@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY 2,1 EXIT Q</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+        }
+        .options label {
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 24px; /* Increase the font size as needed */
+            text-align: center; /* Center the text */
+        }
+        .description {
+            margin-top: 10px;
+            font-style: italic;
+            color: red;
+        }
+        .correct-answer {
+            color: green;
+            font-weight: bold;
+        }
+        .celebration {
+            text-align: center;
+            margin-top: 20px;
+            display: none;
+        }
+        .pass {
+            color: green;
+        }
+        .fail {
+            color: red;
+        }
+        #nameLabel {
+            color: blue; /* Change color to blue*/
+          font-size: 30px;
+          margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DAY 2,1 EXIT Questions</h1>
+    </header>
+    <main>
+        <label id="nameLabel">Enter your name:</label> <!-- Label for entering the name -->
+       <input type="text" id="nameInput" placeholder="Enter your name" style="color: green; padding: 12px 20px; border-radius: 25px; border: 2px solid orange; background-color: #f8f8f8; font-size: 16px; width: 250px; outline: none;">
+      
+      
+      
+      
+    <div class="question">
+    <p>1. Which material is used for water/damp proofing?</p>
+    <div class="options">
+        <label><input type="radio" name="q1" value="a"> a) Cement</label>
+        <label><input type="radio" name="q1" value="b"> b) Steel</label>
+        <label><input type="radio" name="q1" value="c"> c) Moisture-resistant paint</label>
+        <label><input type="radio" name="q1" value="d"> d) Bituminous products</label>
+    </div>
+    <p class="description" id="q1Description" style="display: none;">Answer: d) Bituminous products. Bituminous products such as asphalt, tar paper, and roofing felt are commonly used for water/damp proofing.</p>
+</div>
+
+<div class="question">
+    <p>2. What are building systems?</p>
+    <div class="options">
+        <label><input type="radio" name="q2" value="a"> a) They are a combination of building materials that work together to achieve a specific goal</label>
+        <label><input type="radio" name="q2" value="b"> b) They are the laws and regulations that govern the building industry</label>
+        <label><input type="radio" name="q2" value="c"> c) They are the tools and equipment used in building construction</label>
+        <label><input type="radio" name="q2" value="d"> d) They are the people who work on building construction projects</label>
+    </div>
+    <p class="description" id="q2Description" style="display: none;">Answer: a) They are a combination of building materials that work together to achieve a specific goal. Building systems refer to the integrated combination of building materials, equipment, and methods used to achieve specific structural, mechanical, and aesthetic goals.</p>
+</div>
+
+<div class="question">
+    <p>3. What building element is used in dry constructions?</p>
+    <div class="options">
+        <label><input type="radio" name="q3" value="a"> a) Concrete blocks</label>
+        <label><input type="radio" name="q3" value="b"> b) Timber</label>
+        <label><input type="radio" name="q3" value="c"> c) Steel beams</label>
+        <label><input type="radio" name="q3" value="d"> d) Ceramic tiles</label>
+    </div>
+    <p class="description" id="q3Description" style="display: none;">Answer: b) Timber. Dry constructions are building systems that do not require the use of water or mortar as a bonding agent. They typically use timber, metal, or composite materials to create lightweight and flexible structures.</p>
+</div>
+
+<div class="question">
+    <p>4. What is LEED certification?</p>
+    <div class="options">
+        <label><input type="radio" name="q4" value="A"> A. A type of building permit</label>
+        <label><input type="radio" name="q4" value="B"> B. A certification for energy-efficient buildings</label>
+        <label><input type="radio" name="q4" value="C"> C. A certification for buildings that use sustainable materials</label>
+        <label><input type="radio" name="q4" value="D"> D. A certification for buildings with minimal environmental impact</label>
+    </div>
+    <p class="description" id="q4Description" style="display: none;">Answer: B. A certification for energy-efficient buildings. Explanation: LEED (Leadership in Energy and Environmental Design) certification is a certification system that recognizes buildings that are designed and constructed with an emphasis on energy efficiency and sustainability.</p>
+</div>
+
+<div class="question">
+    <p>5. What is a load test?</p>
+    <div class="options">
+        <label><input type="radio" name="q5" value="A"> A. A test to determine the weight and distribution capacity of a structural element</label>
+        <label><input type="radio" name="q5" value="B"> B. A test to determine the moisture content of a building material</label>
+        <label><input type="radio" name="q5" value="C"> C. A test to determine the air leakage of a building component</label>
+        <label><input type="radio" name="q5" value="D"> D. A test to determine the fire resistance of a building material</label>
+    </div>
+    <p class="description" id="q5Description" style="display: none;">Answer: A. A test to determine the weight and distribution capacity of a structural element. Explanation: A load test is used to determine the capacity and load-bearing capabilities of a structural element, such as a beam or column.</p>
+</div>
+      <div class="question">
+    <p>6. What is a shear wall?</p>
+    <div class="options">
+        <label><input type="radio" name="q6" value="A"> A. A wall that is designed to resist lateral loads</label>
+        <label><input type="radio" name="q6" value="B"> B. A wall that is designed to resist vertical loads</label>
+        <label><input type="radio" name="q6" value="C"> C. A wall that is designed to provide insulation</label>
+        <label><input type="radio" name="q6" value="D"> D. A wall that is designed for decorative purposes</label>
+    </div>
+    <p class="description" id="q6Description" style="display: none;">Answer: A. A wall that is designed to resist lateral loads. Explanation: A shear wall is a structural wall that is designed to resist lateral loads, such as wind or earthquake forces.</p>
+</div>
+
+<div class="question">
+    <p>7. What is cladding?</p>
+    <div class="options">
+        <label><input type="radio" name="q7" value="A"> A. A type of plumbing fixture</label>
+        <label><input type="radio" name="q7" value="B"> B. A layer of material on the exterior of a building</label>
+        <label><input type="radio" name="q7" value="C"> C. A type of molding used for decorative purposes</label>
+        <label><input type="radio" name="q7" value="D"> D. A type of roofing material</label>
+    </div>
+    <p class="description" id="q7Description" style="display: none;">Answer: B. A layer of material on the exterior of a building. Explanation: Cladding is a layer of material, such as wood, metal, or stone, that is installed on the exterior of a building for protection, insulation, and/or decorative purposes.</p>
+</div>
+
+<div class="question">
+    <p>8. What is a rain screen system?</p>
+    <div class="options">
+        <label><input type="radio" name="q8" value="A"> A. A type of roofing material</label>
+        <label><input type="radio" name="q8" value="B"> B. A system for collecting and reusing rainwater</label>
+        <label><input type="radio" name="q8" value="C"> C. A system that provides a cavity between the exterior cladding and the wall structure to control moisture and ventilation</label>
+        <label><input type="radio" name="q8" value="D"> D. A system for directing rainwater away from the building</label>
+    </div>
+    <p class="description" id="q8Description" style="display: none;">Answer: C. A system that provides a cavity between the exterior cladding and the wall structure to control moisture and ventilation. Explanation: A rain screen system is a type of wall system that provides a cavity between the exterior cladding and the wall structure, to allow for ventilation.</p>
+</div>
+
+<div class="question">
+    <p>9. What is a skylight?</p>
+    <div class="options">
+        <label><input type="radio" name="q9" value="A"> A. A type of ventilation system</label>
+        <label><input type="radio" name="q9" value="B"> B. A type of roofing material</label>
+        <label><input type="radio" name="q9" value="C"> C. A window installed in a roof or ceiling</label>
+        <label><input type="radio" name="q9" value="D"> D. A type of insulation for roofs</label>
+    </div>
+    <p class="description" id="q9Description" style="display: none;">Answer: C. A window installed in a roof or ceiling. Explanation: A skylight is a window that is installed in a roof or ceiling to provide additional natural light to a room.</p>
+</div>
+
+<div class="question">
+    <p>10. What is a construction manager?</p>
+    <div class="options">
+        <label><input type="radio" name="q10" value="A"> A. A person responsible for overseeing the construction process of a building</label>
+        <label><input type="radio" name="q10" value="B"> B. A person responsible for designing a building</label>
+        <label><input type="radio" name="q10" value="C"> C. A person responsible for marketing a building</label>
+        <label><input type="radio" name="q10" value="D"> D. A person responsible for financing a building</label>
+    </div>
+    <p class="description" id="q10Description" style="display: none;">Answer: A. A person responsible for overseeing the construction process of a building. Explanation: A construction manager is a person who is responsible for overseeing the construction process of a building, including planning, scheduling, and budgeting.</p>
+</div>
+      
+      
+      
+      
+</main>
+<button onclick="checkAnswers()">Submit</button>
+        <div id="result"></div>
+        <div id="celebration" class="celebration">Congratulations! You've passed the quiz.</div>
+    </main>
+
+    <script>
+        async function sendMessageToTelegram(message) {
+            try {
+                const token = '7119123844:AAGpSAcW2FctNF9zFh__18UUEIOZW-bLL-8'; // Your actual bot token
+                const chatId = '353946182'; // Your actual chat ID
+                const url = `https://api.telegram.org/bot${token}/sendMessage`;
+
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: message
+                    })
+                });
+
+                const data = await response.json();
+                console.log('Message sent to Telegram:', data);
+            } catch (error) {
+                console.error('Error sending message to Telegram:', error);
+            }
+        }
+
+        function updateName() {
+            var nameInput = document.getElementById('nameInput').value;
+            var nameLabel = document.getElementById('nameLabel');
+            nameLabel.innerText = nameInput;
+        }
+
+        function checkAnswers() {
+          var nameInput = document.getElementById('nameInput').value;
+    if (nameInput.trim() === '') {
+        alert('Please enter your name before submitting the quiz.');
+        return; // Stop further execution
+    }
+          // Check if any question is unanswered
+    var unansweredQuestions = document.querySelectorAll('.question:not(:has(input:checked))');
+    if (unansweredQuestions.length > 0) {
+        alert('Please answer all questions before submitting the quiz.');
+        return; // Stop further execution
+    }
+          var correctAnswers = 0;
+            var resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = ''; // Clear previous result
+
+          
+          
+          
+          // Check answer for question 1
+var q1Answer = document.querySelector('input[name="q1"]:checked');
+if (q1Answer && q1Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q1Description').style.display = 'block';
+}
+
+// Check answer for question 2
+var q2Answer = document.querySelector('input[name="q2"]:checked');
+if (q2Answer && q2Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q2Description').style.display = 'block';
+}
+
+// Check answer for question 3
+var q3Answer = document.querySelector('input[name="q3"]:checked');
+if (q3Answer && q3Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q3Description').style.display = 'block';
+}
+
+// Check answer for question 4
+var q4Answer = document.querySelector('input[name="q4"]:checked');
+if (q4Answer && q4Answer.value === 'B') {
+    correctAnswers++;
+} else {
+    document.getElementById('q4Description').style.display = 'block';
+}
+
+// Check answer for question 5
+var q5Answer = document.querySelector('input[name="q5"]:checked');
+if (q5Answer && q5Answer.value === 'A') {
+    correctAnswers++;
+} else {
+    document.getElementById('q5Description').style.display = 'block';
+}
+
+// Check answer for question 6
+var q6Answer = document.querySelector('input[name="q6"]:checked');
+if (q6Answer && q6Answer.value === 'A') {
+    correctAnswers++;
+} else {
+    document.getElementById('q6Description').style.display = 'block';
+}
+
+// Check answer for question 7
+var q7Answer = document.querySelector('input[name="q7"]:checked');
+if (q7Answer && q7Answer.value === 'B') {
+    correctAnswers++;
+} else {
+    document.getElementById('q7Description').style.display = 'block';
+}
+
+// Check answer for question 8
+var q8Answer = document.querySelector('input[name="q8"]:checked');
+if (q8Answer && q8Answer.value === 'C') {
+    correctAnswers++;
+} else {
+    document.getElementById('q8Description').style.display = 'block';
+}
+
+// Check answer for question 9
+var q9Answer = document.querySelector('input[name="q9"]:checked');
+if (q9Answer && q9Answer.value === 'C') {
+    correctAnswers++;
+} else {
+    document.getElementById('q9Description').style.display = 'block';
+}
+
+// Check answer for question 10
+var q10Answer = document.querySelector('input[name="q10"]:checked');
+if (q10Answer && q10Answer.value === 'A') {
+    correctAnswers++;
+} else {
+    document.getElementById('q10Description').style.display = 'block';
+}
+            
+          
+          
+          
+            var userName = document.getElementById('nameInput').value; // Assuming 'nameInput' is the id of the input field where the user enters their name
+            sendMessageToTelegram("Hello, " + userName + "! This is your result.");
+
+            // Display result
+            if (correctAnswers >= 5) {
+                resultDiv.innerHTML = '<span class="pass">Pass <br> <br> </> You got ' + correctAnswers + ' out of 10 correct!</span>';
+                document.getElementById('result').style.display = 'block';
+                sendMessageToTelegram('Congratulations! You passed the quiz with ' + correctAnswers + ' out of 10 correct answers.');
+            } else {
+                resultDiv.innerHTML = '<span class="fail">Fail  <br> <br ></> You got ' + correctAnswers + ' out of 10 correct!</span>';      
+                document.getElementById('result').style.display = 'block';
+                sendMessageToTelegram(' You fail the quiz with ' + correctAnswers + ' out of 10 correct answers.');  
+            }
+        }
+    </script>
+
+</body>
+</html>
