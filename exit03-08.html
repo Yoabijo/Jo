@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY 3,1 EXIT Q</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+        }
+        .options label {
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 24px; /* Increase the font size as needed */
+            text-align: center; /* Center the text */
+        }
+        .description {
+            margin-top: 10px;
+            font-style: italic;
+            color: red;
+        }
+        .correct-answer {
+            color: green;
+            font-weight: bold;
+        }
+        .celebration {
+            text-align: center;
+            margin-top: 20px;
+            display: none;
+        }
+        .pass {
+            color: green;
+        }
+        .fail {
+            color: red;
+        }
+        #nameLabel {
+            color: blue; /* Change color to blue*/
+          font-size: 30px;
+          margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DAY 3,1 EXIT Questions</h1>
+    </header>
+    <main>
+        <label id="nameLabel">Enter your name:</label> <!-- Label for entering the name -->
+       <input type="text" id="nameInput" placeholder="Enter your name" style="color: green; padding: 12px 20px; border-radius: 25px; border: 2px solid orange; background-color: #f8f8f8; font-size: 16px; width: 250px; outline: none;">
+      
+      
+      
+      
+      
+      
+      
+      
+      <div class="question">
+    <p>1. If you wish to construct a house on waterlogged ground condition, which component of a building do you need to construct to prevent the entry of moisture from the ground surface to the building superstructure?</p>
+    <div class="options">
+        <label><input type="radio" name="q1" value="a"> A. Damp proof course</label>
+        <label><input type="radio" name="q1" value="b"> B. Plinth level</label>
+        <label><input type="radio" name="q1" value="c"> C. Ground floor slab</label>
+        <label><input type="radio" name="q1" value="d"> D. A and B</label>
+    </div>
+    <p class="description" id="q1Description" style="display: none;">Answer: D. The plinth level refers to the transition zone between the ground and the base of a building. Acts as a barrier to protect the building from moisture and water infiltration from the ground. A damp-proof course is a vital element in a building's construction that acts as a barrier against moisture rising from the ground.</p>
+</div>
+
+<div class="question">
+    <p>2. Assume you plan to cast the first floor solid slab with C25 concrete for a building project. However, you notice that it's impossible to complete the slab within one day. To attain the full strength of the slab, at what location do you need to stop concreting the slab on the first day?</p>
+    <div class="options">
+        <label><input type="radio" name="q2" value="a"> A. At the support</label>
+        <label><input type="radio" name="q2" value="b"> B. At the middle span of the slab</label>
+        <label><input type="radio" name="q2" value="c"> C. At the point where there is a maximum shear force</label>
+        <label><input type="radio" name="q2" value="d"> D. At the point where there is maximum negative or hogging moment</label>
+    </div>
+    <p class="description" id="q2Description" style="display: none;">Answer: B. At the middle span of the slab. There are different types of joints: Construction joints occur when the concrete pouring is stopped and then resumed later. Expansion joints are designed to accommodate expansion and contraction of materials due to temperature fluctuations. Contraction joints are cuts in the concrete while it's still fresh. This gives the concrete a designated spot to crack. Isolation joints completely separate adjacent structural elements, allowing for independent movement.</p>
+</div>
+
+<!-- Remaining questions follow the same format -->
+      
+      <div class="question">
+    <p>3. Assume you are a site engineer for Project X, and your Foreman requested you how to construct the gutter to downpipe connections. Which drawing component will you prepare for your Foreman?</p>
+    <div class="options">
+        <label><input type="radio" name="q3" value="a"> A. Construction drawing</label>
+        <label><input type="radio" name="q3" value="b"> B. Installation drawing</label>
+        <label><input type="radio" name="q3" value="c"> C. Working drawing</label>
+        <label><input type="radio" name="q3" value="d"> D. Detailed drawing</label>
+    </div>
+    <p class="description" id="q3Description" style="display: none;">Answer: D. Detailed drawing. Construction drawing: drawing for day-to-day activities. Installation drawing: for water supply, electrical, mechanical drawing. Working drawing: most common type of drawing gives detailed information on elevation, section, specification, etc. Detailed drawing: the zoomed or the large scale.</p>
+</div>
+
+<div class="question">
+    <p>4. What is a joist?</p>
+    <div class="options">
+        <label><input type="radio" name="q4" value="a"> A. A horizontal structural element that supports the weight of a floor or ceiling</label>
+        <label><input type="radio" name="q4" value="b"> B. A vertical structural element that supports the weight of a building or other structure</label>
+        <label><input type="radio" name="q4" value="c"> C. A type of decorative molding applied to the surface of a wall</label>
+        <label><input type="radio" name="q4" value="d"> D. A type of foundation material</label>
+    </div>
+    <p class="description" id="q4Description" style="display: none;">Answer: A. A horizontal structural element that supports the weight of a floor or ceiling. Explanation: A joist is a horizontal structural element, typically made of wood or steel, that supports the weight of a floor or ceiling.</p>
+</div>
+
+<div class="question">
+    <p>5. What is a foundation drain?</p>
+    <div class="options">
+        <label><input type="radio" name="q5" value="a"> A. A type of plumbing drain that carries waste water away from a building</label>
+        <label><input type="radio" name="q5" value="b"> B. A drain that carries rainwater away from the foundation of a building</label>
+        <label><input type="radio" name="q5" value="c"> C. A type of air duct that circulates air through a building's foundation</label>
+        <label><input type="radio" name="q5" value="d"> D. A type of electrical conduit used for underground wiring</label>
+    </div>
+    <p class="description" id="q5Description" style="display: none;">Answer: B. A drain that carries rainwater away from the foundation of a building. Explanation: A foundation drain is a drain that is installed around the perimeter of a foundation to collect and carry away rainwater to prevent damage to the foundation.</p>
+</div>
+
+<!-- Questions 6 through 10 follow the same format -->
+      <div class="question">
+    <p>6. What is a curtain wall?</p>
+    <div class="options">
+        <label><input type="radio" name="q6" value="a"> A. A type of decorative wall finish material</label>
+        <label><input type="radio" name="q6" value="b"> B. A type of wall material used for soundproofing</label>
+        <label><input type="radio" name="q6" value="c"> C. A non-load-bearing exterior wall system that is hung from the building's structural frame</label>
+        <label><input type="radio" name="q6" value="d"> D. A type of insulating material used in walls</label>
+    </div>
+    <p class="description" id="q6Description" style="display: none;">Answer: C. A non-load-bearing exterior wall system that is hung from the building's structural frame. Explanation: A curtain wall is an exterior wall system made of lightweight materials, such as glass or metal, that hangs from the building's structural frame and is not responsible for supporting the weight of the building.</p>
+</div>
+
+<div class="question">
+    <p>7. What is a bulkhead?</p>
+    <div class="options">
+        <label><input type="radio" name="q7" value="a"> A. A type of plumbing fixture</label>
+        <label><input type="radio" name="q7" value="b"> B. A type of lighting fixture</label>
+        <label><input type="radio" name="q7" value="c"> C. A wall or ceiling structure used to hide ductwork, pipes, or wires</label>
+        <label><input type="radio" name="q7" value="d"> D. A type of door handle</label>
+    </div>
+    <p class="description" id="q7Description" style="display: none;">Answer: C. A wall or ceiling structure used to hide ductwork, pipes, or wires. Explanation: A bulkhead is a wall or ceiling structure that is constructed to hide ductwork, pipes, or wires and typically has removable panels for access.</p>
+</div>
+
+<div class="question">
+    <p>8. What is a load factor?</p>
+    <div class="options">
+        <label><input type="radio" name="q8" value="a"> A. A factor used to calculate the amount of weight a structural element can support</label>
+        <label><input type="radio" name="q8" value="b"> B. A factor used to calculate the speed of the air flowing through an HVAC system</label>
+        <label><input type="radio" name="q8" value="c"> C. A factor used to calculate the number of windows and doors in a building</label>
+        <label><input type="radio" name="q8" value="d"> D. A factor used to calculate the amount of electricity a building consumes</label>
+    </div>
+    <p class="description" id="q8Description" style="display: none;">Answer: A. A factor used to calculate the amount of weight a structural element can support. Explanation: A load factor is a factor used to calculate the amount of weight or force that a structural element, such as a column or beam, can support without failure.</p>
+</div>
+
+<div class="question">
+    <p>9. What is a parapet?</p>
+    <div class="options">
+        <label><input type="radio" name="q9" value="a"> A. A type of heating system</label>
+        <label><input type="radio" name="q9" value="b"> B. A low wall or railing at the edge of a roof or balcony</label>
+        <label><input type="radio" name="q9" value="c"> C. A decorative element applied to the surface of a wall</label>
+        <label><input type="radio" name="q9" value="d"> D. A type of foundation material</label>
+    </div>
+    <p class="description" id="q9Description" style="display: none;">Answer: B. A low wall or railing at the edge of a roof or balcony. Explanation: A parapet is a low wall or railing that is constructed at the edge of a roof or balcony to provide safety and/or to hide the roofline.</p>
+</div>
+
+<div class="question">
+    <p>10. What is a drywall?</p>
+    <div class="options">
+        <label><input type="radio" name="q10" value="a"> A. A type of insulation material used in walls</label>
+        <label><input type="radio" name="q10" value="b"> B. A type of wall finish material made of gypsum board</label>
+        <label><input type="radio" name="q10" value="c"> C. A type of roofing material</label>
+        <label><input type="radio" name="q10" value="d"> D. A type of door material</label>
+    </div>
+    <p class="description" id="q10Description" style="display: none;">Answer: B. A type of wall finish material made of gypsum board. Explanation: Drywall is a wall finish material made of gypsum board and is commonly used to cover and finish interior walls and ceilings.</p>
+</div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+</main>
+<button onclick="checkAnswers()">Submit</button>
+        <div id="result"></div>
+        <div id="celebration" class="celebration">Congratulations! You've passed the quiz.</div>
+    </main>
+
+    <script>
+        async function sendMessageToTelegram(message) {
+            try {
+                const token = '7119123844:AAGpSAcW2FctNF9zFh__18UUEIOZW-bLL-8'; // Your actual bot token
+                const chatId = '353946182'; // Your actual chat ID
+                const url = `https://api.telegram.org/bot${token}/sendMessage`;
+
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: message
+                    })
+                });
+
+                const data = await response.json();
+                console.log('Message sent to Telegram:', data);
+            } catch (error) {
+                console.error('Error sending message to Telegram:', error);
+            }
+        }
+
+        function updateName() {
+            var nameInput = document.getElementById('nameInput').value;
+            var nameLabel = document.getElementById('nameLabel');
+            nameLabel.innerText = nameInput;
+        }
+
+        function checkAnswers() {
+          var nameInput = document.getElementById('nameInput').value;
+    if (nameInput.trim() === '') {
+        alert('Please enter your name before submitting the quiz.');
+        return; // Stop further execution
+    }
+          // Check if any question is unanswered
+    var unansweredQuestions = document.querySelectorAll('.question:not(:has(input:checked))');
+    if (unansweredQuestions.length > 0) {
+        alert('Please answer all questions before submitting the quiz.');
+        return; // Stop further execution
+    }
+          var correctAnswers = 0;
+            var resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = ''; // Clear previous result
+
+          
+          
+          
+          
+          
+          
+          
+          // Check answer for question 1
+var q1Answer = document.querySelector('input[name="q1"]:checked');
+if (q1Answer && q1Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q1Description').style.display = 'block';
+}
+
+// Check answer for question 2
+var q2Answer = document.querySelector('input[name="q2"]:checked');
+if (q2Answer && q2Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q2Description').style.display = 'block';
+}
+
+// Check answer for question 3
+var q3Answer = document.querySelector('input[name="q3"]:checked');
+if (q3Answer && q3Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q3Description').style.display = 'block';
+}
+
+// Check answer for question 4
+var q4Answer = document.querySelector('input[name="q4"]:checked');
+if (q4Answer && q4Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q4Description').style.display = 'block';
+}
+
+// Check answer for question 5
+var q5Answer = document.querySelector('input[name="q5"]:checked');
+if (q5Answer && q5Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q5Description').style.display = 'block';
+}
+
+// Check answer for question 6
+var q6Answer = document.querySelector('input[name="q6"]:checked');
+if (q6Answer && q6Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q6Description').style.display = 'block';
+}
+
+// Check answer for question 7
+var q7Answer = document.querySelector('input[name="q7"]:checked');
+if (q7Answer && q7Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q7Description').style.display = 'block';
+}
+
+// Check answer for question 8
+var q8Answer = document.querySelector('input[name="q8"]:checked');
+if (q8Answer && q8Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q8Description').style.display = 'block';
+}
+
+// Check answer for question 9
+var q9Answer = document.querySelector('input[name="q9"]:checked');
+if (q9Answer && q9Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q9Description').style.display = 'block';
+}
+
+// Check answer for question 10
+var q10Answer = document.querySelector('input[name="q10"]:checked');
+if (q10Answer && q10Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q10Description').style.display = 'block';
+}
+          
+          
+          
+          
+          
+         
+            
+          
+          
+          
+            var userName = document.getElementById('nameInput').value; // Assuming 'nameInput' is the id of the input field where the user enters their name
+            sendMessageToTelegram("Hello, " + userName + "! This is your result.");
+
+            // Display result
+            if (correctAnswers >= 5) {
+                resultDiv.innerHTML = '<span class="pass">Pass <br> <br> </> You got ' + correctAnswers + ' out of 10 correct!</span>';
+                document.getElementById('result').style.display = 'block';
+                sendMessageToTelegram('Congratulations! You passed the quiz with ' + correctAnswers + ' out of 10 correct answers.');
+            } else {
+                resultDiv.innerHTML = '<span class="fail">Fail  <br> <br ></> You got ' + correctAnswers + ' out of 10 correct!</span>';      
+                document.getElementById('result').style.display = 'block';
+                sendMessageToTelegram(' You fail the quiz with ' + correctAnswers + ' out of 10 correct answers.');  
+            }
+        }
+    </script>
+
+</body>
+</html>
