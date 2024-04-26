@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY 18 EXIT Q</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+        }
+        .options label {
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 24px; /* Increase the font size as needed */
+            text-align: center; /* Center the text */
+        }
+        .description {
+            margin-top: 10px;
+            font-style: italic;
+            color: red;
+        }
+        .correct-answer {
+            color: green;
+            font-weight: bold;
+        }
+        .celebration {
+            text-align: center;
+            margin-top: 20px;
+            display: none;
+        }
+        .pass {
+            color: green;
+        }
+        .fail {
+            color: red;
+        }
+        #nameLabel {
+            color: blue; /* Change color to blue*/
+          font-size: 30px;
+          margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DAY 18 EXIT Questions</h1>
+    </header>
+    <main>
+        <label id="nameLabel">Enter your name:</label> <!-- Label for entering the name -->
+       <input type="text" id="nameInput" placeholder="Enter your name" style="color: green; padding: 12px 20px; border-radius: 25px; border: 2px solid orange; background-color: #f8f8f8; font-size: 16px; width: 250px; outline: none;">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <div class="question">
+    <p>1. If the depth of actual neutral axis in a beam is more than the depth of critical neutral axis, then the beam is called</p>
+    <div class="options">
+        <label><input type="radio" name="q1" value="a"> A. Balanced beam</label>
+        <label><input type="radio" name="q1" value="b"> B. Under reinforced beam</label>
+        <label><input type="radio" name="q1" value="c"> C. Over reinforced beam</label>
+        <label><input type="radio" name="q1" value="d"> D. None of the above</label>
+    </div>
+    <p class="description" id="q1Description" style="display: none;">Answer: C. Over reinforced beam<br>
+    Explanation: When the actual neutral axis of a beam is deeper than the critical neutral axis, it means that the beam has more steel reinforcement than required for balanced behavior. This situation characterizes an over reinforced beam.</p>
+</div>
+
+<div class="question">
+    <p>2. Spacing of stirrups in a rectangular beam, is</p>
+    <div class="options">
+        <label><input type="radio" name="q2" value="a"> A. Kept constant throughout the length</label>
+        <label><input type="radio" name="q2" value="b"> B. Decreased towards the center of the beam</label>
+        <label><input type="radio" name="q2" value="c"> C. Increased at the ends</label>
+        <label><input type="radio" name="q2" value="d"> D. Increased at the center of the beam</label>
+    </div>
+    <p class="description" id="q2Description" style="display: none;">Answer: C. Increased at the ends<br>
+    Explanation: Stirrups in a rectangular beam are spaced closer together at the ends where the shear force is higher, and they are spaced farther apart towards the center of the beam.</p>
+</div>
+
+<div class="question">
+    <p>3. Which statement is not correct about reinforcement splicing?</p>
+    <div class="options">
+        <label><input type="radio" name="q3" value="a"> A. Lapping of reinforcement is conducted at higher stress zone</label>
+        <label><input type="radio" name="q3" value="b"> B. The location of lapping for positive reinforcement in RC beam is at support</label>
+        <label><input type="radio" name="q3" value="c"> C. The location of lapping for negative reinforcement is at mid span</label>
+        <label><input type="radio" name="q3" value="d"> D. None</label>
+    </div>
+    <p class="description" id="q3Description" style="display: none;">Answer: B. The location of lapping for positive reinforcement in RC beam is at support.<br>
+    Explanation: Positive reinforcement typically spans the bottom zone of a beam, where tensile stresses are higher. Therefore, it is usually not spliced at the supports, but rather closer to the mid-span where tension is highest.</p>
+</div>
+
+<div class="question">
+    <p>4. In singly reinforced beam, the effective depth is measured from its compression edge to</p>
+    <div class="options">
+        <label><input type="radio" name="q4" value="a"> A. Tensile edge</label>
+        <label><input type="radio" name="q4" value="b"> B. Tensile reinforcement</label>
+        <label><input type="radio" name="q4" value="c"> C. Neutral axis of the beam</label>
+        <label><input type="radio" name="q4" value="d"> D. Longitudinal central axis</label>
+    </div>
+    <p class="description" id="q4Description" style="display: none;">Answer: B. Tensile reinforcement<br>
+    Explanation: The effective depth of a singly reinforced beam is measured from its compression edge to the tensile edge</p>
+</div>
+
+<div class="question">
+    <p>5. RCC roof slab is designed as a two way slab if</p>
+    <div class="options">
+        <label><input type="radio" name="q5" value="a"> A. It supports lived loads in both direction</label>
+        <label><input type="radio" name="q5" value="b"> B. The ratio of longer span to shorter span is less than or equal to two</label>
+        <label><input type="radio" name="q5" value="c"> C. The ratio of longer span to shorter span is greater than two</label>
+        <label><input type="radio" name="q5" value="d"> D. The slab is continuous over two supports</label>
+    </div>
+    <p class="description" id="q5Description" style="display: none;">Answer: B. The ratio of longer span to shorter span is less than or equal to two<br>
+    Explanation: When the longer span to shorter span ratio is less than or equal to two, the loads tend to be distributed more evenly in both directions, justifying a two-way slab design.</p>
+</div>
+<div class="question">
+    <p>6. Obligatory points through which the alignment should not pass are</p>
+    <div class="options">
+        <label><input type="radio" name="q6" value="a"> A. Religious structure and costly structures</label>
+        <label><input type="radio" name="q6" value="b"> B. Intermediate towns</label>
+        <label><input type="radio" name="q6" value="c"> C. Important cities</label>
+        <label><input type="radio" name="q6" value="d"> D. Important places like market</label>
+    </div>
+    <p class="description" id="q6Description" style="display: none;">Answer: A. Religious structure and costly structures<br>
+    Explanation: It's generally avoided to pass road alignments through religious structures and costly structures due to potential demolition or high compensation costs.</p>
+</div>
+
+<div class="question">
+    <p>7. The extra widening is the sum of</p>
+    <div class="options">
+        <label><input type="radio" name="q7" value="a"> A. Mechanical widening and psychological widening</label>
+        <label><input type="radio" name="q7" value="b"> B. Two times of mechanical widening</label>
+        <label><input type="radio" name="q7" value="c"> C. Two times of psychological widening</label>
+        <label><input type="radio" name="q7" value="d"> D. Mechanical widening – physical widening</label>
+    </div>
+    <p class="description" id="q7Description" style="display: none;">Answer: A. Mechanical widening and psychological widening<br>
+    Explanation: Extra widening on curves involves both mechanical widening, which accommodates the vehicle's physical dimensions, and psychological widening, which ensures driver comfort and safety.</p>
+</div>
+
+<div class="question">
+    <p>8. The stopping sight distance does not depend on</p>
+    <div class="options">
+        <label><input type="radio" name="q8" value="a"> A. Brake reaction time</label>
+        <label><input type="radio" name="q8" value="b"> B. Speed of vehicle</label>
+        <label><input type="radio" name="q8" value="c"> C. Length of vehicle</label>
+        <label><input type="radio" name="q8" value="d"> D. Friction</label>
+    </div>
+    <p class="description" id="q8Description" style="display: none;">Answer: C. Length of vehicle<br>
+    Explanation: Stopping sight distance primarily depends on the driver's reaction time, vehicle speed, and road friction, with vehicle length having minimal influence.</p>
+</div>
+
+<div class="question">
+    <p>9. The curve preferred for vertical curves is a</p>
+    <div class="options">
+        <label><input type="radio" name="q9" value="a"> A. Circular arc</label>
+        <label><input type="radio" name="q9" value="b"> B. Spiral</label>
+        <label><input type="radio" name="q9" value="c"> C. Parabola</label>
+        <label><input type="radio" name="q9" value="d"> D. Hyperbola</label>
+    </div>
+    <p class="description" id="q9Description" style="display: none;">Answer: C. Parabola<br>
+    Explanation: Parabolic curves are preferred for vertical curves in road design because they provide smooth transitions between grades, ensuring comfort and safety for drivers.</p>
+</div>
+
+<div class="question">
+    <p>10. The total land area required for the construction of the roadway is called</p>
+    <div class="options">
+        <label><input type="radio" name="q10" value="a"> A. Traffic lane</label>
+        <label><input type="radio" name="q10" value="b"> B. Right of way</label>
+        <label><input type="radio" name="q10" value="c"> C. Carriage way</label>
+        <label><input type="radio" name="q10" value="d"> D. Roadway</label>
+    </div>
+    <p class="description" id="q10Description" style="display: none;">Answer: B. Right of way<br>
+    Explanation: The right of way encompasses all the land needed for the construction, operation, and maintenance of a roadway, including the carriageway, shoulders, and any other necessary areas.</p>
+</div>
+
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+</main>
+<button onclick="checkAnswers()">Submit</button>
+        <div id="result"></div>
+        <div id="celebration" class="celebration">Congratulations! You've passed the quiz.</div>
+    </main>
+
+    <script>
+        async function sendMessageToTelegram(message) {
+            try {
+                const token = '7119123844:AAGpSAcW2FctNF9zFh__18UUEIOZW-bLL-8'; // Your actual bot token
+                const chatId = '353946182'; // Your actual chat ID
+                const url = `https://api.telegram.org/bot${token}/sendMessage`;
+
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: message
+                    })
+                });
+
+                const data = await response.json();
+                console.log('Message sent to Telegram:', data);
+            } catch (error) {
+                console.error('Error sending message to Telegram:', error);
+            }
+        }
+
+        function updateName() {
+            var nameInput = document.getElementById('nameInput').value;
+            var nameLabel = document.getElementById('nameLabel');
+            nameLabel.innerText = nameInput;
+        }
+
+        function checkAnswers() {
+          var nameInput = document.getElementById('nameInput').value;
+    if (nameInput.trim() === '') {
+        alert('Please enter your name before submitting the quiz.');
+        return; // Stop further execution
+    }
+          // Check if any question is unanswered
+    var unansweredQuestions = document.querySelectorAll('.question:not(:has(input:checked))');
+    if (unansweredQuestions.length > 0) {
+        alert('Please answer all questions before submitting the quiz.');
+        return; // Stop further execution
+    }
+          var correctAnswers = 0;
+            var resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = ''; // Clear previous result
+
+          
+          
+          
+          
+          
+          // Check answer for question 1
+var q1Answer = document.querySelector('input[name="q1"]:checked');
+if (q1Answer && q1Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q1Description').style.display = 'block';
+}
+
+// Check answer for question 2
+var q2Answer = document.querySelector('input[name="q2"]:checked');
+if (q2Answer && q2Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q2Description').style.display = 'block';
+}
+
+// Check answer for question 3
+var q3Answer = document.querySelector('input[name="q3"]:checked');
+if (q3Answer && q3Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q3Description').style.display = 'block';
+}
+
+// Check answer for question 4
+var q4Answer = document.querySelector('input[name="q4"]:checked');
+if (q4Answer && q4Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q4Description').style.display = 'block';
+}
+
+// Check answer for question 5
+var q5Answer = document.querySelector('input[name="q5"]:checked');
+if (q5Answer && q5Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q5Description').style.display = 'block';
+}
+
+// Check answer for question 6
+var q6Answer = document.querySelector('input[name="q6"]:checked');
+if (q6Answer && q6Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q6Description').style.display = 'block';
+}
+
+// Check answer for question 7
+var q7Answer = document.querySelector('input[name="q7"]:checked');
+if (q7Answer && q7Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q7Description').style.display = 'block';
+}
+
+// Check answer for question 8
+var q8Answer = document.querySelector('input[name="q8"]:checked');
+if (q8Answer && q8Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q8Description').style.display = 'block';
+}
+
+// Check answer for question 9
+var q9Answer = document.querySelector('input[name="q9"]:checked');
+if (q9Answer && q9Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q9Description').style.display = 'block';
+}
+
+// Check answer for question 10
+var q10Answer = document.querySelector('input[name="q10"]:checked');
+if (q10Answer && q10Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q10Description').style.display = 'block';
+}
+
+          
+          
+          
+          
+          
+          
+          
+         
+            
+          
+          
+          
+            var userName = document.getElementById('nameInput').value; // Assuming 'nameInput' is the id of the input field where the user enters their name
+            sendMessageToTelegram("Hello, " + userName + "! This is your result.");
+
+            // Display result
+            if (correctAnswers >= 5) {
+                resultDiv.innerHTML = '<span class="pass">Pass <br> <br> </> You got ' + correctAnswers + ' out of 10 correct!</span>';
+                document.getElementById('result').style.display = 'block';
+                sendMessageToTelegram('Congratulations! You passed the quiz with ' + correctAnswers + ' out of 10 correct answers.');
+            } else {
+                resultDiv.innerHTML = '<span class="fail">Fail  <br> <br ></> You got ' + correctAnswers + ' out of 10 correct!</span>';      
+                document.getElementById('result').style.display = 'block';
+                sendMessageToTelegram(' You fail the quiz with ' + correctAnswers + ' out of 10 correct answers.');  
+            }
+        }
+    </script>
+
+</body>
+</html>
