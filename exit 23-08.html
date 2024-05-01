@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY 23 EXIT Q</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0a0a0a;
+            color: #FFD700;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+        }
+        .options label {
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 24px; /* Increase the font size as needed */
+            text-align: center; /* Center the text */
+        }
+        .description {
+            margin-top: 10px;
+            font-style: italic;
+            color: red;
+        }
+        .correct-answer {
+            color: green;
+            font-weight: bold;
+        }
+        .celebration {
+            text-align: center;
+            margin-top: 20px;
+            display: none;
+        }
+        .pass {
+            color: green;
+        }
+        .fail {
+            color: red;
+        }
+        #nameLabel {
+            color: blue; /* Change color to blue*/
+          font-size: 30px;
+          margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DAY 23 EXIT Questions</h1>
+    </header>
+    <main>
+       <style>
+  /* Define styles for attractive text */
+  .attractive-text {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: #007bff; /* Blue color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow */
+    letter-spacing: 2px; /* Increase letter spacing */
+    line-height: 1.5; /* Increase line height */
+    text-align: center; /* Center align */
+    animation: blink-animation 1s infinite; /* Blink animation */
+  }
+
+  /* Define the blink animation */
+  @keyframes blink-animation {
+    0% { opacity: 1; } /* Visible */
+    50% { opacity: 0; } /* Invisible */
+    100% { opacity: 1; } /* Visible */
+  }
+</style>
+</head>
+<body>
+  <div class="attractive-text">
+    please enter your name 
+  </div>
+       <input type="text" id="nameInput" placeholder="Enter your name" style="color: green; padding: 12px 20px; border-radius: 25px; border: 2px solid orange; background-color: #ffff36; font-size: 16px; width: 250px; outline: none;">
+
+    
+   
+      
+      
+      
+      
+      
+      <div class="question">
+    <p>1. What is the main advantage of shallow foundations?</p>
+    <div class="options">
+        <label><input type="radio" name="q1" value="a"> A. They require less excavation than deep foundations</label>
+        <label><input type="radio" name="q1" value="b"> B. They are less expensive than deep foundations</label>
+        <label><input type="radio" name="q1" value="c"> C. They can provide more stability than deep foundations</label>
+        <label><input type="radio" name="q1" value="d"> D. None of the above</label>
+    </div>
+    <p class="description" id="q1Description" style="display: none;">Answer: B. They are less expensive than deep foundations. Explanation: Shallow foundations are generally less expensive and require less excavation than deep foundations.</p>
+</div>
+
+<div class="question">
+    <p>2. Which type of foundation is commonly used for bridges and highways?</p>
+    <div class="options">
+        <label><input type="radio" name="q2" value="a"> A. Pile foundation</label>
+        <label><input type="radio" name="q2" value="b"> B. Pier foundation</label>
+        <label><input type="radio" name="q2" value="c"> C. Raft foundation</label>
+        <label><input type="radio" name="q2" value="d"> D. None of the above</label>
+    </div>
+    <p class="description" id="q2Description" style="display: none;">Answer: A. Pile foundation. Explanation: Pile foundations are often used for bridges and highways due to their ability to support heavy loads.</p>
+</div>
+
+<div class="question">
+    <p>3. What is the main disadvantage of deep foundations?</p>
+    <div class="options">
+        <label><input type="radio" name="q3" value="a"> A. They are more expensive than shallow foundations</label>
+        <label><input type="radio" name="q3" value="b"> B. They require more excavation than shallow foundations</label>
+        <label><input type="radio" name="q3" value="c"> C. They are less stable than shallow foundations</label>
+        <label><input type="radio" name="q3" value="d"> D. None of the above</label>
+    </div>
+    <p class="description" id="q3Description" style="display: none;">Answer: A. They are more expensive than shallow foundations. Explanation: Deep foundations are generally more expensive and may require more specialized equipment and expertise than shallow foundations.</p>
+</div>
+
+<div class="question">
+    <p>4. Which type of foundation is typically used for high-rise buildings?</p>
+    <div class="options">
+        <label><input type="radio" name="q4" value="a"> A. Shallow foundation</label>
+        <label><input type="radio" name="q4" value="b"> B. Deep foundation</label>
+        <label><input type="radio" name="q4" value="c"> C. Pier foundation</label>
+        <label><input type="radio" name="q4" value="d"> D. Raft foundation</label>
+    </div>
+    <p class="description" id="q4Description" style="display: none;">Answer: B. Deep foundation. Explanation: High-rise buildings generally require deep foundations due to their weight and height.</p>
+</div>
+
+<div class="question">
+    <p>5. What is the purpose of a footing in a foundation?</p>
+    <div class="options">
+        <label><input type="radio" name="q5" value="a"> A. To provide additional stability to shallow foundation</label>
+        <label><input type="radio" name="q5" value="b"> B. To distribute the weight of the structure over a larger area</label>
+        <label><input type="radio" name="q5" value="c"> C. To provide a level surface for the foundation</label>
+        <label><input type="radio" name="q5" value="d"> D. None of the above</label>
+    </div>
+    <p class="description" id="q5Description" style="display: none;">Answer: B. To distribute the weight of the structure over a larger area. Explanation: Footings are used to spread the weight of the structure over a larger area, which helps to prevent settlement and other types of structural damage.</p>
+</div>
+<div class="question">
+    <p>6. Which type of soil is unsuitable for foundation construction?</p>
+    <div class="options">
+        <label><input type="radio" name="q6" value="a"> A. Clay</label>
+        <label><input type="radio" name="q6" value="b"> B. Sand</label>
+        <label><input type="radio" name="q6" value="c"> C. Silt</label>
+        <label><input type="radio" name="q6" value="d"> D. None of the above</label>
+    </div>
+    <p class="description" id="q6Description" style="display: none;">Answer: A. Clay Explanation: Clay soil is generally unsuitable for foundation construction due to its tendency to expand when wet and contract when dry, which can cause damage to the foundation.</p>
+</div>
+
+<div class="question">
+    <p>7. What is the minimum depth of excavation for a shallow foundation?</p>
+    <div class="options">
+        <label><input type="radio" name="q7" value="a"> A. 150mm</label>
+        <label><input type="radio" name="q7" value="b"> B. 300mm</label>
+        <label><input type="radio" name="q7" value="c"> C. 450mm</label>
+        <label><input type="radio" name="q7" value="d"> D. 600mm</label>
+    </div>
+    <p class="description" id="q7Description" style="display: none;">Answer: B. 300mm. Explanation: The minimum depth of excavation for a shallow foundation is usually around 300mm.</p>
+</div>
+
+<div class="question">
+    <p>8. Which type of pile foundation is most commonly used?</p>
+    <div class="options">
+        <label><input type="radio" name="q8" value="a"> A. Timber piles</label>
+        <label><input type="radio" name="q8" value="b"> B. Steel piles</label>
+        <label><input type="radio" name="q8" value="c"> C. Concrete piles</label>
+        <label><input type="radio" name="q8" value="d"> D. None of the above</label>
+    </div>
+    <p class="description" id="q8Description" style="display: none;">Answer: C. Concrete piles. Explanation: Concrete piles are the most commonly used type of pile foundation.</p>
+</div>
+
+<div class="question">
+    <p>9. Which type of pier foundation is most commonly used?</p>
+    <div class="options">
+        <label><input type="radio" name="q9" value="a"> A. Tension pier</label>
+        <label><input type="radio" name="q9" value="b"> B. Compression pier</label>
+        <label><input type="radio" name="q9" value="c"> C. Combined pier</label>
+        <label><input type="radio" name="q9" value="d"> D. None of the above</label>
+    </div>
+    <p class="description" id="q9Description" style="display: none;">Answer: B. Compression pier. Explanation: Compression piers are the most commonly used type of pier foundation.</p>
+</div>
+
+<div class="question">
+    <p>10. What is the purpose of a retaining wall in foundation construction?</p>
+    <div class="options">
+        <label><input type="radio" name="q10" value="a"> A. To prevent soil erosion</label>
+        <label><input type="radio" name="q10" value="b"> B. To provide additional stability to the foundation</label>
+        <label><input type="radio" name="q10" value="c"> C. To support soil on one side and prevent it from collapsing</label>
+        <label><input type="radio" name="q10" value="d"> D. None of the above</label>
+    </div>
+    <p class="description" id="q10Description" style="display: none;">Answer: C. To support soil on one side and prevent it from collapsing. Explanation: Retaining walls are used to support soil on one side and prevent it from collapsing, which can cause damage to the foundation.</p>
+</div>
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+</main>
+<button onclick="checkAnswers()">Submit</button>
+        <div id="result"></div>
+        <div id="celebration" class="celebration">Congratulations! You've passed the quiz.</div>
+    </main>
+
+    <script>
+        async function sendMessageToTelegram(message) {
+            try {
+                const token = '7119123844:AAGpSAcW2FctNF9zFh__18UUEIOZW-bLL-8'; // Your actual bot token
+                const chatId = '353946182'; // Your actual chat ID
+                const url = `https://api.telegram.org/bot${token}/sendMessage`;
+
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: message
+                    })
+                });
+
+                const data = await response.json();
+                console.log('Message sent to Telegram:', data);
+            } catch (error) {
+                console.error('Error sending message to Telegram:', error);
+            }
+        }
+
+        function updateName() {
+            var nameInput = document.getElementById('nameInput').value;
+            var nameLabel = document.getElementById('nameLabel');
+            nameLabel.innerText = nameInput;
+        }
+
+        function checkAnswers() {
+          var nameInput = document.getElementById('nameInput').value;
+    if (nameInput.trim() === '') {
+        alert('Please enter your name before submitting the quiz.');
+        return; // Stop further execution
+    }
+          // Check if any question is unanswered
+    var unansweredQuestions = document.querySelectorAll('.question:not(:has(input:checked))');
+    if (unansweredQuestions.length > 0) {
+        alert('Please answer all questions before submitting the quiz.');
+        return; // Stop further execution
+    }
+          var correctAnswers = 0;
+            var resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = ''; // Clear previous result
+
+          
+          
+          
+          
+          
+          
+          
+          
+          // Check answer for question 1
+var q1Answer = document.querySelector('input[name="q1"]:checked');
+if (q1Answer && q1Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q1Description').style.display = 'block';
+}
+
+// Check answer for question 2
+var q2Answer = document.querySelector('input[name="q2"]:checked');
+if (q2Answer && q2Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q2Description').style.display = 'block';
+}
+
+// Check answer for question 3
+var q3Answer = document.querySelector('input[name="q3"]:checked');
+if (q3Answer && q3Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q3Description').style.display = 'block';
+}
+
+// Check answer for question 4
+var q4Answer = document.querySelector('input[name="q4"]:checked');
+if (q4Answer && q4Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q4Description').style.display = 'block';
+}
+
+// Check answer for question 5
+var q5Answer = document.querySelector('input[name="q5"]:checked');
+if (q5Answer && q5Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q5Description').style.display = 'block';
+}
+
+// Check answer for question 6
+var q6Answer = document.querySelector('input[name="q6"]:checked');
+if (q6Answer && q6Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q6Description').style.display = 'block';
+}
+
+// Check answer for question 7
+var q7Answer = document.querySelector('input[name="q7"]:checked');
+if (q7Answer && q7Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q7Description').style.display = 'block';
+}
+
+// Check answer for question 8
+var q8Answer = document.querySelector('input[name="q8"]:checked');
+if (q8Answer && q8Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q8Description').style.display = 'block';
+}
+
+// Check answer for question 9
+var q9Answer = document.querySelector('input[name="q9"]:checked');
+if (q9Answer && q9Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q9Description').style.display = 'block';
+}
+
+// Check answer for question 10
+var q10Answer = document.querySelector('input[name="q10"]:checked');
+if (q10Answer && q10Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q10Description').style.display = 'block';
+}
+
+          
+          
+          
+          
+         
+            
+          
+          
+          
+            var userName = document.getElementById('nameInput').value; // Assuming 'nameInput' is the id of the input field where the user enters their name
+            sendMessageToTelegram("      day 23,        !!  " + userName + "   !!        result.");
+
+
+            // Display result
+            if (correctAnswers >= 5) {
+                resultDiv.innerHTML = '<span class="pass">Pass <br> <br> </> You got ' + correctAnswers + ' out of 10 correct!</span>';
+                document.getElementById('result').style.display = 'block';
+                sendMessageToTelegram('Congratulations! You passed the quiz with ' + correctAnswers + ' out of 10 correct answers.');
+            } else {
+                resultDiv.innerHTML = '<span class="fail">Fail  <br> <br ></> You got ' + correctAnswers + ' out of 10 correct!</span>';      
+                document.getElementById('result').style.display = 'block';
+                sendMessageToTelegram(' You fail the quiz with ' + correctAnswers + ' out of 10 correct answers.');  
+            }
+        }
+    </script>
+
+</body>
+</html>
