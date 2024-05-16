@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>material p2  EXIT Q</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0a0a0a;
+            color: #FFD700;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+        }
+        .options label {
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 24px; /* Increase the font size as needed */
+            text-align: center; /* Center the text */
+        }
+        .description {
+            margin-top: 10px;
+            font-style: italic;
+            color: red;
+        }
+        .correct-answer {
+            color: green;
+            font-weight: bold;
+        }
+        .celebration {
+            text-align: center;
+            margin-top: 20px;
+            display: none;
+        }
+        .pass {
+            color: green;
+        }
+        .fail {
+            color: red;
+        }
+        #nameLabel {
+            color: blue; /* Change color to blue*/
+          font-size: 30px;
+          margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>material p2  EXIT Questions</h1>
+    </header>
+    <main>
+       <style>
+  /* Define styles for attractive text */
+  .attractive-text {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: #007bff; /* Blue color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow */
+    letter-spacing: 2px; /* Increase letter spacing */
+    line-height: 1.5; /* Increase line height */
+    text-align: center; /* Center align */
+    animation: blink-animation 1s infinite; /* Blink animation */
+  }
+
+  /* Define the blink animation */
+  @keyframes blink-animation {
+    0% { opacity: 1; } /* Visible */
+    50% { opacity: 0; } /* Invisible */
+    100% { opacity: 1; } /* Visible */
+  }
+</style>
+</head>
+<body>
+  <div class="attractive-text">
+    please enter your name 
+  </div>
+       <input type="text" id="nameInput" placeholder="Enter your name" style="color: green; padding: 12px 20px; border-radius: 25px; border: 2px solid orange; background-color: #ffff36; font-size: 16px; width: 250px; outline: none;">
+
+    
+   <div class="question">
+    <p>51. Which of the following is not a material used in concrete?</p>
+    <div class="options">
+        <label><input type="radio" name="q51" value="a"> A. Cement</label>
+        <label><input type="radio" name="q51" value="b"> B. Water</label>
+        <label><input type="radio" name="q51" value="c"> C. Gravel</label>
+        <label><input type="radio" name="q51" value="d"> D. Asphalt</label>
+    </div>
+    <p class="description" id="q51Description" style="display: none;">Answer: D. Asphalt<br>
+    Explanation: Asphalt is not a material used in concrete. The essential materials required to make concrete are cement, water, and aggregates (such as sand and gravel).</p>
+</div>
+
+<div class="question">
+    <p>52. What is the purpose of adding water to concrete during the mixing process?</p>
+    <div class="options">
+        <label><input type="radio" name="q52" value="a"> A. It activates the cement.</label>
+        <label><input type="radio" name="q52" value="b"> B. It makes the concrete easier to pour.</label>
+        <label><input type="radio" name="q52" value="c"> C. It strengthens the concrete.</label>
+        <label><input type="radio" name="q52" value="d"> D. It reduces the amount of cement needed.</label>
+    </div>
+    <p class="description" id="q52Description" style="display: none;">Answer: A. It activates the cement.<br>
+    Explanation: Adding water to the mix activates the cement, which starts a chemical reaction that binds the materials together to form concrete.</p>
+</div>
+
+<div class="question">
+    <p>53. What is the maximum size of aggregate typically used in concrete?</p>
+    <div class="options">
+        <label><input type="radio" name="q53" value="a"> A. 1/4 inch</label>
+        <label><input type="radio" name="q53" value="b"> B. 1/2 inch</label>
+        <label><input type="radio" name="q53" value="c"> C. 1 inch</label>
+        <label><input type="radio" name="q53" value="d"> D. 2 inches</label>
+    </div>
+    <p class="description" id="q53Description" style="display: none;">Answer: C. 1 inch<br>
+    Explanation: The maximum size of aggregate typically used in concrete is around 1 inch. This helps to ensure good workability and produces a strong, durable concrete.</p>
+</div>
+
+<div class="question">
+    <p>54. What is the minimum compressive strength of concrete required for construction in Ethiopia?</p>
+    <div class="options">
+        <label><input type="radio" name="q54" value="a"> A. 20 MPa</label>
+        <label><input type="radio" name="q54" value="b"> B. 25 MPa</label>
+        <label><input type="radio" name="q54" value="c"> C. 30 MPa</label>
+        <label><input type="radio" name="q54" value="d"> D. 35 MPa</label>
+    </div>
+    <p class="description" id="q54Description" style="display: none;">Answer: B. 25 MPa<br>
+    Explanation: According to Ethiopian standards, the minimum compressive strength of concrete required for construction is 25 MPa.</p>
+</div>
+
+<div class="question">
+    <p>55. What is the purpose of quality control in concrete construction?</p>
+    <div class="options">
+        <label><input type="radio" name="q55" value="a"> A. To ensure that the mix design is correct.</label>
+        <label><input type="radio" name="q55" value="b"> B. To ensure that the materials are of the required quality.</label>
+        <label><input type="radio" name="q55" value="c"> C. To ensure that the concrete is mixed and cured properly.</label>
+        <label><input type="radio" name="q55" value="d"> D. All of the above.</label>
+    </div>
+    <p class="description" id="q55Description" style="display: none;">Answer: D. All of the above.<br>
+        Explanation: Quality control in concrete construction is essential to ensure that the mix design is correct, materials are of the required quality, and that the concrete is mixed and cured properly. This helps to ensure that the concrete is strong, durable, and meets the specified standards.</p>
+</div>
+
+
+
+
+    <div class="question">
+    <p>56. Which of the following is an example of a supplementary cementitious material that can be used in concrete?</p>
+    <div class="options">
+        <label><input type="radio" name="q56" value="a"> A. Limestone</label>
+        <label><input type="radio" name="q56" value="b"> B. Sand</label>
+        <label><input type="radio" name="q56" value="c"> C. Fly ash</label>
+        <label><input type="radio" name="q56" value="d"> D. Gravel</label>
+    </div>
+    <p class="description" id="q56Description" style="display: none;">Answer: C. Fly ash<br>
+    Explanation: Supplementary cementitious materials (SCMs) are often added to concrete to improve its performance. Examples include fly ash, silica fume, and slag.</p>
+</div>
+
+<div class="question">
+    <p>57. What is the purpose of the mix design process in concrete construction?</p>
+    <div class="options">
+        <label><input type="radio" name="q57" value="a"> A. To determine the optimum proportions of materials for a given set of requirements.</label>
+        <label><input type="radio" name="q57" value="b"> B. To ensure that the concrete is easy to work with.</label>
+        <label><input type="radio" name="q57" value="c"> C. To determine the maximum allowable strength of the concrete.</label>
+        <label><input type="radio" name="q57" value="d"> D. To ensure that the concrete has a consistent color.</label>
+    </div>
+    <p class="description" id="q57Description" style="display: none;">Answer: A. To determine the optimum proportions of materials for a given set of requirements.<br>
+    Explanation: The mix design process is used to determine the optimum proportions of materials for a given set of requirements, such as strength, workability, and durability. This helps to ensure that the concrete meets the desired performance specifications.</p>
+</div>
+
+<div class="question">
+    <p>58. What is the slump test used for in concrete construction?</p>
+    <div class="options">
+        <label><input type="radio" name="q58" value="a"> A. To measure the workability of the concrete.</label>
+        <label><input type="radio" name="q58" value="b"> B. To measure the compressive strength of the concrete.</label>
+        <label><input type="radio" name="q58" value="c"> C. To measure the water content of the concrete.</label>
+        <label><input type="radio" name="q58" value="d"> D. To measure the air content of the concrete.</label>
+    </div>
+    <p class="description" id="q58Description" style="display: none;">Answer: A. To measure the workability of the concrete.<br>
+    Explanation: The slump test is used to measure the workability of the concrete, which refers to how easily the concrete can be placed, compacted, and finished. A higher slump indicates that the concrete is more workable.</p>
+</div>
+
+<div class="question">
+    <p>59. What is the minimum cement content required in a concrete mix?</p>
+    <div class="options">
+        <label><input type="radio" name="q59" value="a"> A. 200 kg/m³</label>
+        <label><input type="radio" name="q59" value="b"> B. 250 kg/m³</label>
+        <label><input type="radio" name="q59" value="c"> C. 300 kg/m³</label>
+        <label><input type="radio" name="q59" value="d"> D. 350 kg/m³</label>
+    </div>
+    <p class="description" id="q59Description" style="display: none;">Answer: B. 250 kg/m³<br>
+    Explanation: The minimum cement content required in a concrete mix depends on the strength and durability requirements, but typically ranges from 250 to 350 kg/m³.</p>
+</div>
+
+<div class="question">
+    <p>60. What is the purpose of adding admixtures to concrete?</p>
+    <div class="options">
+        <label><input type="radio" name="q60" value="a"> A. To improve the workability of the concrete.</label>
+        <label><input type="radio" name="q60" value="b"> B. To increase the strength of the concrete.</label>
+        <label><input type="radio" name="q60" value="c"> C. To reduce the water content of the concrete.</label>
+        <label><input type="radio" name="q60" value="d"> D. All of the above.</label>
+    </div>
+       <p class="description" id="q60Description" style="display: none;">Answer: D. All of the above.<br>
+    Explanation: Admixtures are chemicals that can be added to the concrete mix to improve its performance, such as increasing workability, strength, or reducing water content. Admixtures can also be used to control the setting time or enhance durability.</p>
+</div>
+<div class="question">
+    <p>61. Which of the following is not a classification of building stones?</p>
+    <div class="options">
+        <label><input type="radio" name="q61" value="a"> A. Igneous</label>
+        <label><input type="radio" name="q61" value="b"> B. Metamorphic</label>
+        <label><input type="radio" name="q61" value="c"> C. Sedimentary</label>
+        <label><input type="radio" name="q61" value="d"> D. Gravel</label>
+    </div>
+    <p class="description" id="q61Description" style="display: none;">Answer: D. Gravel<br>
+    Explanation: The correct answer is d. Gravel is not considered a building stone. It is a type of aggregate used in construction, but it is not used as a structural material on its own.</p>
+</div>
+
+<div class="question">
+    <p>62. What types of rocks are typically used for building stone?</p>
+    <div class="options">
+        <label><input type="radio" name="q62" value="a"> A. Igneous and metamorphic rocks</label>
+        <label><input type="radio" name="q62" value="b"> B. Sedimentary and metamorphic rocks</label>
+        <label><input type="radio" name="q62" value="c"> C. Igneous and sedimentary rocks</label>
+        <label><input type="radio" name="q62" value="d"> D. All types of rocks are used for building stone</label>
+    </div>
+    <p class="description" id="q62Description" style="display: none;">Answer: A. Igneous and metamorphic rocks<br>
+    Explanation: The correct answer is a. Igneous and metamorphic rocks are most commonly used for building stone because they tend to be the strongest and most durable.</p>
+</div>
+
+<div class="question">
+    <p>63. What is a primary test used to assess the quality of building stone?</p>
+    <div class="options">
+        <label><input type="radio" name="q63" value="a"> A. Acid test</label>
+        <label><input type="radio" name="q63" value="b"> B. Water absorption test</label>
+        <label><input type="radio" name="q63" value="c"> C. Tensile strength test</label>
+        <label><input type="radio" name="q63" value="d"> D. Hardness test</label>
+    </div>
+    <p class="description" id="q63Description" style="display: none;">Answer: B. Water absorption test<br>
+    Explanation: The correct answer is b. The water absorption test is a primary test used to assess the quality of building stone. It measures how much water a stone absorbs, which can indicate its porosity and susceptibility to weathering and staining.</p>
+</div>
+
+<div class="question">
+    <p>64. What is the purpose of the acid test on building stone?</p>
+    <div class="options">
+        <label><input type="radio" name="q64" value="a"> A. To determine the stone's ability to resist acids</label>
+        <label><input type="radio" name="q64" value="b"> B. To assess the stone's colorfastness</label>
+        <label><input type="radio" name="q64" value="c"> C. To test the stone's ability to conduct electricity</label>
+        <label><input type="radio" name="q64" value="d"> D. To measure the stone's hardness</label>
+    </div>
+    <p class="description" id="q64Description" style="display: none;">Answer: B. To assess the stone's colorfastness<br>
+    Explanation: The correct answer is b. The acid test is used to assess a stone's colorfastness, or its ability to resist staining or discoloration when exposed to acid or other chemicals.</p>
+</div>
+
+<div class="question">
+    <p>65. What is the primary factor that determines a building stone's durability?</p>
+    <div class="options">
+        <label><input type="radio" name="q65" value="a"> A. Hardness</label>
+        <label><input type="radio" name="q65" value="b"> B. Color</label>
+        <label><input type="radio" name="q65" value="c"> C. Texture</label>
+        <label><input type="radio" name="q65" value="d"> D. Size</label>
+    </div>
+    <p class="description" id="q65Description" style="display: none;">Answer: A. Hardness<br>
+    Explanation: The correct answer is a. Hardness is the primary factor that determines a building stone's durability. Stones that are harder are generally more resistant to weathering and erosion, and thus will last longer as building materials.</p>
+</div>
+
+<div class="question">
+    <p>66. What is the scratch test used to determine?</p>
+    <div class="options">
+        <label><input type="radio" name="q66" value="a"> A. The stone's water absorption rate</label>
+        <label><input type="radio" name="q66" value="b"> B. The stone's colorfastness</label>
+        <label><input type="radio" name="q66" value="c"> C. The stone's hardness</label>
+        <label><input type="radio" name="q66" value="d"> D. The stone's compressive strength</label>
+    </div>
+    <p class="description" id="q66Description" style="display: none;">Answer: C. The stone's hardness<br>
+    Explanation: The correct answer is c. The scratch test is used to determine the hardness of a building stone. A steel scalpel or penknife is used to make a scratch on the surface of the stone, and the scratch's depth and visibility are used to determine the stone's relative hardness.</p>
+</div>
+
+<div class="question">
+    <p>67. How is the compressive strength of a building stone tested?</p>
+    <div class="options">
+        <label><input type="radio" name="q67" value="a"> A. By measuring the stone's water absorption rate</label>
+        <label><input type="radio" name="q67" value="b"> B. By subjecting the stone to a tensile strength test</label>
+        <label><input type="radio" name="q67" value="c"> C. By applying a crushing force to the stone until it fails</label>
+        <label><input type="radio" name="q67" value="d"> D. By measuring the stone's resistance to bending or twisting</label>
+    </div>
+    <p class="description" id="q67Description" style="display: none;">Answer: C. By applying a crushing force to the stone until it fails<br>
+Explanation: The correct answer is c. The compressive strength of a building stone is tested by subjecting the stone to a crushing force until it fails. This test is typically performed using a hydraulic press or universal testing machine.</p>
+</div>
+
+<div class="question">
+    <p>68. What is the main disadvantage of using sedimentary rocks as building stone?</p>
+    <div class="options">
+        <label><input type="radio" name="q68" value="a"> A. They are more difficult to shape and carve than other types of rocks</label>
+        <label><input type="radio" name="q68" value="b"> B. They tend to have a low compressive strength and are prone to weathering and erosion</label>
+        <label><input type="radio" name="q68" value="c"> C. They are scarce and expensive to obtain in large quantities</label>
+        <label><input type="radio" name="q68" value="d"> D. They are typically not aesthetically pleasing and lack variation in color and texture</label>
+    </div>
+    <p class="description" id="q68Description" style="display: none;">Answer: B. They tend to have a low compressive strength and are prone to weathering and erosion<br>
+    Explanation: The correct answer is b. Sedimentary rocks tend to have a lower compressive strength than igneous or metamorphic rocks, and they are also prone to weathering and erosion over time. This can make them less suitable for use as structural building materials.</p>
+</div>
+
+<div class="question">
+    <p>69. What is the main advantage of using igneous rocks as building stone?</p>
+    <div class="options">
+        <label><input type="radio" name="q69" value="a"> A. They are often more aesthetically pleasing than other types of rocks</label>
+        <label><input type="radio" name="q69" value="b"> B. They are easy to shape and carve into decorative shapes and patterns</label>
+        <label><input type="radio" name="q69" value="c"> C. They have a high compressive strength and are resistant to weathering and erosion</label>
+        <label><input type="radio" name="q69" value="d"> D. They are widely available and inexpensive to obtain</label>
+    </div>
+    <p class="description" id="q69Description" style="display: none;">Answer: C. They have a high compressive strength and are resistant to weathering and erosion<br>
+    Explanation: The correct answer is c. Igneous rocks are known for their high compressive strength and durability, which make them ideal for use as building stone. They are resistant to weathering and erosion, and they can also be highly varied in color and texture, making them versatile building materials.</p>
+</div>
+
+<div class="question">
+    <p>70. What is the main advantage of using local building stone in construction projects?</p>
+    <div class="options">
+        <label><input type="radio" name="q70" value="a"> A. It is easier to transport and handle than imported materials</label>
+        <label><input type="radio" name="q70" value="b"> B. It reduces the carbon footprint of the project by minimizing transportation emissions</label>
+        <label><input type="radio" name="q70" value="c"> C. It is typically more affordable than imported materials</label>
+        <label><input type="radio" name="q70" value="d"> D. Local building stone is of higher quality and more durable than imported materials</label>
+    </div>
+    <p class="description" id="q70Description" style="display: none;">Answer: B. It reduces the carbon footprint of the project by minimizing transportation emissions<br>
+    Explanation: The correct answer is b. Using local building stone in construction projects can help minimize the environmental impact of the project by reducing transportation emissions. It may also be more affordable than imported materials, and it can help support local economies and artisans. The quality and durability of local building stone will depend on the specific type of stone and its source.</p>
+</div>
+<div class="question">
+    <p>71. Which of the following are common types of clay products used in Ethiopia's construction industry?</p>
+    <div class="options">
+        <label><input type="radio" name="q71" value="a"> a) Bricks</label>
+        <label><input type="radio" name="q71" value="b"> b) Tiles</label>
+        <label><input type="radio" name="q71" value="c"> c) Other types of blocks</label>
+        <label><input type="radio" name="q71" value="d"> d) All of the above</label>
+    </div>
+    <p class="description" id="q71Description" style="display: none;">Answer: d) All of the above. Explanation: Clay products are extensively used in Ethiopia's construction industry because they are affordable, readily available, and environmentally friendly. Bricks, tiles, stabilized soil blocks, and hollow concrete blocks are all common types of clay products used in construction.</p>
+</div>
+
+<div class="question">
+    <p>72. Which of the following characteristics apply to brick construction materials in Ethiopia's construction industry?</p>
+    <div class="options">
+        <label><input type="radio" name="q72" value="a"> a) Durable and weather-resistant</label>
+        <label><input type="radio" name="q72" value="b"> b) Easy to install and maintain</label>
+        <label><input type="radio" name="q72" value="c"> c) Heavy, requiring structural support</label>
+        <label><input type="radio" name="q72" value="d"> d) All of the above</label>
+    </div>
+    <p class="description" id="q72Description" style="display: none;">Answer: d) All of the above. Explanation: Bricks are a popular construction material in Ethiopia because they are durable and weather-resistant, easy to install and maintain, and locally available.</p>
+</div>
+
+<div class="question">
+    <p>73. What are stabilized soil blocks in Ethiopia's construction industry?</p>
+    <div class="options">
+        <label><input type="radio" name="q73" value="a"> a) Blocks made from compressed soil mixed with cement or lime</label>
+        <label><input type="radio" name="q73" value="b"> b) Blocks made from compressed sand and cement</label>
+        <label><input type="radio" name="q73" value="c"> c) Blocks made from compressed concrete and sand</label>
+        <label><input type="radio" name="q73" value="d"> d) None of the above</label>
+    </div>
+    <p class="description" id="q73Description" style="display: none;">Answer: a) Blocks made from compressed soil mixed with cement or lime. Explanation: Stabilized soil blocks are made by compressing soil mixed with cement, lime, or both. This technique improves the strength and durability of the blocks.</p>
+</div>
+
+<div class="question">
+    <p>74. What are the advantages of using hollow concrete blocks in Ethiopia's construction industry?</p>
+    <div class="options">
+        <label><input type="radio" name="q74" value="a"> a) They are lightweight and easy to handle</label>
+        <label><input type="radio" name="q74" value="b"> b) They are fire-resistant</label>
+        <label><input type="radio" name="q74" value="c"> c) They provide excellent thermal insulation</label>
+        <label><input type="radio" name="q74" value="d"> d) All of the above</label>
+    </div>
+    <p class="description" id="q74Description" style="display: none;">Answer: d) All of the above. Explanation: Hollow concrete blocks are lightweight and easy to handle, making them ideal for use in construction. They are also fire-resistant and provide good thermal insulation, making them an appealing option for building in Ethiopia.</p>
+</div>
+
+<div class="question">
+    <p>75. Which of the following is a disadvantage of using clay products in Ethiopia's construction industry?</p>
+    <div class="options">
+        <label><input type="radio" name="q75" value="a"> a) They are prone to cracking and chipping</label>
+        <label><input type="radio" name="q75" value="b"> b) They are costly</label>
+        <label><input type="radio" name="q75" value="c"> c) They are not readily available</label>
+        <label><input type="radio" name="q75" value="d"> d) None of the above</label>
+    </div>
+    <p class="description" id="q75Description" style="display: none;">Answer: a) They are prone to cracking and chipping. Explanation: While clay products are a popular construction material in Ethiopia, they are prone to cracking and chipping over time. This can cause structural issues if not addressed regularly.</p>
+</div>
+
+<div class="question">
+    <p>76. Which of the following are the main materials used to produce clay products in Ethiopia's construction industry?</p>
+    <div class="options">
+        <label><input type="radio" name="q76" value="a"> a) Clay and water</label>
+        <label><input type="radio" name="q76" value="b"> b) Cement and sand</label>
+        <label><input type="radio" name="q76" value="c"> c) Stones and gravel</label>
+        <label><input type="radio" name="q76" value="d"> d) None of the above</label>
+    </div>
+    <p class="description" id="q76Description" style="display: none;">Answer: a) Clay and water. Explanation: The main materials used to produce clay products in Ethiopia's construction industry are clay and water, which are mixed together to form a pliable substance that can be molded into various shapes before being baked at high temperatures to harden.</p>
+</div>
+
+<div class="question">
+    <p>77. What is the primary benefit of using clay products in Ethiopia's construction industry?</p>
+    <div class="options">
+        <label><input type="radio" name="q77" value="a"> a) They are durable and long-lasting</label>
+        <label><input type="radio" name="q77" value="b"> b) They are easy to produce and environmentally friendly</label>
+        <label><input type="radio" name="q77" value="c"> c) They are lightweight and easy to handle</label>
+        <label><input type="radio" name="q77" value="d"> d) None of the above</label>
+    </div>
+    <p class="description" id="q77Description" style="display: none;">Answer: b) They are easy to produce and environmentally friendly. Explanation: One of the primary benefits of clay products in Ethiopia's construction industry is that they are easy to produce and environmentally friendly. They are a sustainable material choice, as they do not emit harmful chemicals or pollutants during production or disposal.</p>
+</div>
+
+<div class="question">
+    <p>78. Which type of clay product is often used for flooring in Ethiopia's construction industry?</p>
+    <div class="options">
+        <label><input type="radio" name="q78" value="a"> a) Bricks</label>
+        <label><input type="radio" name="q78" value="b"> b) Tiles</label>
+        <label><input type="radio" name="q78" value="c"> c) Stabilized soil block</label>
+        <label><input type="radio" name="q78" value="d"> d) Hollow concrete blocks</label>
+    </div>
+    <p class="description" id="q78Description" style="display: none;">Answer: b) Tiles. Explanation: Tiles are a common clay product used for flooring in Ethiopia's construction industry due to their durability, water resistance, and easy-to-clean nature.</p>
+</div>
+
+<div class="question">
+    <p>79. Which of the following is a challenge associated with using clay products in Ethiopia's construction industry?</p>
+    <div class="options">
+        <label><input type="radio" name="q79" value="a"> a) Difficulty sourcing high-quality clay</label>
+        <label><input type="radio" name="q79" value="b"> b) Limited availability of skilled labor for production and installation</label>
+        <label><input type="radio" name="q79" value="c"> c) High cost compared to other building materials</label>
+        <label><input type="radio" name="q79" value="d"> d) None of the above</label>
+    </div>
+    <p class="description" id="q79Description" style="display: none;">Answer: b) Limited availability of skilled labor for production and installation. Explanation: A challenge associated with using clay products in Ethiopia's construction industry is a limited availability of skilled labor for production and installation. Producing high-quality clay products requires specific knowledge and techniques that not all construction workers possess.</p>
+</div>
+
+<div class="question">
+    <p>80. How can the durability of clay products in Ethiopia's construction industry be improved?</p>
+    <div class="options">
+        <label><input type="radio" name="q80" value="a"> a) Using higher quality clay materials</label>
+        <label><input type="radio" name="q80" value="b"> b) Adding reinforcing agents like steel mesh to the clay product</label>
+        <label><input type="radio" name="q80" value="c"> c) Applying sealants or coatings to protect the clay product from wear and tear</label>
+        <label><input type="radio" name="q80" value="d"> d) All of the above</label>
+    </div>
+    <p class="description" id="q80Description" style="display: none;">Answer: d) All of the above. Explanation: Durability of clay products in Ethiopia's construction industry can be improved by using higher quality clay materials, adding reinforcing agents like steel mesh to the clay product, and applying sealants or coatings to protect the clay product from wear and tear.</p>
+</div>
+<div class="question">
+    <p>81. Which of the following is not a ferrous metal used in the construction industry?</p>
+    <div class="options">
+        <label><input type="radio" name="q81" value="a"> a) Cast iron</label>
+        <label><input type="radio" name="q81" value="b"> b) Stainless steel</label>
+        <label><input type="radio" name="q81" value="c"> c) Wrought iron</label>
+        <label><input type="radio" name="q81" value="d"> d) Copper</label>
+    </div>
+    <p class="description" id="q81Description" style="display: none;">Answer: d. Copper<br>
+    Explanation: Ferrous metals are those that contain iron as their primary constituent. Cast iron, stainless steel, and wrought iron are examples of ferrous metals used in construction, while copper is a non-ferrous metal.</p>
+</div>
+
+<div class="question">
+    <p>82. Which of the following ferrous metals is used for reinforcing concrete structures?</p>
+    <div class="options">
+        <label><input type="radio" name="q82" value="a"> a) Cast iron</label>
+        <label><input type="radio" name="q82" value="b"> b) Wrought iron</label>
+        <label><input type="radio" name="q82" value="c"> c) Mild steel</label>
+        <label><input type="radio" name="q82" value="d"> d) Stainless steel</label>
+    </div>
+    <p class="description" id="q82Description" style="display: none;">Answer: c. Mild steel<br>
+    Explanation: Mild steel is commonly used for reinforcing concrete structures in the construction industry due to its strength and cost-effectiveness.</p>
+</div>
+
+<div class="question">
+    <p>83. Which of the following non-ferrous metals is used as a roofing material?</p>
+    <div class="options">
+        <label><input type="radio" name="q83" value="a"> a) Copper</label>
+        <label><input type="radio" name="q83" value="b"> b) Aluminum</label>
+        <label><input type="radio" name="q83" value="c"> c) Lead</label>
+        <label><input type="radio" name="q83" value="d"> d) Zinc</label>
+    </div>
+    <p class="description" id="q83Description" style="display: none;">Answer: a. Copper<br>
+    Explanation: Copper is a non-ferrous metal that is commonly used as a roofing material due to its durability, corrosion resistance, and aesthetic appeal.</p>
+</div>
+
+<div class="question">
+    <p>84. Which of the following non-ferrous metals is used for electrical wiring in buildings?</p>
+    <div class="options">
+        <label><input type="radio" name="q84" value="a"> a) Copper</label>
+        <label><input type="radio" name="q84" value="b"> b) Aluminum</label>
+        <label><input type="radio" name="q84" value="c"> c) Zinc</label>
+        <label><input type="radio" name="q84" value="d"> d) Brass</label>
+    </div>
+    <p class="description" id="q84Description" style="display: none;">Answer: a. Copper<br>
+    Explanation: Copper is a non-ferrous metal that is an excellent conductor of electricity, making it a popular choice for electrical wiring in buildings.</p>
+</div>
+
+<div class="question">
+    <p>85. Which of the following ferrous metals is commonly used in the manufacture of pipes and fittings for plumbing systems?</p>
+    <div class="options">
+        <label><input type="radio" name="q85" value="a"> a) Cast iron</label>
+        <label><input type="radio" name="q85" value="b"> b) Wrought iron</label>
+        <label><input type="radio" name="q85" value="c"> c) Carbon steel</label>
+        <label><input type="radio" name="q85" value="d"> d) Stainless steel</label>
+    </div>
+    <p class="description" id="q85Description" style="display: none;">Answer: c. Carbon steel<br>
+    Explanation: Carbon steel is a ferrous metal that is commonly used in the manufacture of pipes and fittings for plumbing systems due to its strength and durability.</p>
+</div>
+<div class="question">
+    <p>86. Which of the following properties make stainless steel a popular choice for structural components in buildings?</p>
+    <div class="options">
+        <label><input type="radio" name="q86" value="a"> a) Corrosion resistance</label>
+        <label><input type="radio" name="q86" value="b"> b) High strength</label>
+        <label><input type="radio" name="q86" value="c"> c) Aesthetic appeal</label>
+        <label><input type="radio" name="q86" value="d"> d) All of the above</label>
+    </div>
+    <p class="description" id="q86Description" style="display: none;">Answer: d. All of the above<br>
+    Explanation: Stainless steel is a type of ferrous metal that is popular for structural components in buildings due to its high strength, corrosion resistance, and aesthetic appeal.</p>
+</div>
+
+<div class="question">
+    <p>87. Which of the following non-ferrous metals is commonly used for decorative purposes in the construction industry?</p>
+    <div class="options">
+        <label><input type="radio" name="q87" value="a"> a) Brass</label>
+        <label><input type="radio" name="q87" value="b"> b) Aluminum</label>
+        <label><input type="radio" name="q87" value="c"> c) Zinc</label>
+        <label><input type="radio" name="q87" value="d"> d) Titanium</label>
+    </div>
+    <p class="description" id="q87Description" style="display: none;">Answer: a. Brass<br>
+    Explanation: Brass is a non-ferrous metal that is commonly used for decorative purposes in the construction industry due to its attractive color and finish.</p>
+</div>
+
+<div class="question">
+    <p>88. Which of the following ferrous metals is used for the production of rails and tracks for transportation systems?</p>
+    <div class="options">
+        <label><input type="radio" name="q88" value="a"> a) Cast iron</label>
+        <label><input type="radio" name="q88" value="b"> b) Wrought iron</label>
+        <label><input type="radio" name="q88" value="c"> c) Carbon steel</label>
+        <label><input type="radio" name="q88" value="d"> d) Stainless steel</label>
+    </div>
+    <p class="description" id="q88Description" style="display: none;">Answer: c. Carbon steel<br>
+    Explanation: Carbon steel is a ferrous metal that is commonly used for the production of rails and tracks for transportation systems due to its strength and durability.</p>
+</div>
+
+<div class="question">
+    <p>89. Which of the following non-ferrous metals is commonly used for window frames in buildings due to its lightweight and corrosion resistance?</p>
+    <div class="options">
+        <label><input type="radio" name="q89" value="a"> a) Copper</label>
+        <label><input type="radio" name="q89" value="b"> b) Aluminum</label>
+        <label><input type="radio" name="q89" value="c"> c) Lead</label>
+        <label><input type="radio" name="q89" value="d"> d) Zinc</label>
+    </div>
+    <p class="description" id="q89Description" style="display: none;">Answer: b. Aluminum<br>
+    Explanation: Aluminum is a non-ferrous metal that is commonly used for window frames in buildings due to its lightweight, corrosion resistance, and ease of fabrication.</p>
+</div>
+
+<div class="question">
+    <p>90. Which of the following ferrous metals is commonly used for the production of bridges and large-scale construction projects?</p>
+    <div class="options">
+        <label><input type="radio" name="q90" value="a"> a) Cast iron</label>
+        <label><input type="radio" name="q90" value="b"> b) Wrought iron</label>
+        <label><input type="radio" name="q90" value="c"> c) Carbon steel</label>
+        <label><input type="radio" name="q90" value="d"> d) Stainless steel</label>
+    </div>
+    <p class="description" id="q90Description" style="display: none;">Answer: c. Carbon steel<br>
+    Explanation: Carbon steel is a ferrous metal that is commonly used for the production of bridges and large-scale construction projects due to its strength, durability, and cost-effectiveness.</p>
+</div>
+
+<div class="question">
+    <p>91. Which of the following is NOT a common use of timber in construction?</p>
+    <div class="options">
+        <label><input type="radio" name="q91" value="a"> a) Roof trusses</label>
+        <label><input type="radio" name="q91" value="b"> b) Flooring</label>
+        <label><input type="radio" name="q91" value="c"> c) Concrete reinforcement</label>
+        <label><input type="radio" name="q91" value="d"> d) Wall framing</label>
+    </div>
+    <p class="description" id="q91Description" style="display: none;">Answer: c. Concrete reinforcement<br>
+    Explanation: While timber is commonly used for roof trusses, flooring, and wall framing, it is not typically used for reinforcing concrete structures.</p>
+</div>
+
+<div class="question">
+    <p>92. Which of the following types of timber is most commonly used in construction?</p>
+    <div class="options">
+        <label><input type="radio" name="q92" value="a"> a) Softwood</label>
+        <label><input type="radio" name="q92" value="b"> b) Hardwood</label>
+        <label><input type="radio" name="q92" value="c"> c) Engineered wood</label>
+        <label><input type="radio" name="q92" value="d"> d) Bamboo</label>
+    </div>
+    <p class="description" id="q92Description" style="display: none;">Answer: a. Softwood<br>
+    Explanation: Softwood is the most widely used timber in construction due to its abundance and affordability, as well as its strength and durability.</p>
+</div>
+
+<div class="question">
+    <p>93. What is the purpose of pressure-treated timber in construction?</p>
+    <div class="options">
+        <label><input type="radio" name="q93" value="a"> a) To improve its aesthetic appeal</label>
+        <label><input type="radio" name="q93" value="b"> b) To increase its fire resistance</label>
+        <label><input type="radio" name="q93" value="c"> c) To protect it from insect and fungal damage</label>
+        <label><input type="radio" name="q93" value="d"> d) To reduce its weight</label>
+    </div>
+    <p class="description" id="q93Description" style="display: none;">Answer: c. To protect it from insect and fungal damage<br>
+    Explanation: Pressure-treated timber is treated with chemicals to make it more resistant to insects, fungi, and rot.</p>
+</div>
+
+<div class="question">
+    <p>94. What is the typical lifespan of a timber-framed house?</p>
+    <div class="options">
+        <label><input type="radio" name="q94" value="a"> a) 10-15 years</label>
+        <label><input type="radio" name="q94" value="b"> b) 30-50 years</label>
+        <label><input type="radio" name="q94" value="c"> c) 70-100 years</label>
+        <label><input type="radio" name="q94" value="d"> d) 150-200 years</label>
+    </div>
+    <p class="description" id="q94Description" style="display: none;">Answer: c. 70-100 years<br>
+    Explanation: Timber-framed houses can last several decades if they are well-maintained and protected from the elements.</p>
+</div>
+
+<div class="question">
+    <p>95. What is the main advantage of using timber as a construction material?</p>
+    <div class="options">
+        <label><input type="radio" name="q95" value="a"> a) Affordability</label>
+        <label><input type="radio" name="q95" value="b"> b) Fire resistance</label>
+        <label><input type="radio" name="q95" value="c"> c) Durability</label>
+        <label><input type="radio" name="q95" value="d"> d) Sustainability</label>
+    </div>
+    <p class="description" id="q95Description" style="display: none;">Answer: d. Sustainability<br>
+    Explanation: Timber is a renewable resource that can be sustainably harvested and used in construction, making it an environmentally friendly choice compared to non-renewable materials like concrete and steel.</p>
+</div>
+<div class="question">
+    <p>96. Which of the following factors can affect the strength of timber in construction?</p>
+    <div class="options">
+        <label><input type="radio" name="q96" value="a"> a) Moisture content</label>
+        <label><input type="radio" name="q96" value="b"> b) Tree species</label>
+        <label><input type="radio" name="q96" value="c"> c) Density</label>
+        <label><input type="radio" name="q96" value="d"> d) All of the above</label>
+    </div>
+    <p class="description" id="q96Description" style="display: none;">Answer: d) All of the above.<br>
+    Explanation: The strength of timber can vary depending on factors such as the moisture content of the wood, the species of tree it comes from, and the density of the wood.</p>
+</div>
+
+<div class="question">
+    <p>97. Which of the following types of timber is typically used for decorative purposes in construction?</p>
+    <div class="options">
+        <label><input type="radio" name="q97" value="a"> a) Plywood</label>
+        <label><input type="radio" name="q97" value="b"> b) Particleboard</label>
+        <label><input type="radio" name="q97" value="c"> c) Veneer</label>
+        <label><input type="radio" name="q97" value="d"> d) Solid timber</label>
+    </div>
+    <p class="description" id="q97Description" style="display: none;">Answer: c) Veneer.<br>
+    Explanation: Veneer is a thin layer of high-quality timber that is used for decorative purposes, such as in cabinetry or furniture construction.</p>
+</div>
+
+<div class="question">
+    <p>98. What is the process of seasoning timber in construction?</p>
+    <div class="options">
+        <label><input type="radio" name="q98" value="a"> a) Treating it with chemicals to protect it from insects and fungi</label>
+        <label><input type="radio" name="q98" value="b"> b) Drying it to remove excess moisture</label>
+        <label><input type="radio" name="q98" value="c"> c) Cutting it into specific shapes and sizes</label>
+        <label><input type="radio" name="q98" value="d"> d) Trimming off any bark or branches</label>
+    </div>
+    <p class="description" id="q98Description" style="display: none;">Answer: b) Drying it to remove excess moisture.<br>
+    Explanation: Seasoning timber involves drying it to remove excess moisture, which makes it stronger, more stable, and less susceptible to cracking, warping, or rotting.</p>
+</div>
+
+<div class="question">
+    <p>99. What is the most common method of connecting timber beams in construction?</p>
+    <div class="options">
+        <label><input type="radio" name="q99" value="a"> a) Nailing</label>
+        <label><input type="radio" name="q99" value="b"> b) Gluing</label>
+        <label><input type="radio" name="q99" value="c"> c) Bolting</label>
+        <label><input type="radio" name="q99" value="d"> d) Mortise and tenon</label>
+    </div>
+    <p class="description" id="q99Description" style="display: none;">Answer: d) Mortise and tenon.<br>
+    Explanation: Mortise and tenon joints are a traditional method of joining timber beams, which involves cutting a rectangular hole (the mortise) in one beam and a projecting tongue (the tenon) on the end of another beam, then fitting the two pieces together.</p>
+</div>
+
+<div class="question">
+    <p>100. Which of the following is an advantage of using timber over other construction materials?</p>
+    <div class="options">
+        <label><input type="radio" name="q100" value="a"> a) High strength-to-weight ratio</label>
+        <label><input type="radio" name="q100" value="b"> b) Good fire resistance</label>
+        <label><input type="radio" name="q100" value="c"> c) Low susceptibility to moisture and rot</label>
+        <label><input type="radio" name="q100" value="d"> d) All of the above</label>
+    </div>
+    <p class="description" id="q100Description" style="display: none;">Answer: a) High strength-to-weight ratio.<br>
+    Explanation: Timber is lightweight but strong, which makes it a popular choice for construction in situations where weight is a concern, such as in building tall structures or constructing roofs.</p>
+</div>
+
+
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+</main>
+<button onclick="checkAnswers()">Submit</button>
+        <div id="result"></div>
+        <div id="celebration" class="celebration">Congratulations! You've passed the quiz.</div>
+    </main>
+
+    <script>
+        async function sendMessageToTelegram(message) {
+            try {
+                const token = '7119123844:AAGpSAcW2FctNF9zFh__18UUEIOZW-bLL-8'; // Your actual bot token
+                const chatId = '353946182'; // Your actual chat ID
+                const url = `https://api.telegram.org/bot${token}/sendMessage`;
+
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: message
+                    })
+                });
+
+                const data = await response.json();
+                console.log('Message sent to Telegram:', data);
+            } catch (error) {
+                console.error('Error sending message to Telegram:', error);
+            }
+        }
+
+        function updateName() {
+            var nameInput = document.getElementById('nameInput').value;
+            var nameLabel = document.getElementById('nameLabel');
+            nameLabel.innerText = nameInput;
+        }
+
+        function checkAnswers() {
+          var nameInput = document.getElementById('nameInput').value;
+    if (nameInput.trim() === '') {
+        alert('Please enter your name before submitting the quiz.');
+        return; // Stop further execution
+    }
+          // Check if any question is unanswered
+    var unansweredQuestions = document.querySelectorAll('.question:not(:has(input:checked))');
+    if (unansweredQuestions.length > 0) {
+        alert('Please answer all questions before submitting the quiz.');
+        return; // Stop further execution
+    }
+          var correctAnswers = 0;
+            var resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = ''; // Clear previous result
+
+          
+          
+          
+         // Check answer for question 51
+var q51Answer = document.querySelector('input[name="q51"]:checked');
+if (q51Answer && q51Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q51Description').style.display = 'block';
+}
+
+// Check answer for question 52
+var q52Answer = document.querySelector('input[name="q52"]:checked');
+if (q52Answer && q52Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q52Description').style.display = 'block';
+}
+
+// Check answer for question 53
+var q53Answer = document.querySelector('input[name="q53"]:checked');
+if (q53Answer && q53Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q53Description').style.display = 'block';
+}
+
+// Check answer for question 54
+var q54Answer = document.querySelector('input[name="q54"]:checked');
+if (q54Answer && q54Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q54Description').style.display = 'block';
+}
+
+// Check answer for question 55
+var q55Answer = document.querySelector('input[name="q55"]:checked');
+if (q55Answer && q55Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q55Description').style.display = 'block';
+}
+
+// Check answer for question 56
+var q56Answer = document.querySelector('input[name="q56"]:checked');
+if (q56Answer && q56Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q56Description').style.display = 'block';
+}
+
+// Check answer for question 57
+var q57Answer = document.querySelector('input[name="q57"]:checked');
+if (q57Answer && q57Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q57Description').style.display = 'block';
+}
+
+// Check answer for question 58
+var q58Answer = document.querySelector('input[name="q58"]:checked');
+if (q58Answer && q58Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q58Description').style.display = 'block';
+}
+
+// Check answer for question 59
+var q59Answer = document.querySelector('input[name="q59"]:checked');
+if (q59Answer && q59Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q59Description').style.display = 'block';
+}
+
+// Check answer for question 60
+var q60Answer = document.querySelector('input[name="q60"]:checked');
+if (q60Answer && q60Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q60Description').style.display = 'block';
+}
+// Check answer for question 61
+var q61Answer = document.querySelector('input[name="q61"]:checked');
+if (q61Answer && q61Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q61Description').style.display = 'block';
+}
+
+// Check answer for question 62
+var q62Answer = document.querySelector('input[name="q62"]:checked');
+if (q62Answer && q62Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q62Description').style.display = 'block';
+}
+
+// Check answer for question 63
+var q63Answer = document.querySelector('input[name="q63"]:checked');
+if (q63Answer && q63Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q63Description').style.display = 'block';
+}
+
+// Check answer for question 64
+var q64Answer = document.querySelector('input[name="q64"]:checked');
+if (q64Answer && q64Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q64Description').style.display = 'block';
+}
+
+// Check answer for question 65
+var q65Answer = document.querySelector('input[name="q65"]:checked');
+if (q65Answer && q65Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q65Description').style.display = 'block';
+}
+
+// Check answer for question 66
+var q66Answer = document.querySelector('input[name="q66"]:checked');
+if (q66Answer && q66Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q66Description').style.display = 'block';
+}
+
+// Check answer for question 67
+var q67Answer = document.querySelector('input[name="q67"]:checked');
+if (q67Answer && q67Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q67Description').style.display = 'block';
+}
+
+// Check answer for question 68
+var q68Answer = document.querySelector('input[name="q68"]:checked');
+if (q68Answer && q68Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q68Description').style.display = 'block';
+}
+
+// Check answer for question 69
+var q69Answer = document.querySelector('input[name="q69"]:checked');
+if (q69Answer && q69Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q69Description').style.display = 'block';
+}
+
+// Check answer for question 70
+var q70Answer = document.querySelector('input[name="q70"]:checked');
+if (q70Answer && q70Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q70Description').style.display = 'block';
+}
+// Check answer for question 71
+var q71Answer = document.querySelector('input[name="q71"]:checked');
+if (q71Answer && q71Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q71Description').style.display = 'block';
+}
+
+// Check answer for question 72
+var q72Answer = document.querySelector('input[name="q72"]:checked');
+if (q72Answer && q72Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q72Description').style.display = 'block';
+}
+
+// Check answer for question 73
+var q73Answer = document.querySelector('input[name="q73"]:checked');
+if (q73Answer && q73Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q73Description').style.display = 'block';
+}
+
+// Check answer for question 74
+var q74Answer = document.querySelector('input[name="q74"]:checked');
+if (q74Answer && q74Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q74Description').style.display = 'block';
+}
+
+// Check answer for question 75
+var q75Answer = document.querySelector('input[name="q75"]:checked');
+if (q75Answer && q75Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q75Description').style.display = 'block';
+}
+
+// Check answer for question 76
+var q76Answer = document.querySelector('input[name="q76"]:checked');
+if (q76Answer && q76Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q76Description').style.display = 'block';
+}
+
+// Check answer for question 77
+var q77Answer = document.querySelector('input[name="q77"]:checked');
+if (q77Answer && q77Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q77Description').style.display = 'block';
+}
+
+// Check answer for question 78
+var q78Answer = document.querySelector('input[name="q78"]:checked');
+if (q78Answer && q78Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q78Description').style.display = 'block';
+}
+
+// Check answer for question 79
+var q79Answer = document.querySelector('input[name="q79"]:checked');
+if (q79Answer && q79Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q79Description').style.display = 'block';
+}
+
+// Check answer for question 80
+var q80Answer = document.querySelector('input[name="q80"]:checked');
+if (q80Answer && q80Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q80Description').style.display = 'block';
+}
+
+  // Check answer for question 81
+var q81Answer = document.querySelector('input[name="q81"]:checked');
+if (q81Answer && q81Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q81Description').style.display = 'block';
+}
+
+// Check answer for question 82
+var q82Answer = document.querySelector('input[name="q82"]:checked');
+if (q82Answer && q82Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q82Description').style.display = 'block';
+}
+
+// Check answer for question 83
+var q83Answer = document.querySelector('input[name="q83"]:checked');
+if (q83Answer && q83Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q83Description').style.display = 'block';
+}
+
+// Check answer for question 84
+var q84Answer = document.querySelector('input[name="q84"]:checked');
+if (q84Answer && q84Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q84Description').style.display = 'block';
+}
+
+// Check answer for question 85
+var q85Answer = document.querySelector('input[name="q85"]:checked');
+if (q85Answer && q85Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q85Description').style.display = 'block';
+}
+
+// Check answer for question 86
+var q86Answer = document.querySelector('input[name="q86"]:checked');
+if (q86Answer && q86Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q86Description').style.display = 'block';
+}
+
+// Check answer for question 87
+var q87Answer = document.querySelector('input[name="q87"]:checked');
+if (q87Answer && q87Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q87Description').style.display = 'block';
+}
+
+// Check answer for question 88
+var q88Answer = document.querySelector('input[name="q88"]:checked');
+if (q88Answer && q88Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q88Description').style.display = 'block';
+}
+
+// Check answer for question 89
+var q89Answer = document.querySelector('input[name="q89"]:checked');
+if (q89Answer && q89Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q89Description').style.display = 'block';
+}
+
+// Check answer for question 90
+var q90Answer = document.querySelector('input[name="q90"]:checked');
+if (q90Answer && q90Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q90Description').style.display = 'block';
+}
+         
+
+// Check answer for question 91
+var q91Answer = document.querySelector('input[name="q91"]:checked');
+if (q91Answer && q91Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q91Description').style.display = 'block';
+}
+
+// Check answer for question 92
+var q92Answer = document.querySelector('input[name="q92"]:checked');
+if (q92Answer && q92Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q92Description').style.display = 'block';
+}
+
+// Check answer for question 93
+var q93Answer = document.querySelector('input[name="q93"]:checked');
+if (q93Answer && q93Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q93Description').style.display = 'block';
+}
+
+// Check answer for question 94
+var q94Answer = document.querySelector('input[name="q94"]:checked');
+if (q94Answer && q94Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q94Description').style.display = 'block';
+}
+
+// Check answer for question 95
+var q95Answer = document.querySelector('input[name="q95"]:checked');
+if (q95Answer && q95Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q95Description').style.display = 'block';
+}
+
+// Check answer for question 96
+var q96Answer = document.querySelector('input[name="q96"]:checked');
+if (q96Answer && q96Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q96Description').style.display = 'block';
+}
+
+// Check answer for question 97
+var q97Answer = document.querySelector('input[name="q97"]:checked');
+if (q97Answer && q97Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q97Description').style.display = 'block';
+}
+
+// Check answer for question 98
+var q98Answer = document.querySelector('input[name="q98"]:checked');
+if (q98Answer && q98Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q98Description').style.display = 'block';
+}
+
+// Check answer for question 99
+var q99Answer = document.querySelector('input[name="q99"]:checked');
+if (q99Answer && q99Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q99Description').style.display = 'block';
+}
+
+// Check answer for question 100
+var q100Answer = document.querySelector('input[name="q100"]:checked');
+if (q100Answer && q100Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q100Description').style.display = 'block';
+}
+
+
+
+
+          
+        
+
+          
+          
+          
+          
+         
+            
+          
+          
+          
+            var userName = document.getElementById('nameInput').value; // Assuming 'nameInput' is the id of the input field where the user enters their name
+            sendMessageToTelegram("      material ,        !!  " + userName + "   !!        result.");
+
+
+            // Display result
+            if (correctAnswers >= 20) {
+                resultDiv.innerHTML = '<span class="pass">Pass <br> <br> </> You got ' + correctAnswers + ' out of 50 correct!</span>';
+                document.getElementById('result').style.display = 'block';
+                sendMessageToTelegram('Congratulations! You passed the quiz with ' + correctAnswers + ' out of 50 correct answers.');
+            } else {
+                resultDiv.innerHTML = '<span class="fail">Fail  <br> <br ></> You got ' + correctAnswers + ' out of 50 correct!</span>';      
+                document.getElementById('result').style.display = 'block';
+                sendMessageToTelegram(' You fail the quiz with ' + correctAnswers + ' out of 50 correct answers.');  
+            }
+        }
+    </script>
+
+</body>
+</html>
