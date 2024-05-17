@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>building p1  EXIT Q</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0a0a0a;
+            color: #FFD700;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+        }
+        .options label {
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 24px; /* Increase the font size as needed */
+            text-align: center; /* Center the text */
+        }
+        .description {
+            margin-top: 10px;
+            font-style: italic;
+            color: red;
+        }
+        .correct-answer {
+            color: green;
+            font-weight: bold;
+        }
+        .celebration {
+            text-align: center;
+            margin-top: 20px;
+            display: none;
+        }
+        .pass {
+            color: green;
+        }
+        .fail {
+            color: red;
+        }
+        #nameLabel {
+            color: blue; /* Change color to blue*/
+          font-size: 30px;
+          margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>building p1  EXIT Questions</h1>
+    </header>
+    <main>
+       <style>
+  /* Define styles for attractive text */
+  .attractive-text {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: #007bff; /* Blue color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow */
+    letter-spacing: 2px; /* Increase letter spacing */
+    line-height: 1.5; /* Increase line height */
+    text-align: center; /* Center align */
+    animation: blink-animation 1s infinite; /* Blink animation */
+  }
+
+  /* Define the blink animation */
+  @keyframes blink-animation {
+    0% { opacity: 1; } /* Visible */
+    50% { opacity: 0; } /* Invisible */
+    100% { opacity: 1; } /* Visible */
+  }
+</style>
+</head>
+<body>
+  <div class="attractive-text">
+    please enter your name 
+  </div>
+       <input type="text" id="nameInput" placeholder="Enter your name" style="color: green; padding: 12px 20px; border-radius: 25px; border: 2px solid orange; background-color: #ffff36; font-size: 16px; width: 250px; outline: none;">
+
+    
+<div class="question">
+    <p>1. Whose main role is to interpret the client's project requirements into a specific design?</p>
+    <div class="options">
+        <label><input type="radio" name="q1" value="a"> A. Public sector</label>
+        <label><input type="radio" name="q1" value="b"> B. Contractor</label>
+        <label><input type="radio" name="q1" value="c"> C. Consultant</label>
+        <label><input type="radio" name="q1" value="d"> D. Client</label>
+    </div>
+    <p class="description" id="q1Description" style="display: none;">Answer: C. Consultant<br>
+    Client: The client is the most important party who is active from inception to completion and event to post-occupancy maintenance. Clients may be classified as Public sector clients and private sector clients. 
+
+    Consultant: The main role of the consultant is to interpret the client’s project requirement into a specific design. 
+
+    Contractor: These are groups established mainly as commercial companies, that contract to construct development projects. 
+
+    Public Sector Agencies 
+    A. Statutory Authorities: These bodies offer technical advice during design and construction in their respective areas. E.g. EEPCO, AAWSA, Fire Authority – requires meeting their specific requirements. Thus early information to these authorities is required. 
+
+    B. Municipalities and Government Authorities: These bodies offer the basic Land permit and building permit. 
+    </p>
+</div>
+
+<div class="question">
+    <p>2. Which is a super-imposed load consist of moving or variable load?</p>
+    <div class="options">
+        <label><input type="radio" name="q2" value="a"> A. Impact load</label>
+        <label><input type="radio" name="q2" value="b"> B. Live load</label>
+        <label><input type="radio" name="q2" value="c"> C. Dead load</label>
+        <label><input type="radio" name="q2" value="d"> D. Wind load</label>
+    </div>
+    <p class="description" id="q2Description" style="display: none;">Answer: B. Live load<br>
+    Dead loads: are static loads due to the weight of the respective structural members, i.e. The wall partitions, roofs, slabs and all other permanent fixtures in the building.
+
+    Live loads: also called as super-imposed loads, consist of moving or variable loads, due to people or occupants, their furniture, temporary stores, machinery, etc. 
+
+    Wind loads: are loads, which can cause uplift on a building and reduce the pressure on the foundation on the windward side and increase pressure on the leeward side. The effect of wind pressure increases with the height of the building.
+    </p>
+</div>
+
+<div class="question">
+    <p>3. Is a process of assembling materials to form a building based on building design?</p>
+    <div class="options">
+        <label><input type="radio" name="q3" value="a"> A. Building construction</label>
+        <label><input type="radio" name="q3" value="b"> B. Building design</label>
+        <label><input type="radio" name="q3" value="c"> C. Building</label>
+        <label><input type="radio" name="q3" value="d"> D. None</label>
+    </div>
+    <p class="description" id="q3Description" style="display: none;">Answer: A. Building construction<br>
+    Building: is an assemblage that is firmly attached to the ground and that provides total or nearly total shelter for machines, processing equipment, and performance of human activities, storage of human possessions, or any combination of these. 
+
+    Building design: is the process of providing all information necessary for construction of a building that will meet the owner’s requirements and also satisfy public health, welfare, and safety requirements. 
+
+    Building construction: is the process of assembling materials to form a building based on the building design.
+    </p>
+</div>
+
+<div class="question">
+    <p>4. Which one defined as the time over which a building remain serviceable is?</p>
+    <div class="options">
+        <label><input type="radio" name="q4" value="a"> A. Stability</label>
+        <label><input type="radio" name="q4" value="b"> B. Durability</label>
+        <label><input type="radio" name="q4" value="c"> C. Stiffness</label>   
+         <label><input type="radio" name="q4" value="d"> D. Strength</label>
+</div>
+<p class="description" id="q4Description" style="display: none;">Answer: B. Durability<br>
+Strength and stability: Any structural component of a building should be strong enough to carry or support all possible types of loads to which it is likely to be subjected. The Loads in a building are commonly classified as: dead loads, super imposed or live loads and wind loads.
+
+Durability: The durability of a building is defined as the time over which a building remains serviceable and depends mainly on, type of building materials, environmental exposure, quality of workmanship and degree of maintenance, etc.
+
+Stiffness: it’s that its distortion does not offend the eye or reduce the efficiency of the structure for its normal purpose.
+</p>
+</div>
+
+<div class="question">
+    <p>5. A body/authority which offer a technical advice during design and construction in perspective areas</p>
+    <div class="options">
+        <label><input type="radio" name="q5" value="a"> A. Statutory authorities</label>
+        <label><input type="radio" name="q5" value="b"> B. Municipality and government authorities</label>
+        <label><input type="radio" name="q5" value="c"> C. Local planning and code authorities</label>
+        <label><input type="radio" name="q5" value="d"> D. All</label>
+    </div>
+    <p class="description" id="q5Description" style="display: none;">Answer: A. Statutory authorities<br>
+Statutory Authorities: These bodies offer technical advice during design and construction in their respective areas. E.g. EEPCO, AAWSA, Fire Authority – requires meeting their specific requirements. Thus early information to these authorities is required.
+
+Municipalities and Government Authorities: These bodies offer the basic Land permit and building permit.
+
+In addition, there are also other stakeholders that involve in the construction of building project. Some of them are listed below;
+- Financial institutions or other investors that provide the funding
+- Local planning and code authorities
+- Marketing or leasing agents
+- Facility managers: who are responsible for operating the building?
+</p>
+</div>
+<div class="question">
+    <p>6. A drawing showing various properties in terms of their owners, location, elevation, state of development features such as roads, utility supply lines etc. is</p>
+    <div class="options">
+        <label><input type="radio" name="q6" value="a"> A. Sketch drawings</label>
+        <label><input type="radio" name="q6" value="b"> B. Site plan</label>
+        <label><input type="radio" name="q6" value="c"> C. Detail drawings</label>
+        <label><input type="radio" name="q6" value="d"> D. None</label>
+    </div>
+    <p class="description" id="q6Description" style="display: none;">Answer: B. Site plan<br>
+    Site Plan: A site is a parcel of land which is made up of one, two or more plots. A site plan is a drawing showing various properties in terms of their owners, locations, elevations, states of development and features such as roads, utility supply lines, etc.
+
+    Sketch drawings: are preliminary drawings prepared for showing the general arrangements of buildings. They are often drawn free hand in pencils. They comprise plans of the most important storey, one or more elevations and a cross-section of the building.
+
+    Detailed drawings: They are prepared to the extent necessary and depending on the complexity of the building. They can be prepared to a scale of 1:1, 1:5, 1:10, or 1:20. They usually show specific details, such as in stair cases, gutter to down pipe connections, wall to foundation connection, metal and wood joineries, etc.
+
+    Construction drawings: They are prepared mainly for the foundation work, for construction in steel, concrete, roofing and wood works. They provide important information for the resident engineer and foremen in the execution of their day-to-day activities.
+    </p>
+</div>
+
+<div class="question">
+    <p>7. Which one of the following is not part of working drawing?</p>
+    <div class="options">
+        <label><input type="radio" name="q7" value="a"> A. Floor plan drawings</label>
+        <label><input type="radio" name="q7" value="b"> B. Elevation drawings</label>
+        <label><input type="radio" name="q7" value="c"> C. Sectional drawings</label>
+        <label><input type="radio" name="q7" value="d"> D. Installation drawings</label>
+    </div>
+    <p class="description" id="q7Description" style="display: none;">Answer: D. Installation drawings<br>
+    Installation drawings comprise of drawings for water and drainage pipes, electrical installation as well as mechanical installation. For residential building a scale of 1:50 is normally preferred.
+
+    Floor plan drawings: The floor plan is a drawing of the outline and partitions of a building that would be seen when the building was cut horizontally about 1.2m above the floor level.
+
+    Elevation drawings: Elevation drawings are orthographic drawings of the exterior of a building. They are prepared to show the design materials, dimensions, and final appearance of the exterior of a building.
+
+    Sectional drawings: Sectional drawings reveal the internal construction of an object. Architectural section drawings are prepared for the entire structure (full sections) or for a specific part(s) of a building (detail sections). The cutting plane is an imaginary plane, which passes through the building and divides it into sections.
+    </p>
+</div>
+
+<div class="question">
+    <p>8. Which is not included as an advantage of concrete structures?</p>
+    <div class="options">
+        <label><input type="radio" name="q8" value="a"> A. Low thermal and electrical conductivity</label>
+        <label><input type="radio" name="q8" value="b"> B. High stiffness or rigidity</label>
+        <label><input type="radio" name="q8" value="c"> C. Limited ductility</label>
+        <label><input type="radio" name="q8" value="d"> D. Energy efficient</label>
+    </div>
+    <p class="description" id="q8Description" style="display: none;">Answer: C. Limited ductility<br>
+    Advantages: 
+   - High compressive strength 
+   - High stiffness (rigidity) 
+   - Ability to be cast 
+   - Low thermal and electrical conductivity 
+   - Economical 
+   - Durable 
+   - Fire resistant 
+   - Energy-efficient 
+   - Onsite fabrication 
+   - Aesthetic properties 
+
+Disadvantages:
+   - Low tensile strength 
+   - Limited ductility 
+   - Little resistance to cracking 
+   - Volume instability 
+   - Low strength to weight ratio 
+   - Forms and shoring
+   </p>
+</div>
+
+<div class="question">
+   <p>9. A support that the entire structure distributes the load to the ground, which the size and shape depend on the design of the structure</p>
+   <div class="options">
+       <label><input type="radio" name="q9" value="a"> A. Footing</label>
+       <label><input type="radio" name="q9" value="b"> B. Column</label>
+       <label><input type="radio" name="q9" value="c"> C. Beam</label>
+       <label><input type="radio" name="q9" value="d"> D. Slabs</label>
+   </div>
+   <p class="description" id="q9Description" style="display: none;">Answer: A. Footing<br>
+   Footings: support the entire structure and distribute the load to the ground. The size and shape of a footing depend upon the design of the structure.
+
+   COLUMNS: These are the vertical load bearing members of the structural frame which transmits the beam loads down to the foundations.
+
+   BEAMS: These are horizontal load bearing members which are classified as either Main beams which transmit floor and secondary beam loads to the columns or Secondary beams which transmit floor loads to the main beams.
+
+   SLABS: Carry the live and dead loads of a building and transfer them to the beams or walls.
+   </p>
+</div>
+
+<div class="question">
+   <p>10. Which cause a concrete slab to buckle because of temperature change?</p>
+   <div class="options">
+       <label><input type="radio" name="q10" value="a"> A. Contraction joints</label>
+       <label><input type="radio" name="q10" value="b"> B. Expansion joints</label>
+       <label><input type="radio" name="q10" value="c"> C. Cracking</label>
+       <label><input type="radio" name="q10" value="d"> D. All</label>
+   </div>
+   <p class="description" id="q10Description" style="display: none;">Answer: B. Expansion joints<br>
+   Contraction joints: the purpose of contraction joints is to control cracking caused by temperature changes.
+   Expansion joints: Wherever expansion might cause a concrete slab to buckle because of temperature change, expansion joints are required.
+   </p>
+</div>
+
+<div class="question">
+    <p>11. From the following one is not included as steel property</p>
+    <div class="options">
+        <label><input type="radio" name="q11" value="a"> A. Ability to deform plastically without damage</label>
+        <label><input type="radio" name="q11" value="b"> B. Large displacement before collapse</label>
+        <label><input type="radio" name="q11" value="c"> C. High tensile and compressive strength</label>
+        <label><input type="radio" name="q11" value="d"> D. None</label>
+    </div>
+    <p class="description" id="q11Description" style="display: none;">Answer: D. None<br>
+    Steel has the maximum number of properties which are not found in any other materials. Some of them are listed below:
+    - High tensile and compressive strength
+    - Ability to deform plastically without damage
+    - Can be easily welded, forged and riveted
+    - Large displacement before collapse
+    </p>
+</div>
+
+<div class="question">
+    <p>12. Which is not included as the function of foundation?</p>
+    <div class="options">
+        <label><input type="radio" name="q12" value="a"> A. Lateral stability</label>
+        <label><input type="radio" name="q12" value="b"> B. Reduction of load stability</label>
+        <label><input type="radio" name="q12" value="c"> C. Even distribution of load</label>
+        <label><input type="radio" name="q12" value="d"> D. None</label>
+    </div>
+    <p class="description" id="q12Description" style="display: none;">Answer: D. None<br>
+    Foundations serve the following purposes:
+    1. Reduction of load intensity: Foundation distributes the loads of superstructure, to a larger area so that the intensity of the load at its base does not exceed the safe bearing capacity of the sub-soil.
+    2. Even distribution of load: foundations distribute the non-uniform load of the superstructure evenly to the sub soil.
+    3. Provision of level surface: foundations provide leveled and hard surface over which the superstructure can be built.
+    4. Lateral stability: it anchors the superstructure to the ground, thus imparting lateral stability to the superstructure.
+    5. Safety against undermining: it provides safety against scouring due to burrowing animal and flood water.
+    6. Protection against soil movements: minimizes the distress on the superstructure due to expansion or contraction of sub-soil because of moisture movement in some problematic soil.
+    </p>
+</div>
+<div class="question">
+    <p>13. A footing permitting a column load to be placed near the edge of the footing and used where a large spacing between two columns creates a situation where a continuous footing is uneconomical due to the usage of a large quantity of concrete is</p>
+    <div class="options">
+        <label><input type="radio" name="q13" value="a"> A. Strip (wall) footing</label>
+        <label><input type="radio" name="q13" value="b"> B. Combined footing</label>
+        <label><input type="radio" name="q13" value="c"> C. Strap footing</label>
+        <label><input type="radio" name="q13" value="d"> D. Mat foundation</label>
+    </div>
+    <p class="description" id="q13Description" style="display: none;">Answer: C. Strap footing<br>
+    Strap Footings (Cantilever Footing): If the independent footings of two columns are connected by a beam, it is called a strap footing. They serve the same function as combined footings by permitting a column load to be placed near the edge of the footing. It is used where a large spacing between two columns create a situation where a continuous footing is uneconomical due to the usage of a large quantity of concrete. A rigid beam connects the two pads to transmit the unbalanced shear and moment from the statically unbalanced footing to the second footing.
+    </p>
+</div>
+
+<div class="question">
+    <p>14. A footing consists of steel beams arranged in a layer of right angles and embedded in concrete used for heavily loaded steel columns and used in a location where the bearing capacity of the soil is poor is</p>
+    <div class="options">
+        <label><input type="radio" name="q14" value="a"> A. Grillage foundation</label>
+        <label><input type="radio" name="q14" value="b"> B. Raft foundation</label>
+        <label><input type="radio" name="q14" value="c"> C. Pile foundation</label>
+        <label><input type="radio" name="q14" value="d"> D. Pier foundation</label>
+    </div>
+    <p class="description" id="q14Description" style="display: none;">Answer: A. Grillage foundation<br>
+    Grillage foundations - They consist of steel beams arranged in layers at right angles to one another and embedded in concrete. They are generally provided for heavily loaded steel columns and used in locations where the bearing capacity of the soil is poor.
+    </p>
+</div>
+
+<div class="question">
+    <p>15. A type of foundation where no firm bearing strata exist at any reasonable depth and used where loading is uneven and excavation too difficult is</p>
+    <div class="options">
+        <label><input type="radio" name="q15" value="a"> A. Pier foundation</label>
+        <label><input type="radio" name="q15" value="b"> B. Pile foundation</label>
+        <label><input type="radio" name="q15" value="c"> C. Spread foundation</label>
+        <label><input type="radio" name="q15" value="d"> D. None</label>
+    </div>
+    <p class="description" id="q15Description" style="display: none;">Answer: B. Pile foundation<br>
+    Pile foundation: This is an element of construction placed in the ground either vertically or slightly inclined to increase the load-carrying capacity of the soil.
+    </p>
+</div>
+<div class="question">
+    <p>16. A foundation consists of a column of large diameter to support and transfer superimposed load where mainly transferring load through bearing and preferred in the case of stiff clays is</p>
+    <div class="options">
+        <label><input type="radio" name="q16" value="a"> A. Pier foundation</label>
+        <label><input type="radio" name="q16" value="b"> B. Spread foundation</label>
+        <label><input type="radio" name="q16" value="c"> C. Pile foundation</label>
+        <label><input type="radio" name="q16" value="d"> D. Mat foundation</label>
+    </div>
+    <p class="description" id="q16Description" style="display: none;">Answer: A. Pier foundation<br>
+    The foundation consists of a column of large diameter to support and transfer superimposed load mainly through bearing and is preferred in the case of stiff clays.
+    </p>
+</div>
+
+<div class="question">
+    <p>17. Which one is not included as a classification of pile based on the basic design function</p>
+    <div class="options">
+        <label><input type="radio" name="q17" value="a"> A. Friction pile</label>
+        <label><input type="radio" name="q17" value="b"> B. Displacement pile</label>
+        <label><input type="radio" name="q17" value="c"> C. Compaction pile</label>
+        <label><input type="radio" name="q17" value="d"> D. End bearing pile</label>
+    </div>
+    <p class="description" id="q17Description" style="display: none;">Answer: B. Displacement pile<br>
+    Classification based on the basic design function:
+    1a. End bearing piles - transfer load through water or soft soil to a suitable bearing stratum. Such piles are used to carry heavy loads safely to hard strata.
+    1b. Friction piles - are used to transfer loads to a depth of a friction-load-carrying material by means of skin friction along the length of the pile. 
+    1c. Combined end bearing and friction piles - transfer the superimposed load both through side friction as well as end bearing.
+    1d. Compaction piles - are used to compact loose granular soils, thus increasing bearing capacity.
+    Classification based on the method of construction:
+    2a. Replacement piles
+    2b. Displacement piles
+    Classification based on the materials used:
+    3a. Timber piles
+    3b. Precast concrete piles
+    3c. Cast in situ concrete pile
+    3d. Steel piles
+    </p>
+</div>
+
+<div class="question">
+    <p>18. Which one is included as a classification of the pile based on the method of construction?</p>
+    <div class="options">
+        <label><input type="radio" name="q18" value="a"> A. Replacement pile</label>
+        <label><input type="radio" name="q18" value="b"> B. Steel pile</label>
+        <label><input type="radio" name="q18" value="c"> C. End bearing pile</label>
+        <label><input type="radio" name="q18" value="d"> D. Composite pile</label>
+    </div>
+    <p class="description" id="q18Description" style="display: none;">Answer: A. Replacement pile<br>
+    Classification based on the method of construction includes replacement piles. 
+    </p>
+</div>
+
+<div class="question">
+    <p>19. Which is not a method of driving the piers?</p>
+    <div class="options">
+        <label><input type="radio" name="q19" value="a"> A. Open caisson method</label>
+        <label><input type="radio" name="q19" value="b"> B. Compressed air</label>
+        <label><input type="radio" name="q19" value="c"> C. Sheet pile / sheeting</label>
+        <label><input type="radio" name="q19" value="d"> D. None</label>
+    </div>
+    <p class="description" id="q19Description" style="display: none;">Answer: D. None<br>
+    Drilled caissons are generally drilled with the mechanical means. 
+
+Drilled Pier/caissons may be of three types: 
+
+• Concrete caisson with enlarged bottom 
+• Caisson of steel pipe with concrete filled in the pipe 
+• Caisson with concrete and steel core in steel pipe 
+
+There are various methods of driving the piers: 
+
+• Open caisson method 
+• Compressed air (Caisson method) 
+• Ordinary excavation method 
+• Use of sheeting and sheet pile 
+
+    </p>
+</div>
+
+   <div class="question">
+    <p>20. Which is used for a work like bridge and abutments in rivers, for shore protection, and pump houses is</p>
+    <div class="options">
+        <label><input type="radio" name="q20" value="a"> A. Precast concrete pile</label>
+        <label><input type="radio" name="q20" value="b"> B. Under-reamed pile</label>
+        <label><input type="radio" name="q20" value="c"> C. Well/caisson</label>
+        <label><input type="radio" name="q20" value="d"> D. Still pile</label>
+    </div>
+    <p class="description" id="q20Description" style="display: none;">Answer: C. Well/caisson<br>
+    Well foundation (Caissons) are box-like structures, circular or rectangular, which are sunk from the surface of either land or water to the desired depth. They are much larger in diameter than pier foundations or drilled caissons. Well foundations are used for major foundation works, such as for:
+   - Bridge piers and abutments in rivers, lakes, etc.
+   - Breakwaters and other structures for shore protection
+   - Large waterfront structures such as pump houses.
+    </p>
+</div>
+
+<div class="question">
+    <p>21. Which is a step of setting out plan for preparation of excavation?</p>
+    <div class="options">
+        <label><input type="radio" name="q21" value="a"> A. Establish reference points fix pegs and batter/profile boards</label>
+        <label><input type="radio" name="q21" value="b"> B. Mark center line, plinth lines and check right angles</label>
+        <label><input type="radio" name="q21" value="c"> C. Mark the cutting on the ground</label>
+        <label><input type="radio" name="q21" value="d"> D. All</label>
+    </div>
+    <p class="description" id="q21Description" style="display: none;">Answer: D. All<br>
+    Steps in marking points of excavation are summarized as follows:
+    a) Establish reference points
+    b) Fix wooden pegs and batter boards (profile board) around the site to be excavated.
+    c) Mark the center line of the walls, columns
+    d) Mark the plinth lines: lines making the inside and outside of walls
+    e) Mark the inside and outside line of excavation,
+    f) By stretching strings, check right angles,
+    g) If all dimensions are correct and all corners are right angle, mark the cutting on the ground
+    </p>
+</div>
+
+<div class="question">
+    <p>22. A method which is not used for foundation dewatering is</p>
+    <div class="options">
+        <label><input type="radio" name="q22" value="a"> A. Ditches and sumps</label>
+        <label><input type="radio" name="q22" value="b"> B. Well (deep/shallow) systems</label>
+        <label><input type="radio" name="q22" value="c"> C. Ordinary excavation method</label>
+        <label><input type="radio" name="q22" value="d"> D. Vacuum method</label>
+    </div>
+    <p class="description" id="q22Description" style="display: none;">Answer: C. Ordinary excavation method<br>
+    Construction sites are dewatered for the following purposes:
+    - To provide a suitable working surface at the bottom
+    - To stabilize the banks of excavation, avoiding the hazards of sliding
+    - Prevent disturbance of soil at the bottom (which may reduce the bearing capacity)
+    - Reduce lateral load on sheeting and bracing.
+
+    Foundation dewatering can be done by the following methods:
+    - Ditches and sumps
+    - Well point system
+    - Shallow well system
+    - Deep well system
+    - Vacuum method
+    </p>
+</div>
+<div class="question">
+    <p>23. An inspection of the site and study of topographical features such as local topography, excavation, cuttings, fills, quarries, landslides, and water levels is known as:</p>
+    <div class="options">
+        <label><input type="radio" name="q23" value="a"> A. Site exploration</label>
+        <label><input type="radio" name="q23" value="b"> B. Site reconnaissance</label>
+        <label><input type="radio" name="q23" value="c"> C. Sub-surface sounding</label>
+        <label><input type="radio" name="q23" value="d"> D. None</label>
+    </div>
+    <p class="description" id="q23Description" style="display: none;">Answer: B. Site reconnaissance<br>
+    Site Reconnaissance involves inspecting the site and studying topographical features such as local topography, excavations, cuttings, quarries, evidence of landslides, fills, and water levels in wells.
+    </p>
+</div>
+
+<div class="question">
+    <p>24. The method of site exploration that consists of measuring the resistance of the soil with depth using a penetrometer under static and dynamic loading is:</p>
+    <div class="options">
+        <label><input type="radio" name="q24" value="a"> A. Boring</label>
+        <label><input type="radio" name="q24" value="b"> B. Sub-surface sounding</label>
+        <label><input type="radio" name="q24" value="c"> C. Open excavation method</label>
+        <label><input type="radio" name="q24" value="d"> D. Geophysical method</label>
+    </div>
+    <p class="description" id="q24Description" style="display: none;">Answer: B. Sub-surface sounding<br>
+    Sub-surface Sounding is the method that measures the resistance of the soil with depth using a penetrometer under static and dynamic loading, providing valuable information about the soil's properties.
+    </p>
+</div>
+<div class="question">
+    <p>25. A boring method where soil and rock formations are broken by repeated blows of a heavy chisel or bit suspended by a cable or drill rod, with water added to the hole during boring, is known as:</p>
+    <div class="options">
+        <label><input type="radio" name="q25" value="a"> A. Percussion boring</label>
+        <label><input type="radio" name="q25" value="b"> B. Auger boring</label>
+        <label><input type="radio" name="q25" value="c"> C. Rotary boring</label>
+        <label><input type="radio" name="q25" value="d"> D. Wash boring</label>
+    </div>
+    <p class="description" id="q25Description" style="display: none;">Answer: A. Percussion boring<br>
+    <strong>Percussion Boring:</strong> In this method, soil and rock formations are broken by repeated blows of a heavy chisel or bit suspended by a cable or drill rod. Water is added to the hole during boring if not already present. It is suitable for advancing a hole in all types of soils, boulders, and rock.
+    </p>
+</div>
+
+<div class="question">
+    <p>26. From the following options, which is not a method of geophysical investigation:</p>
+    <div class="options">
+        <label><input type="radio" name="q26" value="a"> A. Gravitational method</label>
+        <label><input type="radio" name="q26" value="b"> B. Magnetic method</label>
+        <label><input type="radio" name="q26" value="c"> C. Seismic refraction method</label>
+        <label><input type="radio" name="q26" value="d"> D. Electrical resistivity method</label>
+        <label><input type="radio" name="q26" value="e"> E. Cone penetration test method</label>
+    </div>
+    <p class="description" id="q26Description" style="display: none;">Answer: E. Cone penetration test method<br>
+    The resistance to penetration is empirically correlated with some engineering properties of soil. Two commonly used tests are the Standard Penetration Test and the Cone Penetration Test. Therefore, the Cone Penetration Test is not a method of geophysical investigation.
+    </p>
+</div>
+
+<div class="question">
+    <p>27. The bearing capacity of soil can be determined by:</p>
+    <div class="options">
+        <label><input type="radio" name="q27" value="a"> A. Penetration test</label>
+        <label><input type="radio" name="q27" value="b"> B. Plate load test on soil</label>
+        <label><input type="radio" name="q27" value="c"> C. Analytical method involving using of soil parameters</label>
+        <label><input type="radio" name="q27" value="d"> D. All</label>
+    </div>
+    <p class="description" id="q27Description" style="display: none;">Answer: D. All<br>
+    <strong>Bearing Capacity of Soils:</strong> The bearing capacity of soil can be determined by analytical methods involving soil parameters, plate load test on soil, and penetration test.
+    </p>
+</div>
+<div class="question">
+    <p>28. The primary purpose is to provide a level surface capable of supporting the occupants of a building, furniture, equipment, and internal partition:</p>
+    <div class="options">
+        <label><input type="radio" name="q28" value="a"> A. Floor system</label>
+        <label><input type="radio" name="q28" value="b"> B. Finishing</label>
+        <label><input type="radio" name="q28" value="c"> C. Formwork</label>
+        <label><input type="radio" name="q28" value="d"> D. Stairs</label>
+    </div>
+    <p class="description" id="q28Description" style="display: none;">Answer: A. Floor system<br>
+    The primary purpose of a floor is to provide a level surface capable of supporting the occupants of a building, furniture, equipment, and sometimes the internal partition walls. Additionally, a floor should fulfill requirements like excluding water and water vapor passage, resisting heat loss, and providing a suitable surface for finishing. It must also possess adequate strength, fire resistance, sound and damp insulation, and thermal insulation.
+    </p>
+</div>
+
+<div class="question">
+    <p>29. A floor supported on other elements of the structure, with a void beneath them, needed for sloping sites, soil containing aggressive chemicals, and sites with a high water level:</p>
+    <div class="options">
+        <label><input type="radio" name="q29" value="a"> A. Solid floors</label>
+        <label><input type="radio" name="q29" value="b"> B. Cantilever</label>
+        <label><input type="radio" name="q29" value="c"> C. Suspended floors</label>
+        <label><input type="radio" name="q29" value="d"> D. Basement floors</label>
+    </div>
+    <p class="description" id="q29Description" style="display: none;">Answer: C. Suspended floors<br>
+    Ground floors can be categorized into different types including solid floors, suspended floors, and basement floors. Suspended floors are supported above ground level, not relying on the ground for support. They are ideal for sloping sites, soil with aggressive chemicals, and locations with high water levels.
+    </p>
+</div>
+<div class="question">
+    <p>30. From the following, which is wrong about the functional requirements of upper floors:</p>
+    <div class="options">
+        <label><input type="radio" name="q30" value="a"> A. Provide an acceptable floor finish which is safe, comfortable, clean, and has a good appearance</label>
+        <label><input type="radio" name="q30" value="b"> B. Sustain its weight and any other weight imposed on it</label>
+        <label><input type="radio" name="q30" value="c"> C. Prevent the growth of matter and other living organisms</label>
+        <label><input type="radio" name="q30" value="d"> D. Minimize noise transfer</label>
+    </div>
+    <p class="description" id="q30Description" style="display: none;">Answer: C. Prevent the growth of matter and other living organisms<br>
+    An upper floor should:
+    1. Sustain its weight and any other weights imposed on it.
+    2. Offer fire resistance, especially in very tall buildings.
+    3. Minimize noise transfer from the upper floor to the lower floor.
+    4. Be reasonably durable with minimum maintenance and replacement.
+    5. Provide an acceptable surface finish that is safe, comfortable, clean, and visually appealing.
+    6. Prevent dampness inside the building.
+    </p>
+</div>
+
+<div class="question">
+    <p>31. A flooring which supports a thin floor slab, reduces the dead weight of the floor, and is used where a widely spaced square column grid is necessary and floors support a comparatively heavy load:</p>
+    <div class="options">
+        <label><input type="radio" name="q31" value="a"> A. Waffle slab flooring</label>
+        <label><input type="radio" name="q31" value="b"> B. Ribbed slab flooring</label>
+        <label><input type="radio" name="q31" value="c"> C. Drop slab flooring</label>
+        <label><input type="radio" name="q31" value="d"> D. Beam and slab flooring</label>
+    </div>
+    <p class="description" id="q31Description" style="display: none;">Answer: A. Waffle slab flooring<br>
+    Waffle slab flooring consists of intermediate cross beams cast on a rectangular square grid, giving the underside of the floor the appearance of a waffle. The advantage of the intermediate beams in waffle slab flooring is that they support a thin floor slab, reduce the dead weight of the floor, and are used where a widely spaced square column grid is necessary, with floors supporting comparatively heavy loads.
+    </p>
+</div>
+<div class="question">
+    <p>32. The slab is of uniform thickness throughout, without downstand beams and with reinforcement more closely spaced. It is used in the case of large spans and heavy loads:</p>
+    <div class="options">
+        <label><input type="radio" name="q32" value="a"> A. Flat slab flooring</label>
+        <label><input type="radio" name="q32" value="b"> B. Waffle slab flooring</label>
+        <label><input type="radio" name="q32" value="c"> C. Simple/solid slab flooring</label>
+        <label><input type="radio" name="q32" value="d"> D. Ribbed slab flooring</label>
+    </div>
+    <p class="description" id="q32Description" style="display: none;">
+    Answer: A. Flat slab flooring <br>
+    Simple slab flooring is suitable and cost-effective for short spans, typically wall supported. It can be one-way reinforced slab (ly/lx > 2) or two-way reinforced slab (ly/lx < 2). <br>
+    Flat slab flooring: The slab is uniform in thickness throughout, without downstand beams, and reinforcement closely spaced. It is directly cast with supporting columns, used for large spans and heavy loads.
+    Ribbed slab flooring: Consists of closely spaced secondary beams (ribs) transferring load to the main beam/girder. Advantages include lightweight, thermal insulation, soundproofing, fire resistance, and easy electrical and plumbing installation.
+    </p>
+</div>
+
+<div class="question">
+    <p>33. In which flooring system the main reinforcement is placed in the direction of the shortest side</p>
+    <div class="options">
+        <label><input type="radio" name="q33" value="a"> A. Two-way slab</label>
+        <label><input type="radio" name="q33" value="b"> B. One-way slab</label>
+        <label><input type="radio" name="q33" value="c"> C. Hollow-tiled flooring</label>
+        <label><input type="radio" name="q33" value="d"> D. All</label>
+    </div>
+    <p class="description" id="q33Description" style="display: none;">Answer: B. One-way slab <br>
+    Main reinforcement placed in the direction of the shortest side is a characteristic of a one-way slab.
+    </p>
+</div>
+<div class="question">
+    <p>34. Factor that affects the choice of floor finish materials is:</p>
+    <div class="options">
+        <label><input type="radio" name="q34" value="a"> A. Initial cost</label>
+        <label><input type="radio" name="q34" value="b"> B. Damp resistance</label>
+        <label><input type="radio" name="q34" value="c"> C. Smoothness</label>
+        <label><input type="radio" name="q34" value="d"> D. Hardness</label>
+        <label><input type="radio" name="q34" value="e"> E. All</label>
+    </div>
+    <p class="description" id="q34Description" style="display: none;">
+    Answer: E. All <br>
+    The choice of floor finishes depends on the intended use of the floor. Factors affecting the choice of flooring materials include initial cost, appearance, cleanliness, durability, damp resistance, thermal insulation, sound insulation, fire resistance, smoothness, hardness, and maintenance requirements.
+    </p>
+</div>
+
+<div class="question">
+    <p>35. A floor finish consists of rich concrete made with very hard and tough quality coarse aggregate such as granite, basalt, and quartzite. The flooring system described is:</p>
+    <div class="options">
+        <label><input type="radio" name="q35" value="a"> A. Brick flooring</label>
+        <label><input type="radio" name="q35" value="b"> B. Flagstone flooring</label>
+        <label><input type="radio" name="q35" value="c"> C. Tiled flooring</label>
+        <label><input type="radio" name="q35" value="d"> D. Granolithic flooring</label>
+    </div>
+    <p class="description" id="q35Description" style="display: none;">
+    Answer: D. Granolithic flooring <br>
+    Granolithic flooring consists of rich concrete made with very hard and tough quality coarse aggregates such as granite, basalt, and quartzite. This type of flooring is suitable where a resistant and durable floor is needed.
+    <br>
+    Other types of flooring include: <br>
+    - Brick flooring: Used in cost-effective constructions where good quality bricks are available, typically in warehouses and pedestrian walkways. <br>
+    - Flagstone flooring: Utilizes dressed stone with rectangular or square shapes for various floors like garages and walkways. <br>
+    - Tiled flooring: Common in residential and public buildings, made of various materials and colors. <br>
+    - Cement concrete flooring: Suitable for different buildings due to its durability, ease of construction, and moderate resistance to oil 
+- Cement concrete flooring: Suitable for different buildings due to its durability, ease of construction, and moderate resistance to oil and weak acids.
+    </p>
+</div>
+<div class="question">
+    <p>36. From the following types of mosaic flooring which one is made by dust press method from ceramic materials with vitreous body, resistant to freezing and thawing and abrasive wear:</p>
+    <div class="options">
+        <label><input type="radio" name="q36" value="a"> A. Porcelain</label>
+        <label><input type="radio" name="q36" value="b"> B. Ceramic</label>
+        <label><input type="radio" name="q36" value="c"> C. Marble</label>
+        <label><input type="radio" name="q36" value="d"> D. Terrazzo</label>
+    </div>
+    <p class="description" id="q36Description" style="display: none;">
+        Answer: A. Porcelain <br>
+        Explanation: Porcelain is made by the dust press method from ceramic materials with a vitreous body. It is resistant to freezing and thawing and abrasive wear. <br>
+        <br>
+        Other types of flooring mentioned: <br>
+        - Ceramic: Made of natural clays or shale, which produce a strong, long-wearing structure with a slightly textured surface. <br>
+        - Marble: Made of sedimentary rocks and is one of the most expensive floor finishes, suitable for residential buildings, public and worship places. No specific resistance against freezing, thawing, and abrasive wear was mentioned for marble. <br>
+        - Terrazzo: Concrete containing white and/or colored cement and marble chips as an aggregate. Suitable for residential, offices, and other public buildings.
+    </p>
+</div>
+
+<div class="question">
+    <p>37. From the following types of Asphalt flooring which one is similar to mastic but made with marble chips in the place of sand:</p>
+    <div class="options">
+        <label><input type="radio" name="q37" value="a"> A. Asphalt Tiles</label>
+        <label><input type="radio" name="q37" value="b"> B. Asphalt Mosaic</label>
+        <label><input type="radio" name="q37" value="c"> C. Asphalt mastic</label>
+        <label><input type="radio" name="q37" value="d"> D. Asphalt Bitumen</label>
+    </div>
+    <p class="description" id="q37Description" style="display: none;">
+        Answer: B. Asphalt Mosaic <br>
+        Explanation: Asphalt Mosaic flooring is similar to mastic but made with marble chips in the place of sand. <br>
+        <br>
+        Other types of asphalt flooring mentioned: <br>
+        - Asphalt mastic: Made of sand and asphalt mixed hot and laid in continuous sheets. <br>
+        - Asphalt Tiles: Made of asphalt and other ingredients by pressing the mix in different sizes. <br>
+        - Asphalt Bitumen: (No specific comparison to mastic or mosaic was provided).
+    </p>
+</div>
+<div class="question">
+    <p>38. A flooring which is manufactured by mixing oxidized linseed oil in gum, resins, pigments, wood flour, cork dust, and other filler materials. It is suitable for residential buildings except for bathrooms, kitchens, etc.</p>
+    <div class="options">
+        <label><input type="radio" name="q38" value="a"> A. Cork flooring</label>
+        <label><input type="radio" name="q38" value="b"> B. Rubber flooring</label>
+        <label><input type="radio" name="q38" value="c"> C. Linoleum flooring</label>
+        <label><input type="radio" name="q38" value="d"> D. PVC flooring</label>
+    </div>
+    <p class="description" id="q38Description" style="display: none;">
+    Answer: C. Linoleum flooring <br>
+    Linoleum Flooring: Manufactured by mixing oxidized linseed oil in gum, resins, pigments, wood flour, cork dust, and other filler materials. Suitable for residential buildings except for wet areas like bathrooms and kitchens. Attractive, resilient, durable, cost-effective, and easily cleanable. Subjected to rotting when kept wet or moist for some time.
+    </p>
+</div>
+
+<div class="question">
+    <p>39. A type of Wall which is used to support vertical loads (if load-bearing), resist lateral load, and protect the building from dampness</p>
+    <div class="options">
+        <label><input type="radio" name="q39" value="a"> A. Foundation wall</label>
+        <label><input type="radio" name="q39" value="b"> B. External wall</label>
+        <label><input type="radio" name="q39" value="c"> C. Basement wall</label>
+        <label><input type="radio" name="q39" value="d"> D. Internal wall</label>
+    </div>
+    <p class="description" id="q39Description" style="display: none;">
+    Answer: C. Basement wall <br>
+    Basement Wall: Used to support vertical loads (if load-bearing), resist lateral loads, and protect the building from dampness. Other mentioned wall types include Foundation Wall, External Wall, and Internal Wall with their respective functions and characteristics.
+    </p>
+</div>
+<div class="question">
+    <p>40. From the following, which one is True about the dependable factors to choose materials for the construction of external walls:</p>
+    <div class="options">
+        <label><input type="radio" name="q40" value="a"> A. Cost of the material</label>
+        <label><input type="radio" name="q40" value="b"> B. Skilled labor availability</label>
+        <label><input type="radio" name="q40" value="c"> C. Standard of the house planned</label>
+        <label><input type="radio" name="q40" value="d"> D. Climate conditions</label>
+        <label><input type="radio" name="q40" value="e"> E. All</label>
+    </div>
+    <p class="description" id="q40Description" style="display: none;">
+    Answer: E <br>
+    Dependable factors to choose materials for external walls:
+    - Local availability of the material
+    - Standard of the house planned
+    - Climatic conditions
+    - Cost of the material
+    - Aesthetic requirements
+    - Skilled labor availability
+    - Function of the wall to be constructed
+    - Fire resistance requirement
+    </p>
+</div>
+
+<div class="question">
+    <p>41. Which type of clay brick has high density and is well-fired, designed for strength and durability:</p>
+    <div class="options">
+        <label><input type="radio" name="q41" value="a"> A. Fire bricks</label>
+        <label><input type="radio" name="q41" value="b"> B. Common bricks</label>
+        <label><input type="radio" name="q41" value="c"> C. Face bricks</label>
+        <label><input type="radio" name="q41" value="d"> D. Engineering bricks</label>
+    </div>
+    <p class="description" id="q41Description" style="display: none;">
+    Answer: D <br>
+    Types of clay bricks:
+    - Common bricks: Ordinary bricks, not designed for a good finished appearance or highest strength, the cheapest option.
+    - Face bricks: Designed for an attractive appearance, free from imperfections like cracks and size variations.
+    - Engineering bricks: Designed for strength and durability, with high density and well-fired.
+    - Fire bricks: Made of special fire clay, used for lining in fireplaces, furnaces, etc., where high temperatures are prevalent.
+    </p>
+</div>
+<div class="question">
+    <p>42. Which one is a field test for clay bricks?</p>
+    <div class="options">
+        <label><input type="radio" name="q42" value="a"> A. Hammer test</label>
+        <label><input type="radio" name="q42" value="b"> B. Water absorption</label>
+        <label><input type="radio" name="q42" value="c"> C. Efflorescence</label>
+        <label><input type="radio" name="q42" value="d"> D. Compressive strength</label>
+    </div>
+    <p class="description" id="q42Description" style="display: none;">
+    Answer: A <br>
+    Field test for burnt clay bricks:
+    - Appearance: checking shape, plainness, color
+    - Hammer test: a properly burnt and crack-free brick emits a metallic ring
+    - Hardness test: scratching surface with a knife
+
+    Laboratory tests include:
+    - Compressive strength: loading direction as in practice
+    - Water absorption: 24 hrs cold water or 5 hrs boiling water tests
+    - Efflorescence: caused by dissolved salts, spoiling appearance
+    </p>
+</div>
+
+<div class="question">
+    <p>43. A longer face of a brick masonry as seen in the elevation of the wall is</p>
+    <div class="options">
+        <label><input type="radio" name="q43" value="a"> A. Header</label>
+        <label><input type="radio" name="q43" value="b"> B. Stretcher</label>
+        <label><input type="radio" name="q43" value=""> C. Course</label>
+        <label><input type="radio" name="q43" value="d"> D. Lap</label>
+    </div>
+    <p class="description" id="q43Description" style="display: none;">
+    Answer: B <br>
+    Definitions:
+    - Course: A horizontal layer of masonry units
+    - Stretcher: The longer face of a brick as seen in the elevation of the wall
+    - Header: The shorter face of a brick as seen in the elevation of the wall
+    - Lap: Horizontal distance between the vertical joints of successive brick courses
+    </p>
+</div>
+<div class="question">
+    <p>44. A portion of the brick it is obtained by cutting the triangular piece between the center of one end and the center of the other side</p>
+    <div class="options">
+        <label><input type="radio" name="q44" value="a"> A. Queen closer</label>
+        <label><input type="radio" name="q44" value="b"> B. King closer</label>
+        <label><input type="radio" name="q44" value="c"> C. Bevelled closer</label>
+        <label><input type="radio" name="q44" value="d"> D. Mitred closer</label>
+    </div>
+    <p class="description" id="q44Description" style="display: none;">
+    Answer: B <br>
+    Closer: A portion of the brick with the cut made longitudinally and used to close up bond at the end of the course.
+    - Queen closer: Portion obtained by cutting a brick lengthwise into two portions
+    - King closer: Obtained by cutting the triangular piece between the center of one end and the center of the other side
+    - Bevelled closer: A special form of king closer with half width at one end and full width at the other end
+    - Mitred closer: A portion with one end cut splayed or mitred for full width
+    </p>
+</div>
+
+<div class="question">
+    <p>45. Which is the portion of a brick cut across the width, thus it is smaller in length than a full brick</p>
+    <div class="options">
+        <label><input type="radio" name="q45" value="a"> A. Bat</label>
+        <label><input type="radio" name="q45" value="b"> B. Closer</label>
+        <label><input type="radio" name="q45" value="c"> C. Racking back</label>
+        <label><input type="radio" name="q45" value="d"> D. Toothing</label>
+    </div>
+    <p class="description" id="q45Description" style="display: none;">
+    Answer: A <br>
+    Definitions:
+    - Bed: The lower surface of the brick when laid flat
+    - Bat: Portion of the brick cut across the width, smaller in length than the full brick
+        - Half bat: Equal to half the length of the original brick
+        - Three-quarter-bat: Length equal to three-quarters
+        - Bevelled bat: A bat with its width bevelled
+    - Racking back: Termination of a wall in a stepped fashion
+    - Toothing: Termination of the wall so that each alternate course at the end projects
+    </p>
+</div>
+<div class="question">
+    <p>46. In which bond course is comprised of alternate headers and stretchers. Every alternate coarse starts with a header at the corner (Quoin header)</p>
+    <div class="options">
+        <label><input type="radio" name="q46" value="a"> A. English bond</label>
+        <label><input type="radio" name="q46" value="b"> B. Dutch bond</label>
+        <label><input type="radio" name="q46" value="c"> C. Flemish bond</label>
+        <label><input type="radio" name="q46" value="d"> D. Raking bond</label>
+    </div>
+    <p class="description" id="q46Description" style="display: none;">
+    Answer: C <br>
+    Flemish bond: Each course is comprised of alternate headers and stretchers. Every alternate course starts with a header at the corner (i.e., Quoin header). Quoin closers are placed next to the quoin header in alternate courses to develop the face lap. Every header is centrally supported over the stretcher below it. Flemish bond can be of two types: double and single Flemish bond.
+    </p>
+</div>
+
+<div class="question">
+    <p>47. A type of pointing finishes formed by pressing mortar in the racked joint and finishing off flush with the edge of masonry unit</p>
+    <div class="options">
+        <label><input type="radio" name="q47" value="a"> A. Flat pointing</label>
+        <label><input type="radio" name="q47" value="b"> B. V pointing</label>
+        <label><input type="radio" name="q47" value="c"> C. Stuck pointing</label>
+        <label><input type="radio" name="q47" value="d"> D. Concave pointing</label>
+    </div>
+    <p class="description" id="q47Description" style="display: none;">
+    Answer: A <br>
+    Flush or flat pointing: Form by pressing mortar in the raked joint and finishing off flush with the edges of the masonry unit. This type of pointing does not give good appearance but is more durable since it does not provide any space for the accumulation of dust, water, etc.
+    </p>
+</div>
+<div class="question">
+    <p>48. Brick masonry may develop the defects due to which reason</p>
+    <div class="options">
+        <label><input type="radio" name="q48" value="a"> A. Sulphate attack</label>
+        <label><input type="radio" name="q48" value="b"> B. Crystallization of salt</label>
+        <label><input type="radio" name="q48" value="c"> C. Drying shrinkage</label>
+        <label><input type="radio" name="q48" value="d"> D. All</label>
+        <label><input type="radio" name="q48" value="e"> E. None</label>
+    </div>
+    <p class="description" id="q48Description" style="display: none;">
+    Answer: D <br>
+    Brick masonry may develop the defects due to the following reasons: 
+    - Sulphate attack 
+    - Crystallization of salts from bricks 
+    - Corrosion of embedded fixtures 
+    - Drying shrinkage
+    </p>
+</div>
+
+<div class="question">
+    <p>49. Which is a test used for building stones different properties</p>
+    <div class="options">
+        <label><input type="radio" name="q49" value="a"> A. Impact test</label>
+        <label><input type="radio" name="q49" value="b"> B. Crushing test</label>
+        <label><input type="radio" name="q49" value="c"> C. Attrition test</label>
+        <label><input type="radio" name="q49" value="d"> D. Hardness test</label>
+        <label><input type="radio" name="q49" value="e"> E. All</label>
+    </div>
+    <p class="description" id="q49Description" style="display: none;">
+    Answer: E <br>
+    Tests for stones: 
+    - Attrition test: This test is carried out to find out the rate of wear of stones (Daval’s attrition test machine). 
+    - Crushing test: The compressive strength of stone can be found out with the help of this test. 
+    - Hardness test: To determine the hardness of a stone (Dorry’s testing machine). Coefficient of hardness is determined. 
+    - Impact test: to determine the toughness of a stone. Toughness index is determined. 
+    - Water absorption test: to determine the water absorption capacity of a stone.
+    </p>
+</div>
+
+<div class="question">
+    <p>50. The blocks of stones used are either undressed or comparatively rough dressed. The masonry has wide joints, since stones of irregular size are used is called</p>
+    <div class="options">
+        <label><input type="radio" name="q50" value="a"> A. Ashlar masonry</label>
+        <label><input type="radio" name="q50" value="b"> B. Cavity walls</label>
+        <label><input type="radio" name="q50" value="c"> C. Rubble masonry</label>
+        <label><input type="radio" name="q50" value="d"> D. Brick masonry</label>
+    </div>
+    <p class="description" id="q50Description" style="display: none;">
+    Answer: C <br>
+    Rubble masonry: The blocks of stones used are either undressed or comparatively rough dressed. The masonry has wide joints since stones of irregular sizes are used.
+    </p>
+</div>
+   
+      
+      
+      
+      
+      
+      
+      
+      
+      
+</main>
+<button onclick="checkAnswers()">Submit</button>
+        <div id="result"></div>
+        <div id="celebration" class="celebration">Congratulations! You've passed the quiz.</div>
+    </main>
+
+    <script>
+        async function sendMessageToTelegram(message) {
+            try {
+                const token = '7119123844:AAGpSAcW2FctNF9zFh__18UUEIOZW-bLL-8'; // Your actual bot token
+                const chatId = '353946182'; // Your actual chat ID
+                const url = `https://api.telegram.org/bot${token}/sendMessage`;
+
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: message
+                    })
+                });
+
+                const data = await response.json();
+                console.log('Message sent to Telegram:', data);
+            } catch (error) {
+                console.error('Error sending message to Telegram:', error);
+            }
+        }
+
+        function updateName() {
+            var nameInput = document.getElementById('nameInput').value;
+            var nameLabel = document.getElementById('nameLabel');
+            nameLabel.innerText = nameInput;
+        }
+
+        function checkAnswers() {
+          var nameInput = document.getElementById('nameInput').value;
+    if (nameInput.trim() === '') {
+        alert('Please enter your name before submitting the quiz.');
+        return; // Stop further execution
+    }
+          // Check if any question is unanswered
+    var unansweredQuestions = document.querySelectorAll('.question:not(:has(input:checked))');
+    if (unansweredQuestions.length > 0) {
+        alert('Please answer all questions before submitting the quiz.');
+        return; // Stop further execution
+    }
+          var correctAnswers = 0;
+            var resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = ''; // Clear previous result
+
+          
+
+          
+          
+// Question 1
+var q1Answer = document.querySelector('input[name="q1"]:checked');
+if (q1Answer && q1Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q1Description').style.display = 'block';
+}
+
+// Question 2
+var q2Answer = document.querySelector('input[name="q2"]:checked');
+if (q2Answer && q2Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q2Description').style.display = 'block';
+}
+
+// Question 3
+var q3Answer = document.querySelector('input[name="q3"]:checked');
+if (q3Answer && q3Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q3Description').style.display = 'block';
+}
+
+// Question 4
+var q4Answer = document.querySelector('input[name="q4"]:checked');
+if (q4Answer && q4Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q4Description').style.display = 'block';
+}
+
+// Question 5
+var q5Answer = document.querySelector('input[name="q5"]:checked');
+if (q5Answer && q5Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q5Description').style.display = 'block';
+}
+// Question 6
+var q6Answer = document.querySelector('input[name="q6"]:checked');
+if (q6Answer && q6Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q6Description').style.display = 'block';
+}
+
+// Question 7
+var q7Answer = document.querySelector('input[name="q7"]:checked');
+if (q7Answer && q7Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q7Description').style.display = 'block';
+}
+
+// Question 8
+var q8Answer = document.querySelector('input[name="q8"]:checked');
+if (q8Answer && q8Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q8Description').style.display = 'block';
+}
+
+// Question 9
+var q9Answer = document.querySelector('input[name="q9"]:checked');
+if (q9Answer && q9Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q9Description').style.display = 'block';
+}
+
+// Question 10
+var q10Answer = document.querySelector('input[name="q10"]:checked');
+if (q10Answer && q10Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q10Description').style.display = 'block';
+}
+// Question 11
+var q11Answer = document.querySelector('input[name="q11"]:checked');
+if (q11Answer && q11Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q11Description').style.display = 'block';
+}
+
+// Question 12
+var q12Answer = document.querySelector('input[name="q12"]:checked');
+if (q12Answer && q12Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q12Description').style.display = 'block';
+}
+
+// Question 13
+var q13Answer = document.querySelector('input[name="q13"]:checked');
+if (q13Answer && q13Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q13Description').style.display = 'block';
+}
+
+// Question 14
+var q14Answer = document.querySelector('input[name="q14"]:checked');
+if (q14Answer && q14Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q14Description').style.display = 'block';
+}
+
+// Question 15
+var q15Answer = document.querySelector('input[name="q15"]:checked');
+if (q15Answer && q15Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q15Description').style.display = 'block';
+}
+
+// Question 16
+var q16Answer = document.querySelector('input[name="q16"]:checked');
+if (q16Answer && q16Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q16Description').style.display = 'block';
+}
+
+// Question 17
+var q17Answer = document.querySelector('input[name="q17"]:checked');
+if (q17Answer && q17Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q17Description').style.display = 'block';
+}
+
+// Question 18
+var q18Answer = document.querySelector('input[name="q18"]:checked');
+if (q18Answer && q18Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q18Description').style.display = 'block';
+}
+
+// Question 19
+var q19Answer = document.querySelector('input[name="q19"]:checked');
+if (q19Answer && q19Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q19Description').style.display = 'block';
+}
+
+// Question 20
+var q20Answer = document.querySelector('input[name="q20"]:checked');
+if (q20Answer && q20Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q20Description').style.display = 'block';
+}
+// Question 21
+var q21Answer = document.querySelector('input[name="q21"]:checked');
+if (q21Answer && q21Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q21Description').style.display = 'block';
+}
+
+// Question 22
+var q22Answer = document.querySelector('input[name="q22"]:checked');
+if (q22Answer && q22Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q22Description').style.display = 'block';
+}
+
+// Question 23
+var q23Answer = document.querySelector('input[name="q23"]:checked');
+if (q23Answer && q23Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q23Description').style.display = 'block';
+}
+
+// Question 24
+var q24Answer = document.querySelector('input[name="q24"]:checked');
+if (q24Answer && q24Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q24Description').style.display = 'block';
+}
+
+// Question 25
+var q25Answer = document.querySelector('input[name="q25"]:checked');
+if (q25Answer && q25Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q25Description').style.display = 'block';
+}
+
+// Question 26
+var q26Answer = document.querySelector('input[name="q26"]:checked');
+if (q26Answer && q26Answer.value === 'e') {
+    correctAnswers++;
+} else {
+    document.getElementById('q26Description').style.display = 'block';
+}
+
+// Question 27
+var q27Answer = document.querySelector('input[name="q27"]:checked');
+if (q27Answer && q27Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q27Description').style.display = 'block';
+}
+
+// Question 28
+var q28Answer = document.querySelector('input[name="q28"]:checked');
+if (q28Answer && q28Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q28Description').style.display = 'block';
+}
+
+// Question 29
+var q29Answer = document.querySelector('input[name="q29"]:checked');
+if (q29Answer && q29Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q29Description').style.display = 'block';
+}
+// Question 30
+var q30Answer = document.querySelector('input[name="q30"]:checked');
+if (q30Answer && q30Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q30Description').style.display = 'block';
+}
+
+// Question 31
+var q31Answer = document.querySelector('input[name="q31"]:checked');
+if (q31Answer && q31Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q31Description').style.display = 'block';
+}
+
+// Question 32
+var q32Answer = document.querySelector('input[name="q32"]:checked');
+if (q32Answer && q32Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q32Description').style.display = 'block';
+}
+
+// Question 33
+var q33Answer = document.querySelector('input[name="q33"]:checked');
+if (q33Answer && q33Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q33Description').style.display = 'block';
+}
+
+// Question 34
+var q34Answer = document.querySelector('input[name="q34"]:checked');
+if (q34Answer && q34Answer.value === 'e') {
+    correctAnswers++;
+} else {
+    document.getElementById('q34Description').style.display = 'block';
+}
+
+// Question 35
+var q35Answer = document.querySelector('input[name="q35"]:checked');
+if (q35Answer && q35Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q35Description').style.display = 'block';
+}
+
+// Question 36
+var q36Answer = document.querySelector('input[name="q36"]:checked');
+if (q36Answer && q36Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q36Description').style.display = 'block';
+}
+
+// Question 37
+var q37Answer = document.querySelector('input[name="q37"]:checked');
+if (q37Answer && q37Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q37Description').style.display = 'block';
+}
+
+// Question 38
+var q38Answer = document.querySelector('input[name="q38"]:checked');
+if (q38Answer && q38Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q38Description').style.display = 'block';
+}
+
+// Question 39
+var q39Answer = document.querySelector('input[name="q39"]:checked');
+if (q39Answer && q39Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q39Description').style.display = 'block';
+}
+
+// Question 40
+var q40Answer = document.querySelector('input[name="q40"]:checked');
+if (q40Answer && q40Answer.value === 'e') {
+    correctAnswers++;
+} else {
+    document.getElementById('q40Description').style.display = 'block';
+}
+// Question 41
+var q41Answer = document.querySelector('input[name="q41"]:checked');
+if (q41Answer && q41Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q41Description').style.display = 'block';
+}
+
+// Question 42
+var q42Answer = document.querySelector('input[name="q42"]:checked');
+if (q42Answer && q42Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q42Description').style.display = 'block';
+}
+
+// Question 43
+var q43Answer = document.querySelector('input[name="q43"]:checked');
+if (q43Answer && q43Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q43Description').style.display = 'block';
+}
+
+// Question 44
+var q44Answer = document.querySelector('input[name="q44"]:checked');
+if (q44Answer && q44Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q44Description').style.display = 'block';
+}
+
+// Question 45
+var q45Answer = document.querySelector('input[name="q45"]:checked');
+if (q45Answer && q45Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q45Description').style.display = 'block';
+}
+
+// Question 46
+var q46Answer = document.querySelector('input[name="q46"]:checked');
+if (q46Answer && q46Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q46Description').style.display = 'block';
+}
+
+// Question 47
+var q47Answer = document.querySelector('input[name="q47"]:checked');
+if (q47Answer && q47Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q47Description').style.display = 'block';
+}
+
+// Question 48
+var q48Answer = document.querySelector('input[name="q48"]:checked');
+if (q48Answer && q48Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q48Description').style.display = 'block';
+}
+
+// Question 49
+var q49Answer = document.querySelector('input[name="q49"]:checked');
+if (q49Answer && q49Answer.value === 'e') {
+    correctAnswers++;
+} else {
+    document.getElementById('q49Description').style.display = 'block';
+}
+
+// Question 50
+var q50Answer = document.querySelector('input[name="q50"]:checked');
+if (q50Answer && q50Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q50Description').style.display = 'block';
+}
+
+
+
+          
+        
+
+          
+          
+          
+          
+         
+            
+          
+          
+          
+            var userName = document.getElementById('nameInput').value; // Assuming 'nameInput' is the id of the input field where the user enters their name
+            sendMessageToTelegram("      building 1  ,        !!  " + userName + "   !!        result.");
+
+
+            // Display result
+            if (correctAnswers >= 20) {
+                resultDiv.innerHTML = '<span class="pass">Pass <br> <br> </> You got ' + correctAnswers + ' out of 50 correct!</span>';
+                document.getElementById('result').style.display = 'block';
+                sendMessageToTelegram('Congratulations! You passed the quiz with ' + correctAnswers + ' out of 50 correct answers.');
+            } else {
+                resultDiv.innerHTML = '<span class="fail">Fail  <br> <br ></> You got ' + correctAnswers + ' out of 50 correct!</span>';      
+                document.getElementById('result').style.display = 'block';
+                sendMessageToTelegram(' You fail the quiz with ' + correctAnswers + ' out of 50 correct answers.');  
+            }
+        }
+    </script>
+
+</body>
+</html>
