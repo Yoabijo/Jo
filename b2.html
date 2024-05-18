@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>building p2 EXIT Q</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0a0a0a;
+            color: #FFD700;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+        }
+        .options label {
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 24px; /* Increase the font size as needed */
+            text-align: center; /* Center the text */
+        }
+        .description {
+            margin-top: 10px;
+            font-style: italic;
+            color: red;
+        }
+        .correct-answer {
+            color: green;
+            font-weight: bold;
+        }
+        .celebration {
+            text-align: center;
+            margin-top: 20px;
+            display: none;
+        }
+        .pass {
+            color: green;
+        }
+        .fail {
+            color: red;
+        }
+        #nameLabel {
+            color: blue; /* Change color to blue*/
+          font-size: 30px;
+          margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>building 2  EXIT Questions</h1>
+    </header>
+    <main>
+       <style>
+  /* Define styles for attractive text */
+  .attractive-text {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: #007bff; /* Blue color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow */
+    letter-spacing: 2px; /* Increase letter spacing */
+    line-height: 1.5; /* Increase line height */
+    text-align: center; /* Center align */
+    animation: blink-animation 1s infinite; /* Blink animation */
+  }
+
+  /* Define the blink animation */
+  @keyframes blink-animation {
+    0% { opacity: 1; } /* Visible */
+    50% { opacity: 0; } /* Invisible */
+    100% { opacity: 1; } /* Visible */
+  }
+</style>
+</head>
+<body>
+  <div class="attractive-text">
+    please enter your name 
+  </div>
+       <input type="text" id="nameInput" placeholder="Enter your name" style="color: green; padding: 12px 20px; border-radius: 25px; border: 2px solid orange; background-color: #ffff36; font-size: 16px; width: 250px; outline: none;">
+
+    
+ 
+<div class="question">
+    <p>51. Is the one which consists of two separate walls, called leaves or skins with a gap in-between?</p>
+    <div class="options">
+        <label><input type="radio" name="q51" value="a"> A. Panel or composite walls</label>
+        <label><input type="radio" name="q51" value="b"> B. Cavity walls</label>
+        <label><input type="radio" name="q51" value="c"> C. Concrete block walls</label>
+        <label><input type="radio" name="q51" value="d"> D. Stone masonry</label>
+    </div>
+    <p class="description" id="q51Description" style="display: none;">
+        Answer: C. Concrete block walls<br>
+        Concrete block is one of the most common masonry units. It consists of hardened cement and may be completely solid or contain single or multiple hollows. It is made from conventional cement mixes and various types of aggregates. These include: sand, gravel, crushed stone, expanded shale or clay, volcanic ciders (Pozzolana), scoria, pumice, etc. Various types of blocks are manufactured to be used for wall construction.
+        <br><br>
+        Panel or Composite Walls: Panel walls are used whenever the load bearing function of the walls is taken over by a framework, which leaves the spaces in the uprights to be filled. Generally, they consist of two or more layers or sections each of which fulfills a specific purpose. They are principally used with the object of reducing weight. Requirements to be fulfilled are resistance to wind pressure, protection against wind and rain, and providing satisfactory appearance. Some of the materials used for panel wall construction are Aluminum panels, Gypsum panels, Glass, etc.
+    </p>
+</div>
+
+<div class="question">
+    <p>52. From the following, which is the advantage of cavity walls:</p>
+    <div class="options">
+        <label><input type="radio" name="q52" value="a"> A. Damp prevention</label>
+        <label><input type="radio" name="q52" value="b"> B. Acoustic</label>
+        <label><input type="radio" name="q52" value="c"> C. Load reduction</label>
+        <label><input type="radio" name="q52" value="d"> D. Insulation</label>
+        <label><input type="radio" name="q52" value="e"> E. All</label>
+    </div>
+    <p class="description" id="q52Description" style="display: none;">
+        Answer: E. All<br>
+        Advantages of cavity walls:<br>
+        i. Damp prevention: cavity walls are able to prevent dampness effectively.<br>
+        ii. Insulation: cavity walls have about 25% greater insulating value than solid walls.<br>
+        iii. Acoustic: cavity walls reduce sound and noise pollution.<br>
+        iv. Economy: they are cheaper and economical.<br>
+        v. Load reduction: loads on foundations are reduced because of lesser solid thickness.
+    </p>
+</div>
+<div class="question">
+    <p>53. Which type of opening in walls is a horizontal member, which placed across openings, the bearing should be equal to at least to its depth:</p>
+    <div class="options">
+        <label><input type="radio" name="q53" value="a"> A. Windows</label>
+        <label><input type="radio" name="q53" value="b"> B. Arches</label>
+        <label><input type="radio" name="q53" value="c"> C. Lintels</label>
+        <label><input type="radio" name="q53" value="d"> D. Doors</label>
+    </div>
+    <p class="description" id="q53Description" style="display: none;">
+        Answer: C. Lintels<br>
+        Arches: An arch is normally a curved member of stone, concrete, steel, etc. Arches are constructed where; loads are heavy, span is large, strong abutments are available, and architectural appearance is required.
+        <br><br>
+        Lintels: A lintel is a horizontal member, which is placed across the opening. Lintels are easy to build and the supporting walls need not be very strong. At least 10cm length of bearing is a minimum requirement. For very long spans, the bearing for the lintel end should be equal at least to its depth.
+    </p>
+</div>
+
+<div class="question">
+    <p>54. Which one is provided in building to afford a means of communication, circulation between the various floors:</p>
+    <div class="options">
+        <label><input type="radio" name="q54" value="a"> A. Stairs</label>
+        <label><input type="radio" name="q54" value="b"> B. Doors</label>
+        <label><input type="radio" name="q54" value="c"> C. Walls</label>
+        <label><input type="radio" name="q54" value="d"> D. Floors</label>
+    </div>
+    <p class="description" id="q54Description" style="display: none;">
+        Answer: A. Stairs<br>
+        Stairs are a set of steps leading from one floor to another and are provided in buildings to afford a means of communication between the various floors. A set of steps arranged in series and placed in an enclosure is called a Stair Case. Stairs should be designed properly to provide proper ventilation and light (natural). The location of stairs should be near the main entrance for public buildings, centrally placed for easy access, and should give privacy in residential buildings.
+        <br><br>
+        The primary functions of stairs are:<br>
+        1. Provide a means of circulation between floor levels.<br>
+        2. Establish a safe means of travel between floor levels.<br>
+        3. Provide an easy means of travel between floor levels.<br>
+        4. Provide a means of conveying fittings and furniture between floor levels.
+    </p>
+</div>
+<div class="question">
+    <p>55. Is the horizontal distance between the nosing or front edge of two consecutive steps:</p>
+    <div class="options">
+        <label><input type="radio" name="q55" value="a"> A. Tread</label>
+        <label><input type="radio" name="q55" value="b"> B. Nosing</label>
+        <label><input type="radio" name="q55" value="c"> C. Riser</label>
+        <label><input type="radio" name="q55" value="d"> D. Going</label>
+    </div>
+    <p class="description" id="q55Description" style="display: none;">
+        Answer: D. Going<br>
+        Step: is a portion of a stair which permits ascent or descent. It is comprised of a tread and a riser. A stair is composed of a set of steps.<br>
+        Tread: is the horizontal member of a stair. The tread of public buildings must be wide enough to provide safe footing.<br>
+        Going: is the horizontal distance between the nosing or front edges of two consecutive steps. It is usually 30cm for public buildings so that it is wide enough to provide safe footings.<br>
+        Riser: is the vertical member of a stair.<br>
+        Rise: is the vertical distance between the upper surfaces of two consecutive steps. The rise of a public building is about 15cm while a higher value can be used for private buildings.<br>
+        Nosing: is the projecting part of the tread beyond the face of the riser. It is usually rounded off from an architectural point of view.
+    </p>
+</div>
+
+<div class="question">
+    <p>56. Is a continuous set of steps between floors and/or landings:</p>
+    <div class="options">
+        <label><input type="radio" name="q56" value="a"> A. Soffit</label>
+        <label><input type="radio" name="q56" value="b"> B. Flight</label>
+        <label><input type="radio" name="q56" value="c"> C. Landing</label>
+        <label><input type="radio" name="q56" value="d"> D. Winders</label>
+    </div>
+    <p class="description" id="q56Description" style="display: none;">
+        Answer: B. Flight<br>
+        Flight: is a continuous set of steps between floors and/or landings.<br>
+        Landing: is a platform between two flights.<br>
+        Baluster: is the vertical member which supports the handrail. The combined framework of handrail and baluster is known as a balustrade.<br>
+        String or stringer: is the structural member which supports the steps and acts as inclined beams.<br>
+        Handrail: is a rounded or molded member of wood or metal fixed on the top of balusters.<br>
+        Headroom: is the minimum clear vertical distance between the tread and overhead structure.<br>
+        Soffit: is the underside of the stair.<br>
+        Run: is the total length of stairs in a horizontal plane, including landings.<br>
+        Newel post: is the vertical member which is placed at the ends of flight to connect the end strings and handrail.<br>
+        Winders: are tapering steps which are provided for changing the direction of the stair.
+    </p>
+</div>
+<div class="question">
+    <p>57. Is a vertical member of a stair:</p>
+    <div class="options">
+        <label><input type="radio" name="q57" value="a"> A. Rise</label>
+        <label><input type="radio" name="q57" value="b"> B. Riser</label>
+        <label><input type="radio" name="q57" value="c"> C. Baluster</label>
+        <label><input type="radio" name="q57" value="d"> D. Newel post</label>
+    </div>
+    <p class="description" id="q57Description" style="display: none;">
+        Answer: B. Riser
+    </p>
+</div>
+
+<div class="question">
+    <p>58. Which one of the following is a type of half turn stair:</p>
+    <div class="options">
+        <label><input type="radio" name="q58" value="a"> A. Dog-legged stair</label>
+        <label><input type="radio" name="q58" value="b"> B. Straight stair</label>
+        <label><input type="radio" name="q58" value="c"> C. Spiral stair</label>
+        <label><input type="radio" name="q58" value="d"> D. Bifurcated stair</label>
+    </div>
+    <p class="description" id="q58Description" style="display: none;">
+        Answer: A. Dog-legged stair<br>
+        Straight stairs: This stair runs straight between the two floors. It may be used for small houses where there are restrictions in available width or for the entrance of buildings. The stair may consist of either one single flight or more than one flight (usually two) with a landing.
+        <br><br>
+        Quarter turn stairs: It is a stair type which changes its direction either to the left or to the right. The turn is designed either by introducing a quarter space landing or by providing winders. Quarter turn stairs are of two types:<br>
+        A. Newel quarter turn stairs: These stairs have the conspicuous newel posts at the beginning and end of each flight. At the quarter turn, there may either be a quarter space landing or there may be winders.<br>
+        B. Geometrical quarter turn stairs: The stringer as well as the handrail is continuous, with no newel post at the landing.
+        <br><br>
+        Half turn stairs: It is the one which has its direction reversed or changed for 180°. Such stairs are quite commonly used. Half turn stairs are of three types:<br>
+        A. Dog-legged or newel half turn stairs: The name is given because of its appearance in sectional elevation. It comes under the category of newel stairs in which newel posts are provided at the beginning and end of each flight. These may be of two types: with half space landing and with quarter space landing and winders.<br>
+        B. Open newel half turn stairs: This stair type has a space or well between the outer strings. This is the only aspect in which it differs from the dog-legged stairs. Additional width is required between the two flights. When the space provided is more, a small flight containing two to four steps may be introduced.<br>
+        C. Geometrical half turn stairs: The essential features of such stairs are that the stringers and the handrails are continuous, without any intervening newel post. This may be either with half-space landing or without.
+        <br><br>
+        Three quarter turn stairs: It has its direction changed three times with its upper flight crossing the bottom one. It may either be newel type or open newel type. Such type of stair is used when the length of the stair room is limited and when the vertical distance between the two floors is quite large.
+        <br><br>
+        Bifurcated stairs: The stair has a wider flight at the bottom, which bifurcates into two narrow flights one turning to the left and the other to the right, at the landing. It may be either of newel type with a newel post or of geometrical type. This type of stair is commonly used in public buildings at their entrance hall.
+        <br><br>
+        Continuous stairs: These are types of stairs which do neither have any landing nor any intermediate newel post; and they are geometrical in shape. Continuous stairs may be of three types:<br>
+        A. Circular stairs: This stair has a circular plan configuration.<br>
+        B. Spiral stairs: They are usually made either of R.C.C. or metal. They are employed at a location where there are space limitations. They are also used as emergency stairs and are provided at the back side of the building. All the steps are winders. Therefore they are not comfortable.<br>
+        C. Helical stairs: Looks very fine but its structural design and construction is very complicated. It is made of R.C.C. in which a large portion of steel is required to resist bending, shear and torsion.
+    </p>
+</div>
+
+<div class="question">
+    <p>59. From the following general requirements, which a stair should fulfill is:</p>
+    <div class="options">
+        <label><input type="radio" name="q59" value="a"> A. Width of stair</label>
+        <label><input type="radio" name="q59" value="b"> B. Head room clear distance</label>
+        <label><input type="radio" name="q59" value="c"> C. Step dimensions</label>
+        <label><input type="radio" name="q59" value="d"> D. All</label>
+    </div>
+    <p class="description" id="q59Description" style="display: none;">
+        Answer: D. All<br>
+        A. Location:<br>
+        - It should be so located as to provide easy access to the occupants of the building.<br>
+        - It should be so located that it is well lighted and ventilated directly from the exterior.<br>
+        - It should be so located as to have approaches convenient and spacious.
+        <br><br>
+        B. Width of stair:<br>
+        - It should be wide enough to carry the user without much crowd or inconvenience.<br>
+        - Width of stairs depends on its location in the building and the type of the building itself.<br>
+        - For a domestic building, a 90cm wide stair is sufficient while in public buildings, 1.5-1.8m width may be required.
+        <br><br>
+        C. Length of flight:<br>
+        - From a comfort point of view, the number of steps should not be more than 12 and not less than 3.
+        <br><br>
+        D. Pitch of stair:<br>
+        - Its ascent should be relatively easy.<br>
+        - Stairs for public buildings should have a pitch of 38° and for private buildings the pitch should not be more than 42°.
+        <br><br>
+        E. Head room:<br>
+        - The clear distance between the tread and soffit of the flight immediately above it should not be less than 2.1-2.3m.
+        <br><br>
+        F. Balustrade:<br>
+        - Open well stairs should always be provided with a balustrade, to provide safety to the users.<br>
+        - Wider stairs should have a handrail on both sides.
+        <br><br>
+        G. Step dimensions:<br>
+        - The rise and going should be of such dimensions as to provide comfort to the users.<br>
+        - Their proportion should also be such as to provide a desirable pitch of the stair.<br>
+        - The going should not be less than 25cm, though 30cm is quite comfortable.
+        <br><br>
+        - The rise should be between 10cm (for hospitals, etc.) to 15cm.<br>
+        - The width of the landing should not be less than the width of a stair.<br>
+        - Rise + Tread ≥ 40 and ≤ 45cm.<br>
+        - 2Rise + Tread ≥ 58 and ≤ 63cm.<br>
+        - Rise x Tread ≥ 400 and ≤ 500cm².
+    </p>
+</div>
+<div class="question">
+    <p>60. Which one is provided to allow wheelchair access and luggage path in hotels, for stretchers in hospitals for loading and unloading in warehouses and factories?</p>
+    <div class="options">
+        <label><input type="radio" name="q60" value="a"> A. Ladders</label>
+        <label><input type="radio" name="q60" value="b"> B. Ramp</label>
+        <label><input type="radio" name="q60" value="c"> C. Elevator</label>
+        <label><input type="radio" name="q60" value="d"> D. Escalator</label>
+    </div>
+    <p class="description" id="q60Description" style="display: none;">Answer: B. Ramp<br>
+    Ramps shall be provided to allow wheelchair access and luggage path in hotels, for stretchers in hospitals for loading and unloading in warehouses and factories.
+    </p>
+</div>
+
+<div class="question">
+    <p>61. is an openable barrier secured in a wall opening and is provided to give access, protection, safety and privacy to the inside of a room of a building.</p>
+    <div class="options">
+        <label><input type="radio" name="q61" value="a"> A. Window</label>
+        <label><input type="radio" name="q61" value="b"> B. Stair</label>
+        <label><input type="radio" name="q61" value="c"> C. Door</label>
+        <label><input type="radio" name="q61" value="d"> D. Floor</label>
+    </div>
+    <p class="description" id="q61Description" style="display: none;">Answer: C. Door<br>
+    A door is an openable barrier secured in a wall opening and is provided to give access, protection, safety, and privacy to the inside of a room of a building.
+    </p>
+</div>
+
+<div class="question">
+    <p>62. Which are the horizontal projections of the head and sill of a frame to facilitate the fixing of the frame on a wall opening?</p>
+    <div class="options">
+        <label><input type="radio" name="q62" value="a"> A. Head</label>
+        <label><input type="radio" name="q62" value="b"> B. Horn</label>
+        <label><input type="radio" name="q62" value="c"> C. Frame</label>
+        <label><input type="radio" name="q62" value="d"> D. Panel</label>
+    </div>
+    <p class="description" id="q62Description" style="display: none;">Answer: B. Horn<br>
+    The following are the technical terms applied to doors and windows. Horn refers to the horizontal projections of the head and sill of a frame to facilitate the fixing of the frame on a wall opening.
+    Frame: It is an assembly of horizontal and vertical members, forming an enclosure, to which the shutters are fixed. 
+Shutters: these are openable parts of a door or window. It is an assembly of styles, panels and rails. 
+Head: this is the top or uppermost horizontal part of a frame. 
+Horn: these are the horizontal projections of the head and sill of a frame to facilitate the fixing of the frame on wall opening. 
+Style: the vertical outside member of the shutter of the door or window. 
+Top rail: this is the top most horizontal member of a shutter. 
+Lock rail: The middle horizontal member of a door shutter, to which locking arrangement is fixed. 
+Bottom rail: the lower most horizontal member of a shutter. 
+Intermediate or cross rails: additional horizontal rails, fixed b/n the top and bottom rails of a shutter. 
+Panel: this is the area of shutter enclosed b/n the adjacent rails. 
+Mullion: vertical member of a frame, which is employed to sub-divide a window or a door vertically. 
+Sill: this is the lowermost or bottom horizontal part of a window frame. 
+Transom: Horizontal member of a frame, which is employed to subdivide a window opening horizontally. 
+Hold fasts: mild steel flats generally bent into Z shape, to fix or hold the frame to the opening. 
+
+    </p>
+</div>
+<div class="question">
+    <p>63. Which are the generally adopted sizes of doors for residential buildings,0.8-0.9m width and 2-2.1m height is?</p>
+    <div class="options">
+        <label><input type="radio" name="q63" value="a"> A. External Door</label>
+        <label><input type="radio" name="q63" value="b"> B. Internal Door</label>
+        <label><input type="radio" name="q63" value="c"> C. Bathroom & WC</label>
+        <label><input type="radio" name="q63" value="d"> D. Garages for cars</label>
+    </div>
+    <p class="description" id="q63Description" style="display: none;">Answer: B. Internal Door
+        <br> The size of the door should be such that it would allow the movement of largest object or tallest person likely to use the door. As, a rule the height of a door should not be less than 1.8-2.0 m. The width of the door should be such that two persons can pass through it walking shoulder to shoulder. The common width height relations are: 
+Width = 0.4 to 0.6 height 
+Height = (width + 1.2) meters. 
+
+The following are the generally adopted size of doors for residential building: 
+External door: 0.9-1.2m width and 2-2.1m height 
+Internal door: 0.8-0.9m width and 2-2.1m height 
+Bath room & WC 0.7-0.8m width and 2-2.1m height 
+Garages for cars 2.25-2.4m width and 2-2.25m height 
+</p>
+</div>
+
+<div class="question">
+    <p>64. Which one is the correct door classification based on working operations?</p>
+    <div class="options">
+        <label><input type="radio" name="q64" value="a"> A. Revolving Doors</label>
+        <label><input type="radio" name="q64" value="b"> B. Framed and Panelled Doors</label>
+        <label><input type="radio" name="q64" value="c"> C. Battened and Ledged Doors</label>
+        <label><input type="radio" name="q64" value="d"> D. Flush Doors</label>
+    </div>
+    <p class="description" id="q64Description" style="display: none;">Answer: A. Revolving Doors
+     <br>Classification based on working operations 
+1 Revolving doors: Revolving doors are provided in public buildings such as museums, libraries, hotels, banks, etc. where there are constant visitors. Such a door provides entrance to one and exit to the other person simultaneously and closes automatically when not in use. The door consists of a centrally placed mullion to which four radiating shutters are attached.
+
+2 Sliding doors: The shutter can slide upward, downward or sideways. The shutter slides to the sides with the help of runners and guide rails. The door may have one two or even three shutters, depending upon the size of the opening and space available on sides for sliding.
+
+3 Swing doors: The most common type of door movement is the swinging door either right or left, depending on which side is the hinge. Swinging doors may be hinged at the side to open and shut in one direction (single swings) or they may be double acting doors, which swing in both ways (double swinging).
+
+4 Collapsible steel doors: These types of doors are used in workshops, sheds, public buildings, etc for providing increased safety and protection to property. The door neither requires hinges, for opening and closing, nor any frame for hanging them. It acts like a steel curtain which can be opened or closed by horizontal push. It is used even in residential buildings where opening is large but there is no enough space to accommodate leafed shutters.
+
+5 Rolling steel shutter doors: These doors are commonly used for garages, shop fronts, show windows etc., since they are quite strong and offer proper safety to the property. The door consists of a frame, a drum and a shutter of thin steel plates (known as laths or slates) interlocked together. Rolling shutters are of two types: Pull-push type shutters and Mechanical gear type shutters.
+
+Classification based on working operations 
+1 Framed and panelled doors: These types of doors are widely used in almost all types of building since they are strong and give better appearance. This door consists of a frame work of vertical members (called styles) and horizontal members, called rails which are grooved along the inner edges of the frame, to receive the panels.
+
+2 Glazed doors or sash doors: They are provided where additional light is required to be admitted to the room through the door, or where the visibility of the interior of the room is required from adjacent room. They are used in residential as well as public buildings like hospitals, schools, colleges, etc. The doors may be either fully glazed, or they be partly glazed and partly panelled.
+
+3. Flush doors: These doors consist of solid or semi-solid skeleton or core covered on both sides with plywood, face veneers, etc. presenting flush and joint-less surface. Flush doors are becoming increasingly popular these days because of their pleasing appearance, simplicity of construction, less cost, better strength and durability. 
+They are used both for residential as well as public and commercial buildings. Flush doors are of two types: 
+A. Solid core flush door or laminated core flush door. 
+B. Hollow and cellular core flush door.
+
+4 Louvered doors (Venetian doors): Louvered doors permit free ventilation through them, and at the same time maintain the privacy of the room. These doors are generally used for latrines and bath rooms of residential and public buildings. The door may either be louvered to its full height, or it may be partly louvered and partly paneled. The louvers are arranged at such an inclination that the vision is obstructed while they permit the passage of air. Louvers may be either fixed or movable and they may be made of either timber or glass or ply wood.
+
+5 Wire gauged doors: These types of doors are provided to check the entry of flies, mosquitoes, insects, etc. Wire mesh is provided in the panels, and therefore, they permit free passage of air. Such doors are commonly used for refreshment rooms, hotels, cup boards containing food and sweet shops.
+
+Classification based on working operations 
+1 Battened and ledged doors: This is the simplest type of door, especially suitable for narrow openings. It is formed of vertical bonds; known as battens which are fixed together by horizontal supports known as ledges.
+
+2 Battened, ledged and braced doors: These doors are an improved form of the previous one in which additional inclined (or diagonal) members called braces are provided.
+
+3 Battened, ledged and frame doors: This door is also an improved form of simple battened and ledged door, in which frame work for the shutter is provided in the form of two verticals, known as styles.
+
+4 Battened, ledged, braced and frame doors: This is a modification of the above, with the provision of additional braces, provided diagonally b/n the ledges to increase its strength, durability and appearance.
+</p>
+</div>
+
+      <div class="question">
+    <p>65. From the following, which one is a vented barrier secured in a wall opening?</p>
+    <div class="options">
+        <label><input type="radio" name="q65" value="a"> A. Door</label>
+        <label><input type="radio" name="q65" value="b"> B. Window</label>
+        <label><input type="radio" name="q65" value="c"> C. Stair</label>
+        <label><input type="radio" name="q65" value="d"> D. Floor</label>
+    </div>
+    <p class="description" id="q65Description" style="display: none;">Answer: B. Window
+    Description: A window is a vented barrier secured in a wall opening. Its function is to admit light and air into the building, provide an outside view, offer insulation against heat loss, and provide some resistance to fire. A window typically comprises a window frame secured to the wall opening using hold fasts and a window shutter fixed to the window frames with suitable hinges.
+    </p>
+</div>
+
+<div class="question">
+    <p>66. These are the main common type of windows usually provided in buildings:</p>
+    <div class="options">
+        <label><input type="radio" name="q66" value="a"> A. Bay Windows</label>
+        <label><input type="radio" name="q66" value="b"> B. Casement Windows</label>
+        <label><input type="radio" name="q66" value="c"> C. Fixed Windows</label>
+        <label><input type="radio" name="q66" value="d"> D. Pivoted Windows</label>
+    </div>
+    <p class="description" id="q66Description" style="display: none;">Answer: B. Casement Windows
+    Description:
+    - Fixed Windows: Installed primarily for admitting light or providing vision to the room. Consists of a window frame with fully glazed shutters.
+    - Pivoted Windows: Shutters swing around pivots fixed to the window frame, allowing horizontal or vertical rotation.
+    - Double Hung Windows: Consist of a frame and two shutters that slide vertically within grooves for effective cleaning and ventilation control.
+    - Sliding Windows: Shutters move horizontally or vertically on roller bearings, commonly found in trains, buses, shops, and bank counters.
+    - Casement Windows: The most common type of window in buildings, the shutters open similar to doors with styles, top rails, bottom rails, and intermediate rails dividing into panels that can be glazed or unglazed.
+    - Bay Windows: Project outside the external wall, offering increased light and air intake, additional room space, and enhancing the building's appearance.
+    </p>
+</div>
+<div class="question">
+    <p>67. Which one of the following windows is provided over the flat roofs, to provide more light and air to the inner apartments/rooms of a building?</p>
+    <div class="options">
+        <label><input type="radio" name="q67" value="a"> A. Gable windows</label>
+        <label><input type="radio" name="q67" value="b"> B. Ventilators</label>
+        <label><input type="radio" name="q67" value="c"> C. Sky lights</label>
+        <label><input type="radio" name="q67" value="d"> D. Lantern windows</label>
+    </div>
+    <p class="description" id="q67Description" style="display: none;">Answer: D. Lantern windows
+    Description: 
+    - Clear-Storey Windows: Provided in a room with greater ceiling height than the surrounding rooms or when a lean-to-roof of low height is adjacent to the room. Typically located near the top of the main roof, opening above the lean-to-roof or roof slab of adjoining rooms.
+    - Sash or Glazed Windows: A type of casement window with fully glazed panels consisting of vertical styles, top rail, and bottom rail, divided into small panels.
+    - Dormer Windows: Vertical windows on the sloping roof providing ventilation, lighting, and aesthetic improvement to the space below the roof.
+    - Gable Windows: Vertical windows provided in the gable end of a pitched roof.
+    - Lantern Windows: Provided over flat roofs to offer additional light and air to the inner apartments/rooms of a building, with various shapes in plan that admit light through vertical or inclined faces. The roof slab has an appropriate opening below the window.
+    - Sky lights: Provided on a sloping roof to admit light, projecting above the top sloping surface and running parallel to the sloping surface.
+    - Ventilators: Small windows fixed at a greater height than the window, generally about 30-50cm below roof level, with a frame and a shutter, generally glazed, horizontally pivoted.
+    </p>
+</div>
+
+<div class="question">
+    <p>68. Is a device that permits a door, window, or panel to turn or swing?</p>
+    <div class="options">
+        <label><input type="radio" name="q68" value="a"> A. Bolt</label>
+        <label><input type="radio" name="q68" value="b"> B. Handles</label>
+        <label><input type="radio" name="q68" value="c"> C. Hinge</label>
+        <label><input type="radio" name="q68" value="d"> D. Glaze</label>
+    </div>
+    <p class="description" id="q68Description" style="display: none;">Answer: C. Hinge
+    Description: A hinge is a device that permits a door, window, or panel to turn or swing.
+    </p>
+</div>
+<div class="question">
+    <p>69. Is made of laminated plate glass which may break under impact but will not shatter</p>
+    <div class="options">
+        <label><input type="radio" name="q69" value="a"> A. Obscured glass</label>
+        <label><input type="radio" name="q69" value="b"> B. Quartz glass</label>
+        <label><input type="radio" name="q69" value="c"> C. Bulletproof glass</label>
+        <label><input type="radio" name="q69" value="d"> D. Processed glass</label>
+    </div>
+    <p class="description" id="q69Description" style="display: none;">Answer: C. Bulletproof glass
+  The various types of glass used in construction of doors and windows are: 
+a. Plate glass: plate glass is transparent and flat glass having plain polished surfaces and showing no distortion when through it objects are viewed at any angle. The thickness of plan glass varies from 3 to 6mm. 
+b. Clear window glass: Clear widow glass is transparent, having plain and smooth surface. However, small waviness of surface is present which is visible when viewed at an angle. The thickness of clear window glass varies from2.5 to 7.5mm. 
+c. Obscured glass: One side of this glass is patterned while rolling which obscures direct vision but does not obstruct light. Figured glass or rough cast glass is example of this type. 
+d. Processed glass: There are many patterns and some provide the privacy with a uniform diffusion of light. The primary functions of patterned glasses are the diffusion of light, decoration and privacy. By means of patterned glass, rooms can be adequately day lighted far from windows. Small sky lights can furnish diffused light over a wider area. 
+
+e. Wired glass: Rolled flat glass having wire mesh embedded in it is called wired glass. Wired glass provides safety against breakage and has better fire resistance. 
+f. Prism glass: This has prism shaped prim for deflecting light. The prisms with different angles are available to suit various needs. 
+g. Quartz glass: Quartz glass transmits ultraviolet rays and is used in hospital where maximum benefit from sun’s rays is desired for the health of the patients. 
+h. Bullet proof glass: Bullet proof glass is made of laminated plate glass which may break under impact but will not shatter. The properties of glass can be controlled by adding various metallic oxides or by coating one side with metallic films, oxides or paint. The tints and coatings will filter light, conduct electricity, reflect heat and light, reduce the reflection of light, or impart brilliant colors and decorative effects. 
+
+
+    </p>
+</div>
+
+<div class="question">
+    <p>70. Is defined as the uppermost part of the building, provided as a structural covering?</p>
+    <div class="options">
+        <label><input type="radio" name="q70" value="a"> A. Roof</label>
+        <label><input type="radio" name="q70" value="b"> B. Floor</label>
+        <label><input type="radio" name="q70" value="c"> C. Ceiling</label>
+        <label><input type="radio" name="q70" value="d"> D. Slab</label>
+    </div>
+    <p class="description" id="q70Description" style="display: none;">Answer: A. Roof
+    Description: A roof is defined as the uppermost part of the building, provided as a structural covering to protect the building from external weather exposure such as rain, sun, wind, etc. It consists of various structural elements supporting roof coverings to ensure structural integrity and weather protection.
+    </p>
+</div>
+<div class="question">
+    <p>71. A type of roof which has sloping top surfaces. They are suitable in those areas where rainfall/snowfall is very heavy.</p>
+    <div class="options">
+        <label><input type="radio" name="q71" value="a"> A. Flat roof</label>
+        <label><input type="radio" name="q71" value="b"> B. Pitched roof</label>
+        <label><input type="radio" name="q71" value="c"> C. Curved roof</label>
+        <label><input type="radio" name="q71" value="d"> D. All</label>
+    </div>
+    <p class="description" id="q71Description" style="display: none;">Answer: B. Pitched roof
+    Description:
+    - Pitched (Sloping) roofs: These roofs have sloping top surfaces and are suitable in areas with heavy rainfall or snowfall. They are mainly used to cover buildings with limited width and simple shapes.
+    - Flat roofs: Considered suitable for buildings in plains or hot regions with moderate rainfall and no snowfall. Applicable to buildings of any shape and size.
+    - Curved roofs: Have their top surface curved, providing architectural effects. Examples include cylindrical and parabolic shells and domes.
+    </p>
+</div>
+
+<div class="question">
+    <p>72. It slopes in two directions and intersects at the center of the span and will have a common drainage system.</p>
+    <div class="options">
+        <label><input type="radio" name="q72" value="a"> A. Gable roof</label>
+        <label><input type="radio" name="q72" value="b"> B. Shed roof</label>
+        <label><input type="radio" name="q72" value="c"> C. Butterfly roof</label>
+        <label><input type="radio" name="q72" value="d"> D. Hip roof</label>
+    </div>
+    <p class="description" id="q72Description"style="display: none;">Answer: C. Butterfly roof
+    Description:
+    - Shed roof: The simplest type sloping in one direction, used for smaller spans and also known as a lean-to roof. Rafters are nailed to the wooden wall plate at the upper ends and notched and nailed to the wooden post plate at the lower end.
+    - Gable roof: Slopes in two directions, commonly used, and formed by a pair of inclined rafters with their upper ends nailed to a common ridge piece.
+    - Hip roof: Slopes in four directions, forming triangular and/or trapezoidal shapes at the ends of slope intersections.
+    - Butterfly roof: Slopes in two directions, intersects at the center of the span, and has a common drainage system.
+    - Pyramid roof: Similar to hip roofs, slopes in four directions, with the intersections of slopes creating a pyramid shape.
+    </p>
+</div>
+<div class="question">
+    <p>73. It is defined as the apex line of the sloping roof. It is thus the apex of the angle formed by the termination of the inclined surfaces at the top of a slope.</p>
+    <div class="options">
+        <label><input type="radio" name="q73" value="a"> A. Rise</label>
+        <label><input type="radio" name="q73" value="b"> B. Ridge</label>
+        <label><input type="radio" name="q73" value="c"> C. Pitch</label>
+        <label><input type="radio" name="q73" value="d"> D. Eaves</label>
+    </div>
+    <p class="description" id="q73Description" style="display: none;">Answer: B. Ridge
+    Description:
+    Elements of sloping roofs:
+    a) Span: The clear distance between the supports of an arch, beam, or roof truss.
+    b) Rise: The vertical distance between the top of the ridge and the wall plate.
+    c) Pitch: The inclination of the sides of a roof to the horizontal plane, expressed in terms of angles (degrees) or as a ratio of rise to span.
+    d) Ridge: The apex line of the sloping roof, the termination of the inclined surfaces at the top of a slope.
+    e) Eaves: The lower edge of the inclined roof surface where rainwater from the roof surface drops down.
+    f) Hip: The ridge formed by the intersection of two sloping surfaces, where the exterior angle is greater than 180°.
+    g) Valley: The reverse of a hip, formed by the intersection of two roof surfaces with an external angle less than 180°.
+    h) Hipped end: The sloped triangular surface formed at the end of a roof.
+    </p>
+</div>
+
+<div class="question">
+    <p>74. These are thin strips of wood, called scantlings, which are nailed to the rafters for laying roof material above.</p>
+    <div class="options">
+        <label><input type="radio" name="q74" value="a"> A. Rafters</label>
+        <label><input type="radio" name="q74" value="b"> B. Purlins</label>
+        <label><input type="radio" name="q74" value="c"> C. Verge</label>
+        <label><input type="radio" name="q74" value="d"> D. Battens</label>
+    </div>
+    <p class="description" id="q74Description"style="display: none;">Answer: D. Battens
+    Description:
+    i) Verge: The edge of a gable running between the eaves and ridge.
+    j) Rafters: Horizontal wooden or steel members used to support common rafters of a roof when the span is large.
+    k) Purlins: Inclined wooden members on which roof coverings rest, supported on trusses or walls.
+    l) Eaves board: Also known as Fascia board, a wooden plank fixed to the feet of the common rafters at the eaves.
+    m) Battens: Thin strips of wood, called scantlings, nailed to the rafters for laying roof material above.
+    n) Truss: A framework, usually of triangles, designed to support the roof covering or ceiling over rooms.
+    </p>
+</div>
+<div class="question">
+    <p>75. Which are introduced to support the common rafter at intermediate point? Are used to tie the rafters together and act as intermediate support.</p>
+    <div class="options">
+        <label><input type="radio" name="q75" value="a"> A. Single roof</label>
+        <label><input type="radio" name="q75" value="b"> B. Trussed roof</label>
+        <label><input type="radio" name="q75" value="c"> C. Double or Purlin roof</label>
+        <label><input type="radio" name="q75" value="d"> D. none</label>
+    </div>
+    <p class="description" id="q75Description" style="display: none;">Answer: C. Double or Purlin roof<br>
+    Single roof: This roof consists of common rafters that are secured at the ridge and wall plates.<br>
+    Double or Purlin roof: Additional members called purlins are introduced to support the common rafter at intermediate point. The purlins are used to tie the rafters together and act as intermediate support.<br>
+    Trussed roof: Trussed roofs are usually used when the span exceeds 5m and where there are no inside walls to support purlins. The spacing of trusses depends upon the various factors, such as loads on roof, position of cross walls, span, material of truss, etc. and are spaced not more than 3m center to center. There are three elements in a trussed roof system: <br>
+    • Rafters which support the roofing materials,<br>
+    • Purlins to provide intermediate support to rafters, and<br>
+    • Trusses to provide support to the ends of purlins.<br>
+    The various types of trusses include:<br>
+    i. King-post<br>
+    ii. Queen-post<br>
+    iii. Combination of king and queen<br>
+    iv. Mansard<br>
+    iv. Truncated<br>
+    v. Bel-fast<br>
+    vi. Composite<br>
+    vii. Steel<br>
+    </p>
+</div>
+
+<div class="question">
+    <p>76. It is one of the most ancient types of roof covering and is mainly used in village areas.</p>
+    <div class="options">
+        <label><input type="radio" name="q76" value="a"> A. Thatch roof covering</label>
+        <label><input type="radio" name="q76" value="b"> B. Corrugated Iron sheet</label>
+        <label><input type="radio" name="q76" value="c"> C. Dome</label>
+        <label><input type="radio" name="q76" value="d"> D. Flat roof</label>
+    </div>
+    <p class="description" id="q76Description" style="display: none;">Answer: A. Thatch roof covering<br>
+    Thatch roof coverings: It is one of the most ancient types of roof covering and is mainly used in village areas. Thatch roof cover is suitable for rural buildings mainly because the cost is very low and thatch is abundantly available in those regions.<br>
+    Galvanised corrugated iron/steel sheet: Galvanization means that the iron/steel sheet is covered with a thin layer of zinc to protect it from rusting. The corrugation means that the sheet is made more resistant to bending stresses lengthwise. The gauge indicates the thickness G-24=0.549mm, G-26=0.457mm, G-28=0.376mm, G-30=0.315mm, G-32=0.274mm and G-35=0.2mm.<br>
+    Flat roof is nearly flat slab, with angles less than 100 for drainage purpose. This roof requires very reliable water proofing and heat insulating material. Flat roof has high initial cost. Flat roof is commonly constructed using reinforced concrete.<br>
+    Dome is a roof of semi-spherical or semi-elliptical shape. Materials used are stone, brick, concrete or metals (sky lights). They are common in large buildings because they don't need intermediate support. Domes are structurally different from arches as they are slabs in a different setting and they require massive or strong abutment.<br>
+    </p>
+</div>
+
+
+<div class="question">
+    <p>77. Which one is type of building finish</p>
+    <div class="options">
+        <label><input type="radio" name="q77" value="a"> A. Plastering</label>
+        <label><input type="radio" name="q77" value="b"> B. Pointing</label>
+        <label><input type="radio" name="q77" value="c"> C. Painting</label>
+        <label><input type="radio" name="q77" value="d"> D. Distempering</label>
+        <label><input type="radio" name="q77" value="e"> E. All</label>
+    </div>
+    <p class="description" id="q77Description" style="display: none;">Answer: E. All<br>
+    Finishes are used to give protective coating to the surface which preserves and protects the materials used in building from weather effects such as rain water, heat, frost, etc. They also provide decorative finishes which add to the appearance of the material surfaces and building as a whole.<br>
+    Types of building finish:<br>
+    • Plastering,<br>
+    • Pointing,<br>
+    • White washing and color washing,<br>
+    • Painting,<br>
+    • Varnishing, and<br>
+    • Distempering.<br>
+    </p>
+</div>
+
+<div class="question">
+    <p>78. Is the process of covering various surfaces of structure with a plastic material such as cement mortar, lime mortar or composite mortar, etc. to obtain an even, smooth, regular, clean and durable surface.</p>
+    <div class="options">
+        <label><input type="radio" name="q78" value="a"> A. Pointing</label>
+        <label><input type="radio" name="q78" value="b"> B. Plastering</label>
+        <label><input type="radio" name="q78" value="c"> C. Floor finish</label>
+        <label><input type="radio" name="q78" value="d"> D. Painting</label>
+    </div>
+    <p class="description" id="q78Description" style="display: none;">Answer: B. Plastering<br>
+    Plastering is the process of covering various surfaces of structure with a plastic material such as cement mortar, lime mortar or composite mortar, etc. to obtain an even, smooth, regular, clean and durable surface. Purposes of Plastering are:<br>
+    • Conceals inferior quality materials and defective workmanship,<br>
+    • Provides a protective coating against atmospheric effects<br>
+    • Provides a base for receiving other decorative finishes<br>
+    The tools used in plastering are: laying trowel, float, floating rule and gauging trowel<br>
+    Pointing is the process of finishing of mortar joints in exposed brick or stone masonry. Pointing consists of raking out the green mortar in the joint to a depth of about 15mm and then refilling the joint with fresh mortar. Pointing gives good appearance and water resistance.<br>
+    Paints are coating of fluid materials, which are applied as a final finish to all surfaces such as walls, ceilings, woodwork, metalwork, etc. The process of application of paint as a coating is termed as painting.<br>
+    </p>
+</div>
+<div class="question">
+    <p>79. Which is not included in the defects in plastered work?</p>
+    <div class="options">
+        <label><input type="radio" name="q79" value="a"> A. Cracking</label>
+        <label><input type="radio" name="q79" value="b"> B. Blistering</label>
+        <label><input type="radio" name="q79" value="c"> C. Efflorescence</label>
+        <label><input type="radio" name="q79" value="d"> D. Fading</label>
+    </div>
+    <p class="description" id="q79Description" style="display: none;">Answer: D. Fading<br>
+    Defects in plastering<br>
+    Some of the defects in plastered work include cracking, blistering, efflorescence, and falling out of plaster.<br>
+    a. Cracking in plastering<br>
+    The major causes of cracking in plastering can be:<br>
+    i. Structural defects in the building and discontinuity of surface,<br>
+    ii. Plastering on a very wet background,<br>
+    iii. Old surface not being properly prepared,<br>
+    iv. Movement in the background due to thermal expansion or rapid drying of the backing surface,<br>
+    v. Movements in the plaster itself, due to expansion as in the case of gypsum plaster or due to shrinkage of plaster's coat during drying as in the case of lime-sand plasters,<br>
+    vi. Excessive shrinkage of the plaster due to a thick coat,<br>
+    vii. Due to faulty workmanship or method of application.<br>
+    b. Blistering or blowing of plaster<br>
+    This consists of the formation of one or more swellings in small patches over the finished plastered surfaces. It is caused due to faulty slaking of lime particles in the plaster after its application.<br>
+    c. Falling out of plaster<br>
+    Some portions of the surface come off (peeling) due to:<br>
+    • Lack of adhesion,<br>
+    • Excessive moisture in the background,<br>
+    • Excessive thermal changes in the background,<br>
+    • Rapid drying of plaster coats,<br>
+    • Insufficient drying between each coat of plaster.<br>
+    d. Efflorescence<br>
+    Efflorescence is the whitish crystalline substance that appears on the surface of walls due to the presence of salts in the lime, cements, and bricks, and sometimes even in water. Efflorescence can be rectified or checked by the following measures:<br>
+    i. By scrubbing with brushes. It can also be removed by applying a solution of 1:5 HC:H2O or H2SO4 and spraying with clean water,<br>
+    ii. By using burnt bricks and clean water, which are free from salt,<br>
+    iii. Using a mortar, which is waterproof, is also useful in preventing efflorescence.<br>
+    e. Faulty workmanship<br>
+    The following points can be cited as major workmanship errors in plastering:<br>
+    i. Excessive trawling may cause the binder to come to the surface,<br>
+    ii. The interval between successive applications may be short,<br>
+    iii. The coats may have been too thick,<br>
+    iv. The addition of water to hydraulic lime after the initial set has taken place may be harmful.<br>
+    </p>
+</div>
+
+<div class="question">
+    <p>80. Which is not included in the defects in painting work?</p>
+    <div class="options">
+        <label><input type="radio" name="q80" value="a"> A. Blistering</label>
+        <label><input type="radio" name="q80" value="b"> B. Crawling</label>
+        <label><input type="radio" name="q80" value="c"> C. Efflorescence</label>
+        <label><input type="radio" name="q80" value="d"> D. Saponification</label>
+    </div>
+    <p class="description" id="q80Description" style="display: none;">Answer: C. Efflorescence<br>
+    Defects in Painting Work<br>
+    Some of the usual defects in painting works are:<br>
+    a. Blistering: This defect occurs by the formation of bubbles under the paint film. It is generally caused due to an excess of oil in the final coat and imperfect seasoning of timber.<br>
+    b. Crawling: This occurs due to the application of too thick coat. It can be rectified by sandpapering the surface.<br>
+    c. Grinning: This is a clear reflection of the background due to the lack of opacity of the final coat of paint.<br>
+    d. Fading: This is the loss of paint color due to the effect of sunlight on pigments of paint.<br>
+    e. Flashing: This is the appearance or reflection of glossy patches on the painted surface due to either workmanship or cheap paint used or due to weather effect.<br>
+    f. Saponification: This is the chemical formation of soap patches on the painted surface due to the chemical action of alkalis.<br>
+    </p>
+</div>
+<div class="question">
+    <p>81. What is a solution of resinous substance in oil, turpentine, or alcohol, which on drying or evaporation forms or leaves a hard, transparent, and glossy film of resin?</p>
+    <div class="options">
+        <label><input type="radio" name="q81" value="a"> A. Distempering</label>
+        <label><input type="radio" name="q81" value="b"> B. Varnishing</label>
+        <label><input type="radio" name="q81" value="c"> C. White washing</label>
+        <label><input type="radio" name="q81" value="d"> D. Pointing</label>
+    </div>
+    <p class="description" id="q81Description" style="display: none;">Answer: B. Varnishing<br>
+    Varnish is a solution of resinous substance in oil, turpentine, or alcohol. The varnish solution on drying or evaporation forms or leaves a hard, transparent, and glossy film of resin on the varnish surface. Varnishing is the process of applying varnish to the wooden surfaces and also to the painted surface in order to improve their appearance and protect them from atmospheric action.<br>
+    Distempering is the process of applying distempers over the various surfaces more easily and with less cost than paints and varnishes, to safeguard them against weather effects and improve their appearance. Distempers are considered to water paints, consisting of whiting (i.e., powdered chalk), glue, or casein as a binder, and a suitable proportion of coloring pigments if desired. Distempers form a cheap, durable, and easily applied decoration for internal use on plastered, cement concrete, and various wallboard surfaces.</p>
+</div>
+
+<div class="question">
+    <p>82. What is the finish in which small pebbles or crushed stone of suitable sizes are thrown onto a freshly applied final coat of mortar and left exposed?</p>
+    <div class="options">
+        <label><input type="radio" name="q82" value="a"> A. Pebble-dash or dry-dash</label>
+        <label><input type="radio" name="q82" value="b"> B. Tooled concrete finish</label>
+        <label><input type="radio" name="q82" value="c"> C. Scraped finish</label>
+        <label><input type="radio" name="q82" value="d"> D. Textured finish</label>
+    </div>
+    <p class="description" id="q82Description" style="display: none;">Answer: A. Pebble-dash or dry-dash<br>
+    Pebble-dash or dry-dash is the finish in which small pebbles or crushed stones of suitable sizes are thrown onto a freshly applied final coat of mortar and left exposed.<br>
+    Rough cast, scarped finishes, textured finishes, smooth finish, machine-applied finishes, board-marked concrete, exposed aggregate concrete finishes, and tooled concrete finishes are also some of the external finishes considered important in the application of various finishing qualities.</p>
+</div>
+<div class="question">
+    <p>83. What is the presence of hygroscopic or gravitational moisture?</p>
+    <div class="options">
+        <label><input type="radio" name="q83" value="a"> A. Segregation</label>
+        <label><input type="radio" name="q83" value="b"> B. Damping</label>
+        <label><input type="radio" name="q83" value="c"> C. Creep</label>
+        <label><input type="radio" name="q83" value="d"> D. Cracking</label>
+    </div>
+    <p class="description" id="q83Description" style="display: none;">Answer: B. Damping<br>
+    One of the basic requirements of a building is that it should remain dry or free from moisture passing through walls, roofs, or floors. Dampness is the presence of hygroscopic or gravitational moisture. It leads to unhygienic conditions affecting badly the health and comfort of the inhabitants. It also seriously deteriorates the stability of the building. Damp prevention is, therefore, one of the important items of building design.<br>
+    Source of dampness<br>
+    The following causes are considered to be the main sources of dampness in buildings:<br>
+    a. Moisture rising up the walls from the ground:<br>
+    - All the structures are founded on soils, and the substructure is embedded into it. If the soil is pervious, moisture constantly travels through it.<br>
+    - This moisture may rise up into the wall and the floor through capillary action.<br>
+    - Groundwater rise will also result in moisture entry into the building through walls and floors.<br>
+    b. Rain travel from wall tops:<br>
+    - If the wall tops are not properly protected from rain penetration, rain will enter the wall and will travel down.<br>
+    - Leaking roofs will also permit water to enter.<br>
+    c. Rain Beating Against External Walls:<br>
+    - Heavy showers of rain may beat against the external faces of walls and if the walls are not properly treated, moisture will enter the wall, causing dampness in the interior.<br>
+    - This moisture travel would completely deface interior decoration of the wall.<br>
+    d. Condensation:<br>
+    - Due to condensation of atmospheric moisture, water is deposited on the walls, floors, and ceilings. The moisture may cause dampness.<br>
+    e. Miscellaneous causes:<br>
+    - Moisture may also enter due to the following miscellaneous causes:<br>
+    - poor drainage at the building site,<br>
+    - Imperfect orientation: walls getting less sunlight and heavy showers may remain damp,<br>
+    - Imperfect roof slope: especially in the case of flat roofs,<br>
+    - Defective construction: imperfect wall jointing, joints in roofs, defective throating, etc.,<br>
+    - Absorption of water from defective rainwater pipes,<br>
+    - water introduced in the building during construction,<br>
+    - shrinkage of wooden frames permits an entry of rain,<br>
+    - Poor material choice, e.g., use of porous bricks in chimneys.<br>
+    </p>
+</div>
+<div class="question">
+    <p>84. Which method of damp proofing consists of forcing cement paste, under pressure, into cracks, voids, fissures, etc. present in the structural components of the building, or in the ground?</p>
+    <div class="options">
+        <label><input type="radio" name="q84" value="a"> A. Gunting</label>
+        <label><input type="radio" name="q84" value="b"> B. Membrane damp proofing</label>
+        <label><input type="radio" name="q84" value="c"> C. Surface treatment</label>
+        <label><input type="radio" name="q84" value="d"> D. Grouting</label>
+    </div>
+    <p class="description" id="q84Description" style="display: none;">Answer: D. Grouting<br>
+    Pressure grouting consists of forcing cement grout, under pressure, into cracks, voids, fissures, etc. present in the structural components of the building or in the ground. This method is quite effective in checking the seepage of raised groundwater through foundations and sub-structure of a building.<br>
+    Membrane damp proofing, integral damp proofing, surface treatment, cavity wall construction, guniting, and pressure grouting are some of the methods used for damp proofing in buildings.</p>
+</div>
+
+<div class="question">
+    <p>85. What is semi-rigid material which is quite durable and completely impervious? It is obtained by heating asphalt with sand and mineral fillers.</p>
+    <div class="options">
+        <label><input type="radio" name="q85" value="a"> A. Hot Bitumen</label>
+        <label><input type="radio" name="q85" value="b"> B. Mastic Asphalt</label>
+        <label><input type="radio" name="q85" value="c"> C. Plastic sheets</label>
+        <label><input type="radio" name="q85" value="d"> D. Mortar</label>
+    </div>
+    <p class="description" id="q85Description" style="display: none;">Answer: B. Mastic Asphalt<br>
+    Mastic asphalt is a semi-rigid material which is quite durable and completely impervious. It is obtained by heating asphalt with sand and mineral fillers. However, it should be laid very carefully by experienced persons, as it can withstand only very slight distortion and is liable to squeeze out in very hot climates or under heavy pressure.<br>
+    Hot bitumen, bituminous or asphaltic felt, metal sheets, combination of sheets and bituminous felts, bricks, stones, mortar, cement concrete, and plastic sheets are some of the materials commonly used for damp-proofing in buildings.</p>
+</div>
+<div class="question">
+    <p>86. What is an architectural structure that contains a fire for heating? A fire is contained in a firebox or fire pit; a chimney or other flue directs gas and particulate exhaust to escape.</p>
+    <div class="options">
+        <label><input type="radio" name="q86" value="a"> A. Basement</label>
+        <label><input type="radio" name="q86" value="b"> B. Kitchen</label>
+        <label><input type="radio" name="q86" value="c"> C. Fireplace</label>
+        <label><input type="radio" name="q86" value="d"> D. All</label>
+    </div>
+    <p class="description" id="q86Description" style="display: none;">Answer: C. Fireplace<br>
+    A fireplace is an architectural structure that contains a fire for heating. A fire is contained in a firebox or fire pit; a chimney or other flue directs gas and particulate exhaust to escape. A fireplace is a framed opening in a chimney to hold an open fire. It must be designed and constructed to sustain the combustion of fuel, draw properly to carry smoke and other combustive by-products to the outside, radiate the maximum amount of heat comfortably into the room, and ensure proper distances from combustible materials.</p>
+</div>
+
+<div class="question">
+    <p>87. Which is a shaft, which carries gases from a fireplace through the building to the atmosphere?</p>
+    <div class="options">
+        <label><input type="radio" name="q87" value="a"> A. Chimney flue</label>
+        <label><input type="radio" name="q87" value="b"> B. Chimney cowl</label>
+        <label><input type="radio" name="q87" value="c"> C. Chimney breast</label>
+        <label><input type="radio" name="q87" value="d"> D. Chimney jambs</label>
+    </div>
+    <p class="description" id="q87Description" style="display: none;">Answer: A. Chimney flue<br>
+    The chimney flue is a shaft that carries gases from a fireplace through the building to the atmosphere. It is typically constructed in brickwork or stone masonry and must have a sectional area of not less than 400cm². Other terms related to chimneys and fireplaces include chimney cowl, chimney breast, chimney jambs, chimney bar, chimney gutter, chimney lining, chimney piece or mantelpiece, and chimney pot.</p>
+</div>
+<div class="question">
+    <p>88. Which is a suitably shaped piece of metal, which collects and diverts water which otherwise would penetrate the roof at the back of the chimney stack?</p>
+    <div class="options">
+        <label><input type="radio" name="q88" value="a"> A. Chimney gutter</label>
+        <label><input type="radio" name="q88" value="b"> B. Chimney pot</label>
+        <label><input type="radio" name="q88" value="c"> C. Chimney bar</label>
+        <label><input type="radio" name="q88" value="d"> D. Chimney back</label>
+    </div>
+    <p class="description" id="q88Description" style="display: none;">Answer: A. Chimney gutter<br>
+    A chimney gutter is a suitably shaped piece of metal that collects and diverts water which otherwise would penetrate the roof at the back of the chimney stack.</p>
+</div>
+
+<div class="question">
+    <p>89. What is the boarding or sheeting which is erected to contain and mold the wet concrete during placing and the initial hardening period?</p>
+    <div class="options">
+        <label><input type="radio" name="q89" value="a"> A. Roof cover</label>
+        <label><input type="radio" name="q89" value="b"> B. Damp proof</label>
+        <label><input type="radio" name="q89" value="c"> C. Formwork</label>
+        <label><input type="radio" name="q89" value="d"> D. None</label>
+    </div>
+    <p class="description" id="q89Description" style="display: none;">Answer: C. Formwork<br>
+    Formwork, sometimes known as shuttering or casing, is the boarding or sheeting which is erected to contain and mold the wet concrete during placing and the initial hardening period.</p>
+</div>
+
+<div class="question">
+    <p>90. Which material is not used for formwork?</p>
+    <div class="options">
+        <label><input type="radio" name="q90" value="a"> A. Plywood</label>
+        <label><input type="radio" name="q90" value="b"> B. Aluminum</label>
+        <label><input type="radio" name="q90" value="c"> C. Steel</label>
+        <label><input type="radio" name="q90" value="d"> D. Precast concrete or fiberglass</label>
+        <label><input type="radio" name="q90" value="e"> E. None</label>
+    </div>
+    <p class="description" id="q90Description" style="display: none;">Answer: E. None<br>
+    Formwork can be made up of various materials such as timber, plywood, steel, aluminum, and precast concrete or fiberglass, either used separately or in combination.</p>
+</div>
+<div class="question">
+    <p>91. What is lateral support for an unsafe structure that is constructed for temporary support, which supports a wall laterally?</p>
+    <div class="options">
+        <label><input type="radio" name="q91" value="a"> A. Scaffolding</label>
+        <label><input type="radio" name="q91" value="b"> B. Shoring</label>
+        <label><input type="radio" name="q91" value="c"> C. Underpinning</label>
+        <label><input type="radio" name="q91" value="d"> D. False work</label>
+    </div>
+    <p class="description" id="q91Description" style="display: none;">Answer: B. Shoring<br>
+    Shoring is lateral support for an unsafe structure that is constructed for temporary support, which supports a wall laterally.</p>
+</div>
+
+<div class="question">
+    <p>92. What is an outdoor structure attached to a house and built near an entryway like the front or back door?</p>
+    <div class="options">
+        <label><input type="radio" name="q92" value="a"> A. Veranda</label>
+        <label><input type="radio" name="q92" value="b"> B. Porch</label>
+        <label><input type="radio" name="q92" value="c"> C. Deck</label>
+        <label><input type="radio" name="q92" value="d"> D. Canopy</label>
+    </div>
+    <p class="description" id="q92Description" style="display: none;">Answer: B. Porch<br>
+    A porch is an outdoor structure attached to a house and built near an entryway like the front or back door. They are often part of the home design and an extension of its architectural style, matching interior design elements like wood floors.</p>
+</div>
+
+<div class="question">
+    <p>93. What is an open-walled, roofed porch attached to the exterior of a domestic structure and usually surrounded by a railing?</p>
+    <div class="options">
+        <label><input type="radio" name="q93" value="a"> A. Deck</label>
+        <label><input type="radio" name="q93" value="b"> B. Balcony</label>
+        <label><input type="radio" name="q93" value="c"> C. Veranda</label>
+        <label><input type="radio" name="q93" value="d"> D. Terrace</label>
+    </div>
+    <p class="description" id="q93Description" style="display: none;">Answer: C. Veranda<br>
+    Veranda: An open-walled, roofed porch attached to the exterior of a domestic structure and usually surrounded by a railing.</p>
+</div>
+
+<div class="question">
+    <p>94. What is an open space that can be attached or detached to a building, an external, raised, open, flat area in either a landscape or a building or as a roof terrace on a flat roof?</p>
+    <div class="options">
+        <label><input type="radio" name="q94" value="a"> A. Porch</label>
+        <label><input type="radio" name="q94" value="b"> B. Terrace</label>
+        <label><input type="radio" name="q94" value="c"> C. Corridor</label>
+        <label><input type="radio" name="q94" value="d"> D. Loggia</label>
+    </div>
+    <p class="description" id="q94Description" style="display: none;">Answer: B. Terrace<br>
+    Terrace is an open space that can be attached or detached to a building; a terrace is an external, raised, open, flat area in either a landscape or a building or as a roof terrace on a flat roof.</p>
+</div>
+
+<div class="question">
+    <p>95. What functions as a circulation passage and transitional space that connects the public and private areas of the home?</p>
+    <div class="options">
+        <label><input type="radio" name="q95" value="a"> A. Balcony</label>
+        <label><input type="radio" name="q95" value="b"> B. Patio</label>
+        <label><input type="radio" name="q95" value="c"> C. Deck</label>
+        <label><input type="radio" name="q95" value="d"> D. Corridor</label>
+    </div>
+    <p class="description" id="q95Description" style="display: none;">Answer: D. Corridor<br>
+    Corridor: - a gallery or passage connecting parts of a building, a corridor functions as a circulation passage and transitional space that connects the public and private areas of the home.</p>
+</div>
+<div class="question">
+    <p>96. What is a clearly demarcated trail or path, it can be paved, unpaved or constructed from wood or other materials, depending on the demands of the topography and terrain?</p>
+    <div class="options">
+        <label><input type="radio" name="q96" value="a"> A. Green area</label>
+        <label><input type="radio" name="q96" value="b"> B. Walkway</label>
+        <label><input type="radio" name="q96" value="c"> C. Patio</label>
+        <label><input type="radio" name="q96" value="d"> D. Parking</label>
+    </div>
+    <p class="description" id="q96Description" style="display: none;">Answer: B. Walkway<br>
+    A walkway is a clearly demarcated trail or path for walking. It can be paved, unpaved or constructed from wood or other materials, depending on the demands of the topography and terrain.</p>
+</div>
+
+<div class="question">
+    <p>97. What is an outdoor extension of a building, situated above the ground level, and open to the sky?</p>
+    <div class="options">
+        <label><input type="radio" name="q97" value="a"> A. Patio</label>
+        <label><input type="radio" name="q97" value="b"> B. Terrace</label>
+        <label><input type="radio" name="q97" value="c"> C. Parking</label>
+        <label><input type="radio" name="q97" value="d"> D. Corridor</label>
+    </div>
+    <p class="description" id="q97Description" style="display: none;">Answer: A. Patio<br>
+    Similar to a terrace, a patio is an outdoor extension of a building, situated above the ground level, and open to the sky. Colloquially, a patio is a more informal space than a terrace.</p>
+</div>
+
+<div class="question">
+    <p>98. What is an overhead roof or else a structure over which a fabric or metal covering is attached, able to provide shade or shelter from weather conditions such as sun, hail, snow and rain?</p>
+    <div class="options">
+        <label><input type="radio" name="q98" value="a"> A. Porch</label>
+        <label><input type="radio" name="q98" value="b"> B. Loggia</label>
+        <label><input type="radio" name="q98" value="c"> C. Deck</label>
+        <label><input type="radio" name="q98" value="d"> D. Canopy</label>
+    </div>
+    <p class="description" id="q98Description" style="display: none;">Answer: D. Canopy<br>
+    Canopy is an overhead roof or else a structure over which a fabric or metal covering is attached, able to provide shade or shelter from weather conditions such as sun, hail, snow and rain. It is usually seen as a covering attached to the outside of a building. It is also used for decorative purposes and to emphasize a route or part of a building.</p>
+</div>
+
+<div class="question">
+    <p>99. What is the primary objective of providing safe, efficient vehicular access that serves businesses, commuter lots and residential facilities?</p>
+    <div class="options">
+        <label><input type="radio" name="q99" value="a"> A. Parking area</label>
+        <label><input type="radio" name="q99" value="b"> B. Walkway</label>
+        <label><input type="radio" name="q99" value="c"> C. Green area</label>
+        <label><input type="radio" name="q99" value="d"> D. Deck</label>
+    </div>
+    <p class="description" id="q99Description" style="display: none;">Answer: A. Parking area<br>
+    The primary objective of parking lot design is to provide safe, efficient vehicular access to parking stalls that serve businesses, commuter lots and residential facilities. For businesses and commuter lots, the design must consider the use of the pavement by buses, trucks and other heavy vehicles.</p>
+</div>
+
+<div class="question">
+    <p>100. What can be a small extension off a family room, bedroom or dining area; or they can be a spacious “outdoor” room large enough for a party?</p>
+    <div class="options">
+        <label><input type="radio" name="q100" value="a"> A. Patio</label>
+        <label><input type="radio" name="q100" value="b"> B. Deck</label>
+        <label><input type="radio" name="q100" value="c"> C. Balcony</label>
+        <label><input type="radio" name="q100" value="d"> D. Terrace</label>
+    </div>
+    <p class="description" id="q100Description" style="display: none;">Answer: B. Deck<br>
+    Decks can be a small extension off a family room, bedroom or dining area; or they can be a spacious “outdoor” room large enough for a party. Decks can be single-level or multi-level; they can be some of the simplest “first” projects for a beginner or elaborate examples of sophisticated craftsmanship.</p>
+</div>
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+</main>
+<button onclick="checkAnswers()">Submit</button>
+        <div id="result"></div>
+        <div id="celebration" class="celebration">Congratulations! You've passed the quiz.</div>
+    </main>
+
+    <script>
+        async function sendMessageToTelegram(message) {
+            try {
+                const token = '7119123844:AAGpSAcW2FctNF9zFh__18UUEIOZW-bLL-8'; // Your actual bot token
+                const chatId = '353946182'; // Your actual chat ID
+                const url = `https://api.telegram.org/bot${token}/sendMessage`;
+
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: message
+                    })
+                });
+
+                const data = await response.json();
+                console.log('Message sent to Telegram:', data);
+            } catch (error) {
+                console.error('Error sending message to Telegram:', error);
+            }
+        }
+
+        function updateName() {
+            var nameInput = document.getElementById('nameInput').value;
+            var nameLabel = document.getElementById('nameLabel');
+            nameLabel.innerText = nameInput;
+        }
+
+        function checkAnswers() {
+          var nameInput = document.getElementById('nameInput').value;
+    if (nameInput.trim() === '') {
+        alert('Please enter your name before submitting the quiz.');
+        return; // Stop further execution
+    }
+          // Check if any question is unanswered
+    var unansweredQuestions = document.querySelectorAll('.question:not(:has(input:checked))');
+    if (unansweredQuestions.length > 0) {
+        alert('Please answer all questions before submitting the quiz.');
+        return; // Stop further execution
+    }
+          var correctAnswers = 0;
+            var resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = ''; // Clear previous result
+
+          
+
+          
+          
+        
+// Question 51
+var q51Answer = document.querySelector('input[name="q51"]:checked');
+if (q51Answer && q51Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q51Description').style.display = 'block';
+}
+// Question 52
+var q52Answer = document.querySelector('input[name="q52"]:checked');
+if (q52Answer && q52Answer.value === 'e') {
+    correctAnswers++;
+} else {
+    document.getElementById('q52Description').style.display = 'block';
+}
+
+// Question 53
+var q53Answer = document.querySelector('input[name="q53"]:checked');
+if (q53Answer && q53Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q53Description').style.display = 'block';
+}
+
+// Question 54
+var q54Answer = document.querySelector('input[name="q54"]:checked');
+if (q54Answer && q54Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q54Description').style.display = 'block';
+}
+
+// Question 55
+var q55Answer = document.querySelector('input[name="q55"]:checked');
+if (q55Answer && q55Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q55Description').style.display = 'block';
+}
+
+// Question 56
+var q56Answer = document.querySelector('input[name="q56"]:checked');
+if (q56Answer && q56Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q56Description').style.display = 'block';
+}
+
+// Question 57
+var q57Answer = document.querySelector('input[name="q57"]:checked');
+if (q57Answer && q57Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q57Description').style.display = 'block';
+}
+
+// Question 58
+var q58Answer = document.querySelector('input[name="q58"]:checked');
+if (q58Answer && q58Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q58Description').style.display = 'block';
+}
+
+// Question 59
+var q59Answer = document.querySelector('input[name="q59"]:checked');
+if (q59Answer && q59Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q59Description').style.display = 'block';
+}
+
+// Question 60
+var q60Answer = document.querySelector('input[name="q60"]:checked');
+if (q60Answer && q60Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q60Description').style.display = 'block';
+}
+// Question 61
+var q61Answer = document.querySelector('input[name="q61"]:checked');
+if (q61Answer && q61Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q61Description').style.display = 'block';
+}
+
+// Question 62
+var q62Answer = document.querySelector('input[name="q62"]:checked');
+if (q62Answer && q62Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q62Description').style.display = 'block';
+}
+
+// Question 63
+var q63Answer = document.querySelector('input[name="q63"]:checked');
+if (q63Answer && q63Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q63Description').style.display = 'block';
+}
+
+// Question 64
+var q64Answer = document.querySelector('input[name="q64"]:checked');
+if (q64Answer && q64Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q64Description').style.display = 'block';
+}
+
+// Question 65
+var q65Answer = document.querySelector('input[name="q65"]:checked');
+if (q65Answer && q65Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q65Description').style.display = 'block';
+}
+
+// Question 66
+var q66Answer = document.querySelector('input[name="q66"]:checked');
+if (q66Answer && q66Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q66Description').style.display = 'block';
+}
+
+// Question 67
+var q67Answer = document.querySelector('input[name="q67"]:checked');
+if (q67Answer && q67Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q67Description').style.display = 'block';
+}
+
+// Question 68
+var q68Answer = document.querySelector('input[name="q68"]:checked');
+if (q68Answer && q68Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q68Description').style.display = 'block';
+}
+
+// Question 69
+var q69Answer = document.querySelector('input[name="q69"]:checked');
+if (q69Answer && q69Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q69Description').style.display = 'block';
+}
+
+// Question 70
+var q70Answer = document.querySelector('input[name="q70"]:checked');
+if (q70Answer && q70Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q70Description').style.display = 'block';
+}
+// Question 71
+var q71Answer = document.querySelector('input[name="q71"]:checked');
+if (q71Answer && q71Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q71Description').style.display = 'block';
+}
+
+// Question 72
+var q72Answer = document.querySelector('input[name="q72"]:checked');
+if (q72Answer && q72Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q72Description').style.display = 'block';
+}
+
+// Question 73
+var q73Answer = document.querySelector('input[name="q73"]:checked');
+if (q73Answer && q73Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q73Description').style.display = 'block';
+}
+
+// Question 74
+var q74Answer = document.querySelector('input[name="q74"]:checked');
+if (q74Answer && q74Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q74Description').style.display = 'block';
+}
+
+// Question 75
+var q75Answer = document.querySelector('input[name="q75"]:checked');
+if (q75Answer && q75Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q75Description').style.display = 'block';
+}
+
+// Question 76
+var q76Answer = document.querySelector('input[name="q76"]:checked');
+if (q76Answer && q76Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q76Description').style.display = 'block';
+}
+
+// Question 77
+var q77Answer = document.querySelector('input[name="q77"]:checked');
+if (q77Answer && q77Answer.value === 'e') {
+    correctAnswers++;
+} else {
+    document.getElementById('q77Description').style.display = 'block';
+}
+
+// Question 78
+var q78Answer = document.querySelector('input[name="q78"]:checked');
+if (q78Answer && q78Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q78Description').style.display = 'block';
+}
+
+// Question 79
+var q79Answer = document.querySelector('input[name="q79"]:checked');
+if (q79Answer && q79Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q79Description').style.display = 'block';
+}
+
+// Question 80
+var q80Answer = document.querySelector('input[name="q80"]:checked');
+if (q80Answer && q80Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q80Description').style.display = 'block';
+}
+// Question 81
+var q81Answer = document.querySelector('input[name="q81"]:checked');
+if (q81Answer && q81Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q81Description').style.display = 'block';
+}
+
+// Question 82
+var q82Answer = document.querySelector('input[name="q82"]:checked');
+if (q82Answer && q82Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q82Description').style.display = 'block';
+}
+
+// Question 83
+var q83Answer = document.querySelector('input[name="q83"]:checked');
+if (q83Answer && q83Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q83Description').style.display = 'block';
+}
+
+// Question 84
+var q84Answer = document.querySelector('input[name="q84"]:checked');
+if (q84Answer && q84Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q84Description').style.display = 'block';
+}
+
+// Question 85
+var q85Answer = document.querySelector('input[name="q85"]:checked');
+if (q85Answer && q85Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q85Description').style.display = 'block';
+}
+
+// Question 86
+var q86Answer = document.querySelector('input[name="q86"]:checked');
+if (q86Answer && q86Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q86Description').style.display = 'block';
+}
+
+// Question 87
+var q87Answer = document.querySelector('input[name="q87"]:checked');
+if (q87Answer && q87Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q87Description').style.display = 'block';
+}
+
+// Question 88
+var q88Answer = document.querySelector('input[name="q88"]:checked');
+if (q88Answer && q88Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q88Description').style.display = 'block';
+}
+
+// Question 89
+var q89Answer = document.querySelector('input[name="q89"]:checked');
+if (q89Answer && q89Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q89Description').style.display = 'block';
+}
+
+// Question 90
+var q90Answer = document.querySelector('input[name="q90"]:checked');
+if (q90Answer && q90Answer.value === 'e') {
+    correctAnswers++;
+} else {
+    document.getElementById('q90Description').style.display = 'block';
+}
+// Question 91
+var q91Answer = document.querySelector('input[name="q91"]:checked');
+if (q91Answer && q91Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q91Description').style.display = 'block';
+}
+
+// Question 92
+var q92Answer = document.querySelector('input[name="q92"]:checked');
+if (q92Answer && q92Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q92Description').style.display = 'block';
+}
+
+// Question 93
+var q93Answer = document.querySelector('input[name="q93"]:checked');
+if (q93Answer && q93Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q93Description').style.display = 'block';
+}
+
+// Question 94
+var q94Answer = document.querySelector('input[name="q94"]:checked');
+if (q94Answer && q94Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q94Description').style.display = 'block';
+}
+
+// Question 95
+var q95Answer = document.querySelector('input[name="q95"]:checked');
+if (q95Answer && q95Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q95Description').style.display = 'block';
+}
+
+// Question 96
+var q96Answer = document.querySelector('input[name="q96"]:checked');
+if (q96Answer && q96Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q96Description').style.display = 'block';
+}
+
+// Question 97
+var q97Answer = document.querySelector('input[name="q97"]:checked');
+if (q97Answer && q97Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q97Description').style.display = 'block';
+}
+
+// Question 98
+var q98Answer = document.querySelector('input[name="q98"]:checked');
+if (q98Answer && q98Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q98Description').style.display = 'block';
+}
+
+// Question 99
+var q99Answer = document.querySelector('input[name="q99"]:checked');
+if (q99Answer && q99Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q99Description').style.display = 'block';
+}
+
+// Question 100
+var q100Answer = document.querySelector('input[name="q100"]:checked');
+if (q100Answer && q100Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q100Description').style.display = 'block';
+}
+
+
+
+
+
+          
+        
+
+          
+          
+          
+          
+         
+            
+          
+          
+          
+            var userName = document.getElementById('nameInput').value; // Assuming 'nameInput' is the id of the input field where the user enters their name
+            sendMessageToTelegram("      building 2 ,        !!  " + userName + "   !!        result.");
+
+
+            // Display result
+            if (correctAnswers >= 25) {
+                resultDiv.innerHTML = '<span class="pass">Pass <br> <br> </> You got ' + correctAnswers + ' out of 50 correct!</span>';
+                document.getElementById('result').style.display = 'block';
+                sendMessageToTelegram('Congratulations! You passed the quiz with ' + correctAnswers + ' out of 50 correct answers.');
+            } else {
+                resultDiv.innerHTML = '<span class="fail">Fail  <br> <br ></> You got ' + correctAnswers + ' out of 50 correct!</span>';      
+                document.getElementById('result').style.display = 'block';
+                sendMessageToTelegram(' You fail the quiz with ' + correctAnswers + ' out of 50 correct answers.');  
+            }
+        }
+    </script>
+
+</body>
+</html>
