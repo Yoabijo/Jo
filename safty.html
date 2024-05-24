@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>safety  EXIT Q</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0a0a0a;
+            color: #FFD700;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+        }
+        .options label {
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 24px; /* Increase the font size as needed */
+            text-align: center; /* Center the text */
+        }
+        .description {
+            margin-top: 10px;
+            font-style: italic;
+            color: red;
+        }
+        .correct-answer {
+            color: green;
+            font-weight: bold;
+        }
+        .celebration {
+            text-align: center;
+            margin-top: 20px;
+            display: none;
+        }
+        .pass {
+            color: green;
+        }
+        .fail {
+            color: red;
+        }
+        #nameLabel {
+            color: blue; /* Change color to blue*/
+          font-size: 30px;
+          margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> safety  EXIT Questions</h1>
+    </header>
+    <main>
+       <style>
+  /* Define styles for attractive text */
+  .attractive-text {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: #007bff; /* Blue color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow */
+    letter-spacing: 2px; /* Increase letter spacing */
+    line-height: 1.5; /* Increase line height */
+    text-align: center; /* Center align */
+    animation: blink-animation 1s infinite; /* Blink animation */
+  }
+
+  /* Define the blink animation */
+  @keyframes blink-animation {
+    0% { opacity: 1; } /* Visible */
+    50% { opacity: 0; } /* Invisible */
+    100% { opacity: 1; } /* Visible */
+  }
+</style>
+</head>
+<body>
+  <div class="attractive-text">
+    please enter your name 
+  </div>
+       <input type="text" id="nameInput" placeholder="Enter your name" style="color: green; padding: 12px 20px; border-radius: 25px; border: 2px solid orange; background-color: #ffff36; font-size: 16px; width: 250px; outline: none;">
+
+
+
+
+
+ 
+      
+
+<div class="question">
+    <p>1. What is the primary reason for prioritizing human concerns in construction health and safety management?</p>
+    <div class="options">
+        <label><input type="radio" name="q1" value="a"> A. It is the ethical and moral thing to do.</label>
+        <label><input type="radio" name="q1" value="b"> B. It is required by law.</label>
+        <label><input type="radio" name="q1" value="c"> C. It is necessary to maintain productivity.</label>
+        <label><input type="radio" name="q1" value="d"> D. It is cheaper to prevent accidents than to deal with their aftermath.</label>
+    </div>
+    <p class="description" id="q1Description" style="display: none;">Explanation: While all the options may be valid reasons for prioritizing human concerns in construction health and safety management, the primary reason is that it is the ethical and moral thing to do. Construction sites can be dangerous places to work, and workers have the right to expect that their employers are doing everything possible to protect their health and safety.</p>
+</div>
+
+<div class="question">
+    <p>2. Which of the following is NOT an example of a human concern in construction health and safety management?</p>
+    <div class="options">
+        <label><input type="radio" name="q2" value="a"> A. Adequate training for workers</label>
+        <label><input type="radio" name="q2" value="b"> B. Provision of personal protective equipment</label>
+        <label><input type="radio" name="q2" value="c"> C. Compliance with environmental regulations</label>
+        <label><input type="radio" name="q2" value="d"> D. Access to first aid facilities</label>
+    </div>
+    <p class="description" id="q2Description" style="display: none;">Explanation: Compliance with environmental regulations is important, but it is not directly related to human concerns in construction health and safety management. Adequate training, provision of personal protective equipment, and access to first aid facilities are all essential for protecting workers' health and safety.</p>
+</div>
+
+<div class="question">
+    <p>3. Which of the following is NOT an example of a human concern that must be considered in construction site health and safety management?</p>
+    <div class="options">
+        <label><input type="radio" name="q3" value="a"> a) Physical health and safety</label>
+        <label><input type="radio" name="q3" value="b"> b) Psychological well-being</label>
+        <label><input type="radio" name="q3" value="c"> c) Job satisfaction</label>
+        <label><input type="radio" name="q3" value="d"> d) Financial performance</label>
+    </div>
+    <p class="description" id="q3Description" style="display: none;">Explanation: Human concerns in construction site health and safety management include physical health and safety, psychological well-being, and job satisfaction. While financial performance is important to the overall success of the construction project, it is not considered a human concern.</p>
+</div>
+<div class="question">
+    <p>4. Which of the following is an example of indirect costs associated with poor health and safety management on a construction site?</p>
+    <div class="options">
+        <label><input type="radio" name="q4" value="a"> A. Workers' compensation claims</label>
+        <label><input type="radio" name="q4" value="b"> B. Lost productivity due to absenteeism</label>
+        <label><input type="radio" name="q4" value="c"> C. Fines and penalties for non-compliance</label>
+        <label><input type="radio" name="q4" value="d"> D. Repair costs for damaged equipment</label>
+    </div>
+    <p class="description" id="q4Description" style="display: none;">Explanation: Indirect costs associated with poor health and safety management on a construction site include lost productivity due to absenteeism, decreased morale, and increased employee turnover. Workers' compensation claims, fines and penalties, and repair costs for damaged equipment are all examples of direct costs.</p>
+</div>
+
+<div class="question">
+    <p>5. What is the primary reason for conducting a cost-benefit analysis of health and safety management measures in construction?</p>
+    <div class="options">
+        <label><input type="radio" name="q5" value="a"> A. To determine if the measures are financially feasible</label>
+        <label><input type="radio" name="q5" value="b"> B. To comply with legal requirements</label>
+        <label><input type="radio" name="q5" value="c"> C. To evaluate the effectiveness of the measures</label>
+        <label><input type="radio" name="q5" value="d"> D. To ensure that workers are protected</label>
+    </div>
+    <p class="description" id="q5Description" style="display: none;">Explanation: The primary reason for conducting a cost-benefit analysis of health and safety management measures in construction is to determine if the measures are financially feasible. This involves comparing the costs of implementing the measures with the expected benefits, such as decreased injury rates and increased productivity.</p>
+</div>
+
+<div class="question">
+    <p>6. Which of the following is an example of a cost associated with poor construction site health and safety management?</p>
+    <div class="options">
+        <label><input type="radio" name="q6" value="a"> a) Improved worker morale and job satisfaction</label>
+        <label><input type="radio" name="q6" value="b"> b) Increased productivity and efficiency</label>
+        <label><input type="radio" name="q6" value="c"> c) Reduced insurance premiums</label>
+        <label><input type="radio" name="q6" value="d"> d) Lost time due to work-related injuries and illnesses</label>
+    </div>
+    <p class="description" id="q6Description" style="display: none;">Explanation: Poor construction site health and safety management can result in lost time due to work-related injuries and illnesses. This can lead to decreased productivity, increased insurance premiums, and decreased worker morale and job satisfaction.</p>
+</div>
+<div class="question">
+    <p>7. Which of the following is an example of a safety benefit of implementing health and safety management measures on a construction site?</p>
+    <div class="options">
+        <label><input type="radio" name="q7" value="a"> A. Increased worker morale</label>
+        <label><input type="radio" name="q7" value="b"> B. Decreased equipment downtime</label>
+        <label><input type="radio" name="q7" value="c"> C. Improved project scheduling</label>
+        <label><input type="radio" name="q7" value="d"> D. Reduced workers' compensation claims</label>
+    </div>
+    <p class="description" id="q7Description" style="display: none;">Explanation: One of the primary safety benefits of implementing health and safety management measures on a construction site is a reduction in workers' compensation claims. Other benefits may include increased worker morale, decreased equipment downtime, and improved project scheduling, but these are not primarily related to safety.</p>
+</div>
+
+<div class="question">
+    <p>8. What is the primary reason for measuring the effectiveness of health and safety management measures on a construction site?</p>
+    <div class="options">
+        <label><input type="radio" name="q8" value="a"> A. To comply with legal requirements</label>
+        <label><input type="radio" name="q8" value="b"> B. To evaluate the success of the measures</label>
+        <label><input type="radio" name="q8" value="c"> C. To identify areas for improvement</label>
+        <label><input type="radio" name="q8" value="d"> D. To reduce costs associated with accidents</label>
+    </div>
+    <p class="description" id="q8Description" style="display: none;">Explanation: The primary reason for measuring the effectiveness of health and safety management measures on a construction site is to evaluate the success of the measures. This involves assessing the impact of the measures on worker health and safety, as well as on project costs and productivity.</p>
+</div>
+
+<div class="question">
+    <p>9. Which of the following is NOT an example of a benefit associated with effective construction site health and safety management?</p>
+    <div class="options">
+        <label><input type="radio" name="q9" value="a"> a) Reduced risk of work-related injuries and illnesses</label>
+        <label><input type="radio" name="q9" value="b"> b) Increased worker morale and job satisfaction</label>
+        <label><input type="radio" name="q9" value="c"> c) Increased insurance premiums</label>
+        <label><input type="radio" name="q9" value="d"> d) Improved productivity and efficiency</label>
+    </div>
+    <p class="description" id="q9Description" style="display: none;">Explanation: Effective construction site health and safety management can result in benefits such as reduced risk of work-related injuries and illnesses, increased worker morale and job satisfaction, and improved productivity and efficiency. It can also lead to reduced insurance premiums due to a lower risk of accidents and injuries.</p>
+</div>
+<div class="question">
+    <p>10. Which of the following statements is true regarding record-keeping in construction site health and safety management?</p>
+    <div class="options">
+        <label><input type="radio" name="q10" value="a"> a) Record-keeping is not required for OSHA compliance, but it can be helpful in the event of an incident.</label>
+        <label><input type="radio" name="q10" value="b"> b) Record-keeping is optional and up to the discretion of the construction company.</label>
+        <label><input type="radio" name="q10" value="c"> c) Record-keeping is required by law for OSHA compliance, and it must be kept for a minimum of five years.</label>
+        <label><input type="radio" name="q10" value="d"> d) Record-keeping is only required for incidents resulting in serious injuries or fatalities.</label>
+    </div>
+    <p class="description" id="q10Description" style="display: none;">Explanation: Record-keeping is a legal requirement for construction site health and safety management. OSHA requires employers to keep records of work-related injuries and illnesses for a minimum of five years. This information is used to track trends and identify hazards that need to be addressed to prevent future incidents. Keeping accurate records also helps to ensure compliance with OSHA regulations and can be helpful in the event of an incident or audit.</p>
+</div>
+
+<div class="question">
+    <p>11. What type of information should be included in a construction site health and safety management program's record-keeping system?</p>
+    <div class="options">
+        <label><input type="radio" name="q11" value="a"> a) Incident reports and near-miss reports</label>
+        <label><input type="radio" name="q11" value="b"> b) Employee personal information such as social security numbers and home addresses</label>
+        <label><input type="radio" name="q11" value="c"> c) Financial reports and expense receipts</label>
+        <label><input type="radio" name="q11" value="d"> d) Customer feedback and satisfaction ratings</label>
+    </div>
+    <p class="description" id="q11Description" style="display: none;">Explanation: A construction site health and safety management program's record-keeping system should include incident reports and near-miss reports. These reports should include detailed information about the incident or near-miss, including the date, time, location, and a description of what happened. This information is used to identify trends and hazards that need to be addressed to prevent future incidents.</p>
+</div>
+<div class="question">
+    <p>12. What is the purpose of record-keeping in a health and safety management program?</p>
+    <div class="options">
+        <label><input type="radio" name="q12" value="a"> a. To document incidents and accidents that occur on the job site.</label>
+        <label><input type="radio" name="q12" value="b"> b. To keep track of worker attendance.</label>
+        <label><input type="radio" name="q12" value="c"> c. To track the number of safety violations on the job site.</label>
+        <label><input type="radio" name="q12" value="d"> d. To create a historical record that can be used to identify trends and areas for improvement.</label>
+    </div>
+    <p class="description" id="q12Description" style="display: none;">Explanation: Record-keeping is an important aspect of any health and safety management program. By maintaining accurate and detailed records, project managers can identify trends and patterns related to safety incidents and take action to prevent similar incidents from occurring in the future.</p>
+</div>
+
+<div class="question">
+    <p>13. Which of the following is a benefit of implementing a comprehensive health and safety management program on a construction site?</p>
+    <div class="options">
+        <label><input type="radio" name="q13" value="a"> a. Improved worker morale and productivity.</label>
+        <label><input type="radio" name="q13" value="b"> b. Reduced costs associated with accidents and injuries.</label>
+        <label><input type="radio" name="q13" value="c"> c. Improved relationships with regulatory agencies.</label>
+        <label><input type="radio" name="q13" value="d"> d. All of the above.</label>
+    </div>
+    <p class="description" id="q13Description" style="display: none;">Explanation: Implementing a comprehensive health and safety management program on a construction site can lead to a variety of benefits, including improved worker morale and productivity, reduced costs associated with accidents and injuries, and improved relationships with regulatory agencies.</p>
+</div>
+
+<div class="question">
+    <p>14. What is the purpose of an OSH management program?</p>
+    <div class="options">
+        <label><input type="radio" name="q14" value="a"> a. To ensure compliance with regulatory requirements.</label>
+        <label><input type="radio" name="q14" value="b"> b. To reduce the risk of accidents and injuries on the job site.</label>
+        <label><input type="radio" name="q14" value="c"> c. To improve worker morale and productivity.</label>
+        <label><input type="radio" name="q14" value="d"> d. To all of the above.</label>
+    </div>
+    <p class="description" id="q14Description" style="display: none;">Explanation: The purpose of an OSH management program is to ensure compliance with regulatory requirements, reduce the risk of accidents and injuries on the job site, and improve worker morale and productivity.</p>
+</div>
+
+<div class="question">
+    <p>15. Which of the following is an important step in the planning phase of an OSH management program?</p>
+    <div class="options">
+        <label><input type="radio" name="q15" value="a"> a. Identifying hazards and potential risks.</label>
+        <label><input type="radio" name="q15" value="b"> b. Implementing control measures to reduce risk.</label>
+        <label><input type="radio" name="q15" value="c"> c. Training workers on safety procedures.</label>
+        <label><input type="radio" name="q15" value="d"> d. Conducting regular safety audits.</label>
+    </div>
+    <p class="description" id="q15Description" style="display: none;">Explanation: Identifying hazards and potential risks is an important step in the planning phase of an OSH management program. By identifying potential hazards, project managers can develop strategies to reduce the risk of accidents and injuries on the job site.</p>
+</div>
+<div class="question">
+    <p>16. What is the first step in developing an OSH management program?</p>
+    <div class="options">
+        <label><input type="radio" name="q16" value="a"> a) Identifying hazards and risks</label>
+        <label><input type="radio" name="q16" value="b"> b) Establishing a safety committee</label>
+        <label><input type="radio" name="q16" value="c"> c) Developing policies and procedures</label>
+        <label><input type="radio" name="q16" value="d"> d) Conducting a workplace assessment</label>
+    </div>
+    <p class="description" id="q16Description" style="display: none;">Answer: d) Conducting a workplace assessment. The first step in developing an OSH management program is to conduct a workplace assessment to identify hazards and risks.</p>
+</div>
+
+<div class="question">
+    <p>17. What is the purpose of an OSH policy?</p>
+    <div class="options">
+        <label><input type="radio" name="q17" value="a"> a) To identify hazards and risks</label>
+        <label><input type="radio" name="q17" value="b"> b) To provide a framework for managing OSH</label>
+        <label><input type="radio" name="q17" value="c"> c) To monitor OSH performance</label>
+        <label><input type="radio" name="q17" value="d"> d) To ensure compliance with legal requirements</label>
+    </div>
+    <p class="description" id="q17Description" style="display: none;">Answer: b) To provide a framework for managing OSH. The purpose of an OSH policy is to provide a framework for managing OSH within an organization.</p>
+</div>
+
+<div class="question">
+    <p>18. What is the role of an OSH committee?</p>
+    <div class="options">
+        <label><input type="radio" name="q18" value="a"> a) To conduct workplace assessments</label>
+        <label><input type="radio" name="q18" value="b"> b) To develop OSH policies and procedures</label>
+        <label><input type="radio" name="q18" value="c"> c) To monitor OSH performance</label>
+        <label><input type="radio" name="q18" value="d"> d) All of the above</label>
+    </div>
+    <p class="description" id="q18Description" style="display: none;">Answer: d) All of the above. The role of an OSH committee is to conduct workplace assessments, develop OSH policies and procedures, and monitor OSH performance.</p>
+</div>
+
+<div class="question">
+    <p>19. What is the difference between an OSH program and an OSH management system?</p>
+    <div class="options">
+        <label><input type="radio" name="q19" value="a"> a) There is no difference</label>
+        <label><input type="radio" name="q19" value="b"> b) An OSH program is a subset of an OSH management system</label>
+        <label><input type="radio" name="q19" value="c"> c) An OSH management system is a subset of an OSH program</label>
+        <label><input type="radio" name="q19" value="d">d) An OSH program is focused on training, while an OSH management system is focused on policy development</label>
+        </div>
+    <p class="description" id="q19Description" style="display: none;">
+ Answer: b) An OSH program is a subset of an OSH management system. An OSH program is a subset of an OSH management system that focuses on implementing specific activities to manage OSH risks.</p>
+</div>
+
+<div class="question">
+    <p>20. What is the purpose of an OSH management system audit?</p>
+    <div class="options">
+        <label><input type="radio" name="q20" value="a"> a) To identify hazards and risks</label>
+        <label><input type="radio" name="q20" value="b"> b) To assess the effectiveness of the OSH management system</label>
+        <label><input type="radio" name="q20" value="c"> c) To develop OSH policies and procedures</label>
+        <label><input type="radio" name="q20" value="d"> d) To train employees on OSH best practices</label>
+    </div>
+    <p class="description" id="q20Description" style="display: none;">Answer: b) To assess the effectiveness of the OSH management system. The purpose of an OSH management system audit is to assess the effectiveness of the OSH management system and identify areas for improvement.</p>
+</div>
+
+<div class="question">
+    <p>21. What is the purpose of an OSH training program?</p>
+    <div class="options">
+        <label><input type="radio" name="q21" value="a"> a) To ensure compliance with legal requirements</label>
+        <label><input type="radio" name="q21" value="b"> b) To provide employees with the knowledge and skills to work safely</label>
+        <label><input type="radio" name="q21" value="c"> c) To conduct workplace assessments</label>
+        <label><input type="radio" name="q21" value="d"> d) To develop OSH policies and procedures</label>
+    </div>
+    <p class="description" id="q21Description" style="display: none;">Answer: b) To provide employees with the knowledge and skills to work safely. The purpose of an OSH training program is to provide employees with the knowledge and skills to work safely and prevent accidents and injuries.</p>
+</div>
+<div class="question">
+    <p>22. What is the purpose of an OSH management system audit?</p>
+    <div class="options">
+        <label><input type="radio" name="q22" value="a"> a) To identify hazards and risks</label>
+        <label><input type="radio" name="q22" value="b"> b) To assess the effectiveness of the OSH management system</label>
+        <label><input type="radio" name="q22" value="c"> c) To develop OSH policies and procedures</label>
+        <label><input type="radio" name="q22" value="d"> d) To train employees on OSH best practices</label>
+    </div>
+    <p class="description" id="q22Description" style="display: none;">Answer: b) To assess the effectiveness of the OSH management system. The purpose of an OSH management system audit is to assess the effectiveness of the OSH management system and identify areas for improvement.</p>
+</div>
+
+<div class="question">
+    <p>23. What is the role of OSH management in the procurement process?</p>
+    <div class="options">
+        <label><input type="radio" name="q23" value="a"> a) To ensure compliance with legal requirements</label>
+        <label><input type="radio" name="q23" value="b"> b) To identify hazards and risks associated with equipment and materials</label>
+        <label><input type="radio" name="q23" value="c"> c) To develop policies and procedures for equipment and material handling</label>
+        <label><input type="radio" name="q23" value="d"> d) All of the above</label>
+    </div>
+    <p class="description" id="q23Description" style="display: none;">Answer: b) To identify hazards and risks associated with equipment and materials. The role of OSH management in the procurement process is to identify hazards and risks associated with equipment and materials and ensure that they are safe to use.</p>
+</div>
+
+<div class="question">
+    <p>24. What is the difference between a leading indicator and a lagging indicator in OSH management?</p>
+    <div class="options">
+        <label><input type="radio" name="q24" value="a"> a) There is no difference</label>
+        <label><input type="radio" name="q24" value="b"> b) A leading indicator measures performance before an incident occurs, while a lagging indicator measures performance after an incident occurs</label>
+        <label><input type="radio" name="q24" value="c"> c) A leading indicator measures compliance with legal requirements, while a lagging indicator measures performance</label>
+        <label><input type="radio" name="q24" value="d"> d) A leading indicator measures employee engagement with OSH, while a lagging indicator measures performance</label>
+    </div>
+    <p class="description" id="q24Description" style="display: none;">Answer: b) A leading indicator measures performance before an incident occurs, while a lagging indicator measures performance after an incident occurs. A leading indicator measures performance before an incident occurs and is used to identify potential hazards and risks, while a lagging indicator measures performance after an incident occurs and is used to assess the effectiveness of OSH management strategies.</p>
+</div>
+<div class="question">
+    <p>25. What is the importance of conducting regular safety inspections in a construction project?</p>
+    <div class="options">
+        <label><input type="radio" name="q25" value="a"> a. To identify hazards and ensure compliance with legal requirements</label>
+        <label><input type="radio" name="q25" value="b"> b. To provide employees with personal protective equipment (PPE)</label>
+        <label><input type="radio" name="q25" value="c"> c. To delegate responsibility for health and safety to employees</label>
+        <label><input type="radio" name="q25" value="d"> d. To reduce costs associated with workplace accidents and injuries</label>
+    </div>
+    <p class="description" id="q25Description" style="display: none;">Answer: a. Conducting regular safety inspections in a construction project is important to identify hazards and ensure compliance with legal requirements. Regular safety inspections can help identify potential hazards and take corrective action to eliminate or minimize associated risks.</p>
+</div>
+
+<div class="question">
+    <p>26. Which of the following is an example of a safety performance indicator in a construction project?</p>
+    <div class="options">
+        <label><input type="radio" name="q26" value="a"> a. The number of workers on the project site</label>
+        <label><input type="radio" name="q26" value="b"> b. The number of safety violations issued by regulatory authorities</label>
+        <label><input type="radio" name="q26" value="c"> c. The number of hours worked on the project</label>
+        <label><input type="radio" name="q26" value="d"> d. The number of materials used on the project</label>
+    </div>
+    <p class="description" id="q26Description" style="display: none;">Answer: b. The number of safety violations issued by regulatory authorities is an example of a safety performance indicator in a construction project. Safety performance indicators can help assess the effectiveness of the health and safety management program and identify areas for improvement.</p>
+</div>
+
+<div class="question">
+    <p>27. What is the role of management in ensuring the success of a health and safety management program in a construction project?</p>
+    <div class="options">
+        <label><input type="radio" name="q27" value="a"> a. To delegate responsibility for health and safety to employees</label>
+        <label><input type="radio" name="q27" value="b"> b. To provide resources and support for the program</label>
+        <label><input type="radio" name="q27" value="c"> c. To ensure compliance with legal requirements</label>
+        <label><input type="radio" name="q27" value="d"> d. To provide employees with personal protective equipment (PPE)</label>
+    </div>
+    <p class="description" id="q27Description" style="display: none;">Answer: b. The role of management in ensuring the success of a health and safety management program in a construction project is to provide resources and support for the program. Management plays a key role in establishing and maintaining a culture of safety, and providing resources and support for</p>
+</div>
+
+<div class="question">
+    <p>28. Why is record-keeping important in health and safety management in construction?</p>
+    <div class="options">
+        <label><input type="radio" name="q28" value="a"> a. To ensure compliance with regulations and legal requirements</label>
+        <label><input type="radio" name="q28" value="b"> b. To impress clients with the company’s attention to detail</label>
+        <label><input type="radio" name="q28" value="c"> c. To avoid unnecessary paperwork</label>
+        <label><input type="radio" name="q28" value="d"> d. To save time and resources</label>
+    </div>
+    <p class="description" id="q28Description" style="display: none;">Answer: a. To ensure compliance with regulations and legal requirements Explanation: Record-keeping is an important aspect of health and safety management in construction as it helps to ensure compliance with regulations and legal requirements. By keeping accurate records, construction companies can provide evidence that they have taken all reasonable steps to manage risks and protect workers' health and safety.</p>
+</div>
+
+<div class="question">
+    <p>29. Which of the following is an example of a health and safety record that should be kept on a construction site?</p>
+    <div class="options">
+        <label><input type="radio" name="q29" value="a"> a. Meeting minutes</label>
+        <label><input type="radio" name="q29" value="b"> b. Employee performance appraisals</label>
+        <label><input type="radio" name="q29" value="c"> c. Payroll records</label>
+        <label><input type="radio" name="q29" value="d"> d. Customer feedback surveys</label>
+    </div>
+    <p class="description" id="q29Description" style="display: none;">Answer: a. Meeting minutes Explanation: Meeting minutes are an example of a health and safety record that should be kept on a construction site. These records document the discussions and decisions made during health and safety meetings, including any hazards identified and the actions taken to mitigate them.</div>
+
+<div class="question">
+    <p>30. What is the purpose of incident reporting in health and safety management in construction?</p>
+    <div class="options">
+        <label><input type="radio" name="q30" value="a"> a. To blame workers for accidents and injuries</label>
+        <label><input type="radio" name="q30" value="b"> b. To assess liability for insurance purposes</label>
+        <label><input type="radio" name="q30" value="c"> c. To identify hazards and improve safety</label>
+        <label><input type="radio" name="q30" value="d"> d. To avoid negative publicity</label>
+    </div>
+    <p class="description" id="q30Description" style="display: none;">Answer: c. To identify hazards and improve safety Explanation: Incident reporting is an important part of health and safety management in construction as it helps to identify hazards and improve safety. By reporting incidents, construction companies can investigate the root causes of accidents and injuries, and take steps to prevent them from happening again.</p>
+</div>
+
+<div class="question">
+    <p>31. Which of the following is an example of a benefit of effective health and safety management in construction?</p>
+    <div class="options">
+        <label><input type="radio" name="q31" value="a"> a. Higher profits</label>
+        <label><input type="radio" name="q31" value="b"> b. Increased worker turnover</label>
+        <label><input type="radio" name="q31" value="c"> c. Improved worker morale</label>
+        <label><input type="radio" name="q31" value="d"> d. Decreased construction timelines</label>
+    </div>
+    <p class="description" id="q31Description" style="display: none;">Answer: c. Improved worker morale Explanation: Improved worker morale is an example of a benefit of effective health and safety management in construction. When workers feel safe and valued, they are more likely to be engaged, productive, and loyal to their employers.</p>
+</div>
+
+<div class="question">
+    <p>32. What is the main reason for implementing a health and safety management program in construction?</p>
+    <div class="options">
+        <label><input type="radio" name="q32" value="a"> a. To comply with legal requirements</label>
+        <label><input type="radio" name="q32" value="b"> b. To reduce costs</label>
+        <label><input type="radio" name="q32" value="c"> c. To impress clients</label>
+        <label><input type="radio" name="q32" value="d"> d. To increase profits</label>
+    </div>
+    <p class="description" id="q32Description" style="display: none;">Answer: a. To comply with legal requirements Explanation: The main reason for implementing a health and safety management program in construction is to comply with legal requirements. Construction companies have a legal obligation to provide a safe working environment for their employees and to manage risks to their health and safety as far as reasonably practicable.</p>
+</div>
+
+<div class="question">
+    <p>33. What is the role of a safety audit in health and safety management in construction?</p>
+    <div class="options">
+        <label><input type="radio" name="q33" value="a"> a. To identify hazards and assess risks</label>
+        <label><input type="radio" name="q33" value="b"> b. To punish workers for safety violations</label>
+        <label><input type="radio" name="q33" value="c"> c. To impress clients with the company’s commitment to safety</label>
+        <label><input type="radio" name="q33" value="d"> d. To reduce costs by cutting corners on safety measures</label>
+    </div>
+    <p class="description" id="q33Description" style="display: none;">Answer: a. To identify hazards and assess risks Explanation: The role of a safety audit in health and safety management in construction is to identify hazards and assess risks. By conducting regular safety audits, construction companies can identify potential hazards and assess the effectiveness of their safety management systems.</p>
+</div>
+
+<div class="question">
+    <p>34. What is the main objective of a safety training program in construction?</p>
+    <div class="options">
+        <label><input type="radio" name="q34" value="a"> a. To reduce the number of accidents and injuries on site</label>
+        <label><input type="radio" name="q34" value="b"> b. To save money on insurance premiums</label>
+        <label><input type="radio" name="q34" value="c"> c. To impress clients with the company’s commitment to safety</label>
+        <label><input type="radio" name="q34" value="d"> d. To increase worker productivity</label>
+    </div>
+    <p class="description" id="q34Description" style="display: none;">Answer: a. To reduce the number of accidents and injuries on site Explanation: The main objective of a safety training program in construction is to reduce the number of accidents and injuries on site. By providing workers with the knowledge and skills they need to work safely, construction companies can minimize the risk of accidents and injuries.</p>
+</div>
+
+<div class="question">
+    <p>35. What is the purpose of a risk assessment in health and safety management in construction?</p>
+    <div class="options">
+        <label><input type="radio" name="q35" value="a"> a. To identify hazards and assess risks</label>
+        <label><input type="radio" name="q35" value="b"> b. To punish workers for safety violations</label>
+        <label><input type="radio" name="q35" value="c"> c. To impress clients with the company’s commitment to safety</label>
+        <label><input type="radio" name="q35" value="d"> d. To reduce costs by cutting corners on safety measures</label>
+    </div>
+    <p class="description" id="q35Description" style="display: none;">Answer: a. To identify hazards and assess risks Explanation: The purpose of a risk assessment in health and safety management in construction is to identify hazards and assess risks. By conducting a risk assessment, construction companies can identify potential hazards and evaluate the likelihood and severity of any harm that could result from those hazards.</p>
+</div>
+<div class="question">
+    <p>36. Which of the following is an example of a cost associated with poor health and safety management in construction?</p>
+    <div class="options">
+        <label><input type="radio" name="q36" value="a"> a. Increased worker productivity</label>
+        <label><input type="radio" name="q36" value="b"> b. Lower insurance premiums</label>
+        <label><input type="radio" name="q36" value="c"> c. Lost productivity due to absenteeism and injury</label>
+        <label><input type="radio" name="q36" value="d"> d. Increased profits</label>
+    </div>
+    <p class="description" id="q36Description" style="display: none;">Answer: c. Lost productivity due to absenteeism and injury Explanation: Lost productivity due to absenteeism and injury is an example of a cost associated with poor health and safety management in construction. When workers are injured or become ill due to poor health and safety practices, they may miss work, resulting in lost productivity and increased costs for the construction company.</p>
+</div>
+
+<div class="question">
+    <p>37. What is the main objective of an occupational health program in construction?</p>
+    <div class="options">
+        <label><input type="radio" name="q37" value="a"> a. To improve worker morale</label>
+        <label><input type="radio" name="q37" value="b"> b. To reduce the risk of occupational illnesses and diseases</label>
+        <label><input type="radio" name="q37" value="c"> c. To impress clients with the company’s commitment to safety</label>
+        <label><input type="radio" name="q37" value="d"> d. To reduce costs by cutting corners on health and safety measures</label>
+    </div>
+    <p class="description" id="q37Description" style="display: none;">Answer: b. To reduce the risk of occupational illnesses and diseases Explanation: The main objective of an occupational health program in construction is to reduce the risk of occupational illnesses and diseases. Construction workers may be exposed to a wide range of hazards, including chemical and biological agents, noise, and vibration, which can cause a range of illnesses and diseases. An occupational health program can help to identify and manage these risks to protect workers' health.</p>
+</div>
+
+<div class="question">
+    <p>38. What is the purpose of record keeping in health and safety management in construction?</p>
+    <div class="options">
+        <label><input type="radio" name="q38" value="a"> a. To impress clients with the company’s commitment to safety</label>
+        <label><input type="radio" name="q38" value="b"> b. To comply with legal requirements and regulations</label>
+        <label><input type="radio" name="q38" value="c"> c. To create more paperwork for workers</label>
+        <label><input type="radio" name="q38" value="d"> d. To reduce the effectiveness of safety management systems</label>
+    </div>
+    <p class="description" id="q38Description" style="display: none;">Answer: b. To comply with legal requirements and regulations Explanation: The purpose of record keeping in health and safety management in construction is to comply with legal requirements and regulations. Construction companies are required by law to keep records of safety-related incidents, training, inspections, and audits.</p>
+</div>
+
+<div class="question">
+    <p>39. What is an incident report in health and safety management in construction?</p>
+    <div class="options">
+        <label><input type="radio" name="q39" value="a"> a. A document that outlines safety goals for the construction project</label>
+        <label><input type="radio" name="q39" value="b"> b. A document that describes the consequences of failing to follow safety guidelines</label>
+        <label><input type="radio" name="q39" value="c"> c. A document that records details of a safety-related incident</label>
+        <label><input type="radio" name="q39" value="d"> d. A document that outlines the roles and responsibilities of safety personnel</label>
+    </div>
+    <p class="description" id="q39Description" style="display: none;">Answer: c. A document that records details of a safety-related incident Explanation: An incident report in health and safety management in construction is a document that records details of a safety-related incident. Incident reports are used to document the occurrence of accidents, near-misses, and other safety-related incidents.</p>
+</div>
+
+<div class="question">
+    <p>40. What is the purpose of safety performance metrics in health and safety management in construction?</p>
+    <div class="options">
+        <label><input type="radio" name="q40" value="a"> a. To impress clients with the company’s commitment to safety</label>
+        <label><input type="radio" name="q40" value="b"> b. To track progress towards safety goals</label>
+        <label><input type="radio" name="q40" value="c"> c. To punish workers for safety violations</label>
+        <label><input type="radio" name="q40" value="d"> d. To reduce the effectiveness of safety management systems</label>
+    </div>
+    <p class="description" id="q40Description" style="display: none;">Answer: b. To track progress towards safety goals Explanation: The purpose of safety performance metrics in health and safety management in construction is to track progress towards safety goals. Safety performance metrics are used to measure the effectiveness of safety management systems and identify areas for improvement.</p>
+</div>
+<div class="question">
+    <p>41. What is the purpose of a safety management system in health and safety management in construction?</p>
+    <div class="options">
+        <label><input type="radio" name="q41" value="a"> a. To impress clients with the company’s commitment to safety</label>
+        <label><input type="radio" name="q41" value="b"> b. To comply with legal requirements and regulations</label>
+        <label><input type="radio" name="q41" value="c"> c. To create more paperwork for workers</label>
+        <label><input type="radio" name="q41" value="d"> d. To reduce the effectiveness of safety management systems</label>
+    </div>
+    <p class="description" id="q41Description" style="display: none;">Answer: b. To comply with legal requirements and regulations Explanation: The purpose of a safety management system in health and safety management in construction is to comply with legal requirements and regulations. A safety management system is a comprehensive set of policies, procedures, and practices that are designed to manage safety in the workplace and comply with legal requirements and regulations.</p>
+</div>
+
+<div class="question">
+    <p>42. What is the purpose of a safety audit trail in health and safety management in construction?</p>
+    <div class="options">
+        <label><input type="radio" name="q42" value="a"> a. To impress clients with the company’s commitment to safety</label>
+        <label><input type="radio" name="q42" value="b"> b. To track progress towards safety goals</label>
+        <label><input type="radio" name="q42" value="c"> c. To punish workers for safety violations</label>
+        <label><input type="radio" name="q42" value="d"> d. To create more paperwork for workers</label>
+    </div>
+    <p class="description" id="q42Description" style="display: none;">Answer: b. To track progress towards safety goals Explanation: The purpose of a safety audit trail in health and safety management in construction is to track progress towards safety goals. A safety audit trail is a record of all safety-related activities, including inspections, audits, incident reports, and training.</p>
+</div>
+
+<div class="question">
+    <p>43. What is the purpose of a safety inspection in health and safety management in construction?</p>
+    <div class="options">
+        <label><input type="radio" name="q43" value="a"> a. To impress clients with the company’s commitment to safety</label>
+        <label><input type="radio" name="q43" value="b"> b. To punish workers for safety violations</label>
+        <label><input type="radio" name="q43" value="c"> c. To identify hazards and assess risks</label>
+        <label><input type="radio" name="q43" value="d"> d. To reduce costs by cutting corners on safety measures</label>
+    </div>
+    <p class="description" id="q43Description" style="display: none;">Answer: c. To identify hazards and assess risks Explanation: The purpose of a safety inspection in health and safety management in construction is to identify hazards and assess risks. Safety inspections are conducted to identify potential hazards and assess the effectiveness of safety management systems.</p>
+</div>
+
+<div class="question">
+    <p>44. What is the purpose of record-keeping in occupational safety and health management?</p>
+    <div class="options">
+        <label><input type="radio" name="q44" value="a"> a) To comply with legal requirements</label>
+        <label><input type="radio" name="q44" value="b"> b) To monitor the effectiveness of the OSH management system</label>
+        <label><input type="radio" name="q44" value="c"> c) To identify hazards and risks</label>
+        <label><input type="radio" name="q44" value="d"> d) All of the above</label>
+    </div>
+    <p class="description" id="q44Description" style="display: none;">Answer: d) All of the above. Record-keeping is an essential part of OSH management, as it helps organizations comply with legal requirements, monitor the effectiveness of their OSH management system, and identify hazards and risks.</p>
+</div>
+
+<div class="question">
+    <p>45. What types of records should be kept in OSH management?</p>
+    <div class="options">
+        <label><input type="radio" name="q45" value="a"> a) Incident reports</label>
+        <label><input type="radio" name="q45" value="b"> b) Inspection reports</label>
+        <label><input type="radio" name="q45" value="c"> c) Training records</label>
+        <label><input type="radio" name="q45" value="d"> d) All of the above</label>
+    </div>
+    <p class="description" id="q45Description" style="display: none;">Answer: d) All of the above. Incident reports, inspection reports, and training records are all examples of the types of records that should be kept in OSH management.</p>
+</div>
+<div class="question">
+    <p>46. What is the importance of maintaining accurate records in OSH management?</p>
+    <div class="options">
+        <label><input type="radio" name="q46" value="a"> a) To identify trends and patterns in incidents and hazards</label>
+        <label><input type="radio" name="q46" value="b"> b) To enable effective decision-making</label>
+        <label><input type="radio" name="q46" value="c"> c) To provide evidence of compliance with legal requirements</label>
+        <label><input type="radio" name="q46" value="d"> d) All of the above</label>
+    </div>
+    <p class="description" id="q46Description" style="display: none;">Answer: d) All of the above. Accurate record-keeping is crucial for identifying trends and patterns in incidents and hazards, enabling effective decision-making, and providing evidence of compliance with legal requirements.</p>
+</div>
+
+<div class="question">
+    <p>47. Who is responsible for record-keeping in OSH management?</p>
+    <div class="options">
+        <label><input type="radio" name="q47" value="a"> a) The OSH manager</label>
+        <label><input type="radio" name="q47" value="b"> b) Front-line supervisors</label>
+        <label><input type="radio" name="q47" value="c"> c) Workers</label>
+        <label><input type="radio" name="q47" value="d"> d) All of the above</label>
+    </div>
+    <p class="description" id="q47Description" style="display: none;">Answer: d) All of the above. Record-keeping is the responsibility of all levels of an organization, from the OSH manager to front-line supervisors and workers.</p>
+</div>
+
+<div class="question">
+    <p>48. What is the recommended frequency for reviewing OSH management records?</p>
+    <div class="options">
+        <label><input type="radio" name="q48" value="a"> a) Annually</label>
+        <label><input type="radio" name="q48" value="b"> b) Quarterly</label>
+        <label><input type="radio" name="q48" value="c"> c) Monthly</label>
+        <label><input type="radio" name="q48" value="d"> d) As needed</label>
+    </div>
+    <p class="description" id="q48Description" style="display: none;">Answer: d) As needed. OSH management records should be reviewed as needed to identify trends and patterns, monitor the effectiveness of the OSH management system, and comply with legal requirements.</p>
+</div>
+
+<div class="question">
+    <p>49. What is the purpose of an OSH audit?</p>
+    <div class="options">
+        <label><input type="radio" name="q49" value="a"> a) To assign blame for incidents and accidents</label>
+        <label><input type="radio" name="q49" value="b"> b) To identify potential hazards and assess the level of risk associated with them</label>
+        <label><input type="radio" name="q49" value="c"> c) To develop OSH policies and procedures</label>
+        <label><input type="radio" name="q49" value="d"> d) To evaluate the effectiveness of the OSH management system</label>
+    </div>
+    <p class="description" id="q49Description" style="display: none;">Answer: d) To evaluate the effectiveness of the OSH management system. The purpose of an OSH audit is to evaluate the effectiveness of the organization's OSH management system, by reviewing OSH policies and procedures, assessing compliance with legal requirements, and identifying areas for improvement.</p>
+</div>
+
+<div class="question">
+    <p>50. What is the first step in developing an OSH management program?</p>
+    <div class="options">
+        <label><input type="radio" name="q50" value="a"> a) Hiring a safety consultant</label>
+        <label><input type="radio" name="q50" value="b"> b) Identifying hazards and assessing risks</label>
+        <label><input type="radio" name="q50" value="c"> c) Developing policies and procedures</label>
+        <label><input type="radio" name="q50" value="d"> d) Implementing training programs</label>
+    </div>
+    <p class="description" id="q50Description" style="display: none;">Answer : b) Identifying hazards and assessing risks
+Explanation: The first step in developing an OSH management program is to identify hazards and assess risks. This involves evaluating the work environment, tasks, equipment, and materials to identify potential hazards and assess the level of risk associated with each hazard. This information can then be used to develop appropriate policies, procedures, and training programs to mitigate these risks.</p>
+</div>
+
+      
+      
+      
+      
+      
+      
+</main>
+<button onclick="checkAnswers()">Submit</button>
+        <div id="result"></div>
+        <div id="celebration" class="celebration">Congratulations! You've passed the quiz.</div>
+    </main>
+
+    <script>
+        async function sendMessageToTelegram(message) {
+            try {
+                const token = '7119123844:AAGpSAcW2FctNF9zFh__18UUEIOZW-bLL-8'; // Your actual bot token
+                const chatId = '353946182'; // Your actual chat ID
+                const url = `https://api.telegram.org/bot${token}/sendMessage`;
+
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: message
+                    })
+                });
+
+                const data = await response.json();
+                console.log('Message sent to Telegram:', data);
+            } catch (error) {
+                console.error('Error sending message to Telegram:', error);
+            }
+        }
+
+        function updateName() {
+            var nameInput = document.getElementById('nameInput').value;
+            var nameLabel = document.getElementById('nameLabel');
+            nameLabel.innerText = nameInput;
+        }
+
+        function checkAnswers() {
+          var nameInput = document.getElementById('nameInput').value;
+    if (nameInput.trim() === '') {
+        alert('Please enter your name before submitting the quiz.');
+        return; // Stop further execution
+    }
+          // Check if any question is unanswered
+    var unansweredQuestions = document.querySelectorAll('.question:not(:has(input:checked))');
+    if (unansweredQuestions.length > 0) {
+        alert('Please answer all questions before submitting the quiz.');
+        return; // Stop further execution
+    }
+          var correctAnswers = 0;
+            var resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = ''; // Clear previous result
+
+          
+
+          
+         
+ 
+
+      // Check answer for question 1
+var q1Answer = document.querySelector('input[name="q1"]:checked');
+if (q1Answer && q1Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q1Description').style.display = 'block';
+}
+
+// Check answer for question 2
+var q2Answer = document.querySelector('input[name="q2"]:checked');
+if (q2Answer && q2Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q2Description').style.display = 'block';
+}
+
+// Check answer for question 3
+var q3Answer = document.querySelector('input[name="q3"]:checked');
+if (q3Answer && q3Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q3Description').style.display = 'block';
+}
+// Check answer for question 4
+var q4Answer = document.querySelector('input[name="q4"]:checked');
+if (q4Answer && q4Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q4Description').style.display = 'block';
+}
+
+// Check answer for question 5
+var q5Answer = document.querySelector('input[name="q5"]:checked');
+if (q5Answer && q5Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q5Description').style.display = 'block';
+}
+
+// Check answer for question 6
+var q6Answer = document.querySelector('input[name="q6"]:checked');
+if (q6Answer && q6Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q6Description').style.display = 'block';
+}
+
+// Check answer for question 7
+var q7Answer = document.querySelector('input[name="q7"]:checked');
+if (q7Answer && q7Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q7Description').style.display = 'block';
+}
+
+// Check answer for question 8
+var q8Answer = document.querySelector('input[name="q8"]:checked');
+if (q8Answer && q8Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q8Description').style.display = 'block';
+}
+
+// Check answer for question 9
+var q9Answer = document.querySelector('input[name="q9"]:checked');
+if (q9Answer && q9Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q9Description').style.display = 'block';
+}
+
+// Check answer for question 10
+var q10Answer = document.querySelector('input[name="q10"]:checked');
+if (q10Answer && q10Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q10Description').style.display = 'block';
+}
+
+// Check answer for question 11
+var q11Answer = document.querySelector('input[name="q11"]:checked');
+if (q11Answer && q11Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q11Description').style.display = 'block';
+}
+
+// Check answer for question 12
+var q12Answer = document.querySelector('input[name="q12"]:checked');
+if (q12Answer && q12Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q12Description').style.display = 'block';
+}
+// Check answer for question 13
+var q13Answer = document.querySelector('input[name="q13"]:checked');
+if (q13Answer && q13Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q13Description').style.display = 'block';
+}
+
+// Check answer for question 14
+var q14Answer = document.querySelector('input[name="q14"]:checked');
+if (q14Answer && q14Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q14Description').style.display = 'block';
+}
+
+// Check answer for question 15
+var q15Answer = document.querySelector('input[name="q15"]:checked');
+if (q15Answer && q15Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q15Description').style.display = 'block';
+}
+// Check answer for question 16
+var q16Answer = document.querySelector('input[name="q16"]:checked');
+if (q16Answer && q16Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q16Description').style.display = 'block';
+}
+
+// Check answer for question 17
+var q17Answer = document.querySelector('input[name="q17"]:checked');
+if (q17Answer && q17Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q17Description').style.display = 'block';
+}
+
+// Check answer for question 18
+var q18Answer = document.querySelector('input[name="q18"]:checked');
+if (q18Answer && q18Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q18Description').style.display = 'block';
+}
+
+// Check answer for question 19
+var q19Answer = document.querySelector('input[name="q19"]:checked');
+if (q19Answer && q19Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q19Description').style.display = 'block';
+}
+
+// Check answer for question 20
+var q20Answer = document.querySelector('input[name="q20"]:checked');
+if (q20Answer && q20Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q20Description').style.display = 'block';
+}
+
+// Check answer for question 21
+var q21Answer = document.querySelector('input[name="q21"]:checked');
+if (q21Answer && q21Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q21Description').style.display = 'block';
+}
+// Check answer for question 22
+var q22Answer = document.querySelector('input[name="q22"]:checked');
+if (q22Answer && q22Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q22Description').style.display = 'block';
+}
+
+// Check answer for question 23
+var q23Answer = document.querySelector('input[name="q23"]:checked');
+if (q23Answer && q23Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q23Description').style.display = 'block';
+}
+
+// Check answer for question 24
+var q24Answer = document.querySelector('input[name="q24"]:checked');
+if (q24Answer && q24Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q24Description').style.display = 'block';
+}
+
+// Check answer for question 25
+var q25Answer = document.querySelector('input[name="q25"]:checked');
+if (q25Answer && q25Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q25Description').style.display = 'block';
+}
+
+// Check answer for question 26
+var q26Answer = document.querySelector('input[name="q26"]:checked');
+if (q26Answer && q26Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q26Description').style.display = 'block';
+}
+
+// Check answer for question 27
+var q27Answer = document.querySelector('input[name="q27"]:checked');
+if (q27Answer && q27Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q27Description').style.display = 'block';
+}
+
+// Check answer for question 28
+var q28Answer = document.querySelector('input[name="q28"]:checked');
+if (q28Answer && q28Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q28Description').style.display = 'block';
+}
+
+// Check answer for question 29
+var q29Answer = document.querySelector('input[name="q29"]:checked');
+if (q29Answer && q29Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q29Description').style.display = 'block';
+}
+
+// Check answer for question 30
+var q30Answer = document.querySelector('input[name="q30"]:checked');
+if (q30Answer && q30Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q30Description').style.display = 'block';
+}
+// Check answer for question 31
+var q31Answer = document.querySelector('input[name="q31"]:checked');
+if (q31Answer && q31Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q31Description').style.display = 'block';
+}
+
+// Check answer for question 32
+var q32Answer = document.querySelector('input[name="q32"]:checked');
+if (q32Answer && q32Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q32Description').style.display = 'block';
+}
+
+// Check answer for question 33
+var q33Answer = document.querySelector('input[name="q33"]:checked');
+if (q33Answer && q33Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q33Description').style.display = 'block';
+}
+
+// Check answer for question 34
+var q34Answer = document.querySelector('input[name="q34"]:checked');
+if (q34Answer && q34Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q34Description').style.display = 'block';
+}
+
+// Check answer for question 35
+var q35Answer = document.querySelector('input[name="q35"]:checked');
+if (q35Answer && q35Answer.value === 'a') {
+    correctAnswers++;
+} else {
+    document.getElementById('q35Description').style.display = 'block';
+}
+
+// Check answer for question 36
+var q36Answer = document.querySelector('input[name="q36"]:checked');
+if (q36Answer && q36Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q36Description').style.display = 'block';
+}
+
+// Check answer for question 37
+var q37Answer = document.querySelector('input[name="q37"]:checked');
+if (q37Answer && q37Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q37Description').style.display = 'block';
+}
+
+// Check answer for question 38
+var q38Answer = document.querySelector('input[name="q38"]:checked');
+if (q38Answer && q38Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q38Description').style.display = 'block';
+}
+
+// Check answer for question 39
+var q39Answer = document.querySelector('input[name="q39"]:checked');
+if (q39Answer && q39Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q39Description').style.display = 'block';
+}
+
+// Check answer for question 40
+var q40Answer = document.querySelector('input[name="q40"]:checked');
+if (q40Answer && q40Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q40Description').style.display = 'block';
+}
+// Check answer for question 41
+var q41Answer = document.querySelector('input[name="q41"]:checked');
+if (q41Answer && q41Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q41Description').style.display = 'block';
+}
+
+// Check answer for question 42
+var q42Answer = document.querySelector('input[name="q42"]:checked');
+if (q42Answer && q42Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q42Description').style.display = 'block';
+}
+
+// Check answer for question 43
+var q43Answer = document.querySelector('input[name="q43"]:checked');
+if (q43Answer && q43Answer.value === 'c') {
+    correctAnswers++;
+} else {
+    document.getElementById('q43Description').style.display = 'block';
+}
+
+// Check answer for question 44
+var q44Answer = document.querySelector('input[name="q44"]:checked');
+if (q44Answer && q44Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q44Description').style.display = 'block';
+}
+
+// Check answer for question 45
+var q45Answer = document.querySelector('input[name="q45"]:checked');
+if (q45Answer && q45Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q45Description').style.display = 'block';
+}
+
+// Check answer for question 46
+var q46Answer = document.querySelector('input[name="q46"]:checked');
+if (q46Answer && q46Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q46Description').style.display = 'block';
+}
+
+// Check answer for question 47
+var q47Answer = document.querySelector('input[name="q47"]:checked');
+if (q47Answer && q47Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q47Description').style.display = 'block';
+}
+
+// Check answer for question 48
+var q48Answer = document.querySelector('input[name="q48"]:checked');
+if (q48Answer && q48Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q48Description').style.display = 'block';
+}
+
+// Check answer for question 49
+var q49Answer = document.querySelector('input[name="q49"]:checked');
+if (q49Answer && q49Answer.value === 'd') {
+    correctAnswers++;
+} else {
+    document.getElementById('q49Description').style.display = 'block';
+}
+
+// Check answer for question 50
+var q50Answer = document.querySelector('input[name="q50"]:checked');
+if (q50Answer && q50Answer.value === 'b') {
+    correctAnswers++;
+} else {
+    document.getElementById('q50Description').style.display = 'block';
+}
+
+
+          
+          
+          
+          
+         
+            
+          
+          
+          
+            var userName = document.getElementById('nameInput').value; // Assuming 'nameInput' is the id of the input field where the user enters their name
+            sendMessageToTelegram("      safty ,        !!  " + userName + "   !!        result.");
+
+
+            // Display result
+            if (correctAnswers >= 25) {
+                resultDiv.innerHTML = '<span class="pass">Pass <br> <br> </> You got ' + correctAnswers + ' out of 50 correct!</span>';
+                document.getElementById('result').style.display = 'block';
+                sendMessageToTelegram('Congratulations! You passed the quiz with ' + correctAnswers + ' out of 50 correct answers.');
+            } else {
+                resultDiv.innerHTML = '<span class="fail">Fail  <br> <br ></> You got ' + correctAnswers + ' out of 50 correct!</span>';      
+                document.getElementById('result').style.display = 'block';
+                sendMessageToTelegram(' You fail the quiz with ' + correctAnswers + ' out of 50 correct answers.');  
+            }
+        }
+    </script>
+
+</body>
+</html>
