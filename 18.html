@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+        .container {
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .header h1 {
+            margin: 0;
+            flex-grow: 1;
+            font-size: 1.5em;
+        }
+        .header .back-button {
+            margin-right: 10px;
+        }
+        .content {
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+        }
+        .sidebar {
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+            padding: 10px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+        .main {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .exam-overview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+            gap: 5px;
+        }
+        .exam-overview button {
+            position: relative;
+            padding: 10px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+        .exam-overview button.selected {
+            background-color: #e0e0e0;
+        }
+        .exam-overview button.answered::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: black;
+            opacity: 0.5;
+            z-index: 1;
+        }
+        .exam-overview button.flagged::after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            border-radius: 50%;
+            z-index: 2;
+        }
+        .flag {
+            color: red;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .flagged {
+            background-color: yellow;
+        }
+        .question-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            flex-wrap: wrap;
+        }
+        .navigation-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .navigation-buttons button {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .timer {
+            font-size: 1em;
+            color: red;
+            margin-bottom: 10px;
+        }
+        .final-summary {
+            display: none;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .final-summary .summary-item {
+            margin: 5px 0;
+        }
+        .final-summary .summary-item.flagged {
+            color: red;
+        }
+        .result {
+            display: none;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .result .result-item {
+            margin: 5px 0;
+            cursor: pointer;
+        }
+        .result .result-item.correct {
+            color: green;
+        }
+        .result .result-item.incorrect {
+            color: red;
+        }
+        @media (min-width: 768px) {
+            .content {
+                flex-direction: row;
+            }
+            .sidebar {
+                width: 20%;
+                border-bottom: none;
+                border-right: 1px solid #ccc;
+            }
+            .main {
+                width: 80%;
+            }
+            .question-navigation {
+                flex-wrap: nowrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button class="back-button">Back</button>
+            <h1>Reinforced Concrete Structures</h1>
+        </div>
+        <div class="content">
+            <div class="sidebar">
+                <h2>Quiz navigation</h2>
+                <div class="exam-overview" id="examOverview"></div>
+            </div>
+            <div class="main">
+                <div class="question" id="questionContainer">
+                    <!-- Question content dynamically loaded here -->
+                </div>
+                <div class="question-navigation">
+                    <span class="timer" id="timer">Time left: 44:28</span>
+                    <div class="navigation-buttons">
+                        <button onclick="previousQuestion()">Previous page</button>
+                        <button onclick="nextQuestion()">Next page</button>
+                        <button id="finalAttemptButton" onclick="showFinalSummary()" style="display: none;">Final Attempt</button>
+                    </div>
+                </div>
+                <div class="final-summary" id="finalSummary">
+                    <h3>Summary</h3>
+                    <div id="summaryContent"></div>
+                </div>
+                <div class="result" id="examResult">
+                    <h3>Exam Result</h3>
+                    <p id="resultMessage"></p>
+                    <div id="resultDetails"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentQuestion = 1;
+        const totalQuestions = 5;
+        let selectedOptions = new Array(totalQuestions).fill(null); // To store selected options
+
+        const questionContent = {
+            1: "What is the main component of reinforced concrete (RC) structures?",
+            2: "What is the purpose of providing reinforcement in RC structures?",
+            3: "Which of the following is a common type of reinforcement used in RC structures?",
+            4: "The characteristic strength of concrete is determined by testing:",
+            5: "Which of the following is NOT a limit state in the design of RC structures?"
+        };
+
+        const questionOptions = {
+            1: ["Concrete", "Steel", "Wood", "Glass"],
+            2: ["To increase the weight of the structure", "To decrease the strength of the structure", "To increase the strength of the structure", "To decrease the durability of the structure"],
+            3: ["Aluminum", "Steel", "Copper", "Plastic"],
+            4: ["Fresh concrete samples", "28-day old concrete samples", "Pre-stressed concrete samples", "None of the above"],
+            5: ["Ultimate limit state", "Serviceability limit state", "Fatigue limit state", "Stability limit state"]
+        };
+
+        const correctAnswers = {
+            1: "a",
+            2: "c",
+            3: "b",
+            4: "b",
+            5: "c"
+        };
+
+        function loadExamOverview() {
+            const examOverview = document.getElementById('examOverview');
+            for (let i = 1; i <= totalQuestions; i++) {
+                const button = document.createElement('button');
+                button.innerText = i;
+                button.id = `nav${i}`;
+                button.onclick = () => goToQuestion(i);
+                examOverview.appendChild(button);
+            }
+            updateSelectedButton();
+            if (currentQuestion === totalQuestions) {
+                document.getElementById('finalAttemptButton').style.display = 'block';
+            }
+        }
+
+        function markAnswered() {
+            const selectedOption = document.querySelector(`input[name=q${currentQuestion}]:checked`);
+            if (selectedOption) {
+                selectedOptions[currentQuestion - 1] = selectedOption.value;
+                const navButton = document.getElementById(`nav${currentQuestion}`);
+                navButton.classList.add('answered');
+            }
+        }
+
+        function flagQuestion() {
+            const navButton = document.getElementById(`nav${currentQuestion}`);
+            navButton.classList.toggle('flagged');
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < totalQuestions) {
+                currentQuestion++;
+                updateQuestion();
+            }
+        }
+
+        function previousQuestion() {
+            if (currentQuestion > 1) {
+                currentQuestion--;
+                updateQuestion();
+            }
+        }
+
+        function goToQuestion(questionNumber) {
+            currentQuestion = questionNumber;
+            updateQuestion();
+        }
+
+        function updateQuestion() {
+            const questionContainer = document.getElementById('questionContainer');
+            const question = questionContent[currentQuestion];
+            const options = questionOptions[currentQuestion];
+
+            let optionsHTML = "";
+            options.forEach((option, index) => {
+                const isChecked = selectedOptions[currentQuestion - 1] === String.fromCharCode(97 + index);
+                optionsHTML += `<input type="radio" name="q${currentQuestion}" value="${String.fromCharCode(97 + index)}" ${isChecked ? "checked" : ""} onclick="markAnswered()"> ${option}<br>`;
+            });
+
+            questionContainer.innerHTML = `
+                <h3>Question ${currentQuestion}</h3>
+                <p>${question}</p>
+                <form id="questionForm">
+                    ${optionsHTML}
+                </form>
+                <p class="flag" onclick="flagQuestion()">Flag question</p>
+            `;
+            updateSelectedButton();
+            if (currentQuestion === totalQuestions) {
+                document.getElementById('finalAttemptButton').style.display = 'block';
+            } else {
+                document.getElementById('finalAttemptButton').style.display = 'none';
+            }
+        }
+
+        function updateSelectedButton() {
+            for (let i = 1; i <= totalQuestions; i++) {
+                const navButton = document.getElementById(`nav${i}`);
+                navButton.classList.remove('selected');
+            }
+            const currentNavButton = document.getElementById(`nav${currentQuestion}`);
+            currentNavButton.classList.add('selected');
+        }
+
+       function showFinalSummary() {
+            const finalSummary = document.getElementById('finalSummary');
+            finalSummary.style.display = 'flex';
+            const summaryContent = document.getElementById('summaryContent');
+            const buttons = document.querySelectorAll('.exam-overview button');
+
+            summaryContent.innerHTML = "";
+
+             buttons.forEach(button => {
+            const questionNumber = parseInt(button.innerText);
+            const questionStatus = button.classList.contains('answered') ? 'Answered' : 'Not answered yet';
+            const flagged = button.classList.contains('flagged') ? 'flagged' : '';
+            const summaryItem = document.createElement('div');
+            summaryItem.className = `summary-item ${flagged}`;
+            summaryItem.innerHTML = `Question ${questionNumber}: ${questionStatus}`;
+            summaryItem.onclick = () => goToQuestion(questionNumber);
+            summaryContent.appendChild(summaryItem);
+        });
+
+
+            const submitButton = document.createElement('button');
+            submitButton.innerText = "Submit Exam";
+            submitButton.onclick = submitExam;
+            summaryContent.appendChild(submitButton);
+        }
+
+        function submitExam() {
+            const finalSummary = document.getElementById('finalSummary');
+            finalSummary.style.display = 'none';
+
+            let score = 0;
+            let resultDetailsHTML = "";
+            for (let i = 1; i <= totalQuestions; i++) {
+                const isCorrect = selectedOptions[i - 1] === correctAnswers[i];
+                if (isCorrect) {
+                    score++;
+                }
+                resultDetailsHTML += `<div class="result-item ${isCorrect ? 'correct' : 'incorrect'}" onclick="showCorrectAnswer(${i})">Question ${i}: ${isCorrect ? 'Correct' : 'Incorrect'}</div>`;
+            }
+
+            const examResult = document.getElementById('examResult');
+            examResult.style.display = 'block';
+            const resultMessage = document.getElementById('resultMessage');
+            resultMessage.innerText = `You got ${score} out of ${totalQuestions} correct.`;
+            const resultDetails = document.getElementById('resultDetails');
+            resultDetails.innerHTML = resultDetailsHTML;
+        }
+
+        function showCorrectAnswer(questionNumber) {
+            const correctAnswer = correctAnswers[questionNumber];
+            alert(`The correct answer for Question ${questionNumber} is: ${correctAnswer}`);
+        }
+
+        // Initialize the quiz
+        loadExamOverview();
+        updateQuestion();
+    </script>
+</body>
+</html>
