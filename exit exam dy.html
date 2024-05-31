@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+        .container {
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .header h1 {
+            margin: 0;
+            flex-grow: 1;
+            font-size: 1.5em;
+        }
+        .header .back-button {
+            margin-right: 10px;
+        }
+        .content {
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+        }
+        .sidebar {
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+            padding: 10px;
+            box-sizing: border-box;
+            overflow-y: auto;
+        }
+        .main {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .exam-overview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+            gap: 5px;
+        }
+        .exam-overview button {
+            position: relative;
+            padding: 10px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+        .exam-overview button.selected {
+            background-color: #e0e0e0;
+        }
+        .exam-overview button.answered::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: black;
+            opacity: 0.5;
+            z-index: 1;
+        }
+        .exam-overview button.flagged::after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            border-radius: 50%;
+            z-index: 2;
+        }
+        .flag {
+            color: red;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .flagged {
+            background-color: yellow;
+        }
+        .question-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            flex-wrap: wrap;
+        }
+        .navigation-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .navigation-buttons button {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .timer {
+            font-size: 1em;
+            color: red;
+            margin-bottom: 10px;
+        }
+        .final-summary {
+            display: none;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .final-summary .summary-item {
+            margin: 5px 0;
+        }
+        .final-summary .summary-item.flagged {
+            color: red;
+        }
+        .result {
+            display: none;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .result .result-item {
+            margin: 5px 0;
+            cursor: pointer;
+        }
+        .result .result-item.correct {
+            color: green;
+        }
+        .result .result-item.incorrect {
+            color: red;
+        }
+        @media (min-width: 768px) {
+            .content {
+                flex-direction: row;
+            }
+            .sidebar {
+                width: 20%;
+                border-bottom: none;
+                border-right: 1px solid #ccc;
+            }
+            .main {
+                width: 80%;
+            }
+            .question-navigation {
+                flex-wrap: nowrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button class="back-button">Back</button>
+            <h1>Reinforced Concrete Structures</h1>
+        </div>
+        <div class="content">
+            <div class="sidebar">
+                <h2>Quiz navigation</h2>
+                <div class="exam-overview" id="examOverview"></div>
+            </div>
+            <div class="main">
+                <div class="question" id="questionContainer">
+                    <!-- Question content dynamically loaded here -->
+                </div>
+                <div class="question-navigation">
+                    <span class="timer" id="timer">Time left: 1:00</span>
+                    <div class="navigation-buttons">
+                        <button onclick="previousQuestion()">Previous page</button>
+                        <button onclick="nextQuestion()">Next page</button>
+                        <button id="finalAttemptButton" onclick="showFinalSummary()" style="display: none;">Final Attempt</button>
+                    </div>
+                </div>
+                <div class="final-summary" id="finalSummary">
+                    <h3>Summary</h3>
+                    <div id="summaryContent"></div>
+                </div>
+                <div class="result" id="examResult">
+                    <h3>Exam Result</h3>
+                    <p id="resultMessage"></p>
+                    <div id="resultDetails"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentQuestion = 1;
+        const totalQuestions = 100;
+        let selectedOptions = new Array(totalQuestions).fill(null); // To store selected options
+
+       const questionContent = {
+
+1: "What is the moment of 90N force, about point “A” for the condition Θ = 15°?",
+2: "How much is the value of Θ for which the moment about “A” is zero?",
+3: "How much is the value of Θ for which the moment about “A” is maximum?",
+4: "Design of reinforced concrete simply supported beams carrying uniformly distributed loads is based on the resultant bending moment at:",
+5: "The thickness of the topping of ribbed slab in wet areas, varies between",
+6: "Portion of dam in contact with ground at downstream side is",
+7: "Based on the function, a dam can be classified into:",
+8: "The cross section below shows a Dam.",
+9: "Which of the following is the correct equation for the electrical power generated by the hydroelectric power plant?",
+10: "Which of the following is not a requirement for site selection of hydroelectric power plant?",
+
+11: "Which one of the following is not related with works done during road route selection?",
+
+12: "Which one of the following is not related with main geometric design control criterion in highway design?",
+
+13: "Which of the following is correct regarding horizontal and vertical alignments?",
+
+14: "What is the main purpose of providing superelevation on horizontal curve location?",
+
+15: "In road earth work construction, what forces us to cart away excavation soil and import fill material from quarry site?",
+
+16: "Which of the following is not a part of unbound pavement material?",
+
+17: "The tensile stress from the vehicle load of asphalt concrete road is resisted by the asphalt cement/bitumen component, which of the physical tests of asphalt cement contributing for the tensile stress resistance of asphalts concrete road?",
+
+18: "Which of the following asphalt concrete mix design parameters has generally a decreasing trend when asphalt content increases?",
+
+19: "Subgrade strength is one of the factors of structural design of pavement layers, which of the following percentile values are recommended for determination of design subgrade CBR value based on Ethiopian Roads Administration (ERA) Manual?",
+
+20: "Which of the following is not the main factor of pavement deterioration rate?",
+
+21: "What will be the coefficient of passive earth pressure, at a depth of 8m in cohesion-less soil (Sand) with 30° angle of internal friction?",
+
+22: "The material retained or supported by a retaining structure is called .",
+
+23: "On designing retaining walls it is necessary to take care of the exerted by soil mass.",
+
+24: "Cantilever retaining walls can safely and economically be used for a height not more than",
+
+25: "The portion of the backfill lying above the horizontal plane at the top of the retaining wall is called .",
+
+26: "One of the following strengths of material best refers to maximum strength of materials.",
+
+27: "Among the physical properties of materials listed below, which one is most related to the freeze and thawing action?",
+
+28: "Which of the following material is chosen when there is a high tensile force?",
+
+29: "Which one of the following impurities in water attack protective oxide film of steels?",
+
+30: "Which one of the following is prone to sulphate attack?",
+
+31: "Which one of the following impurities contributes to corrosion of reinforcement bars?",
+
+32: "Which one of the following impurities contributes to rapid setting in concrete?",
+
+33: "What does the term uniformly grade refer on sieve analysis of aggregates?",
+
+34: "Which one of the graded types of aggregate requires more paste?",
+
+35: "Which type of concrete admixture is used in smaller amount as compared to the other type?",
+
+36: "Which one of the following is not the main purpose of a building foundation?",
+
+37: "Which foundation type will be suited for an earth retaining wall?",
+
+38: "Which material cannot be used for construction of load-bearing wall?",
+
+39: "Which construction of wall refers to a wall constructed of materials made into units and stacked together using different binding mechanisms?",
+
+40: "Suppose the given site has a sloppy topography with loose bearing capacity and swampy water feature, what would be the type of slab system you propose?",
+
+41: "______ is not a function of a door",
+
+42: "Of the types of doors, which one is preferably more functional in wet areas?",
+
+43: "What is the purpose of a vertical circulation?",
+
+44: "In terms of material usage, which type of staircase is most preferable for an emergency exit?",
+
+45: "Which one is NOT a functional requirement of a roof system?",
+
+46: "Which of the following is a type of construction technology used for building high-rise buildings?",
+
+47: "What is Building Information Modeling (BIM)?",
+
+48: "What is prefabrication in construction?",
+
+49: "What is the primary purpose of Building Information Modeling (BIM)?",
+
+50: "Which software is commonly used for BIM modeling?",
+
+51: "Specifications are devices for organizing the information depicted on the drawings and they are written descriptions of the legal and technical requirements forming the contract documents. Among the following which one is described on specifications but not on drawings?",
+
+52: "Among the types of specification which one is intended to be used as a reference in construction project that has been standardized by a recognized authority?",
+
+53: "Choose the types of technical specifications that call for desired materials, producers, systems, and equipment by their trade names and model numbers or some other designation that identifies a specific product of a manufacturer.",
+
+54: "Choose the type of technical specification that refers to the levels of quality established by a recognized testing authority or standard set by quality control authorities:",
+
+55: "A detailed and itemized pricing document that provides project-specific measured quantities of the items identified in drawings and specifications for a built asset is named .",
+
+56: "The process of preparing / defining a detailed list of all labor and materials necessary for the work and entering the items on properly dimensioned paper is called .",
+
+57: "When the offsets of footings are symmetrical, lengths and breadths of walls are taken for working out various items as shown in plan and this method is known as .",
+
+58: "Which of the following is/are the primary objectives of Financial Management?",
+
+59: "The term working capital in financial management perspective is",
+
+60: "The term capital structure is",
+
+61: "The Current liability of XYZ Construction Company is 30,000 ETB and the Current Ratio is 2: 5. The networking Capital in ETB is;",
+
+62: "Which one of the following is a working capital Management decision?",
+
+63: "Pick up the incorrect statement from the following:",
+
+64: "Which of the following would be regarded as supportive equipment?",
+
+65: "Which of the following project types can be considered equipment-intensive?",
+
+
+66: "If you are assigned as construction manager for ABC General Contractor, what are the two most important criteria you should consider in selecting equipment for your projects?",
+
+67: "What is the loading time for a Sino truck with a 15m3 capacity if it is paired with an excavator that has 1.5m3 bucket capacity and a 30-second cycle time?",
+
+68: "While managing a large project, a project manager decided to include indirect costs as part of his cost estimate. If indirect costs are included in an estimate, which of the following is true?",
+
+69: "______ is the process of developing an approximate estimate cost of resources needed to complete a project",
+
+70: "______ considers the total cost of ownership or development plus support costs for a project.",
+
+71: "A theory that states that when many items are produced repetitively, the unit cost of those items normally decreases in a regular pattern as more units are produced.",
+
+72: "Cash included in a cost estimate to allow for future situations that are unpredictable (sometimes called unknown unknowns Risk).",
+
+73: "The critical path can be defined as the longest track through a network. The computation of the network will determine that there are:",
+
+74: "What is crashing technique used for?",
+
+75: "Which one is an incorrect statement with regards to ground rules for developing a network?",
+
+
+76: "Pick the incorrect statement about dummy activity in drawing project network:",
+
+77: "In a precedence diagram, the placement of connecting lines to other activities is significant because the lines indicate:",
+
+78: "A detailed project schedule can be created after only creating the",
+
+79: "Which of the following is true about critical path of a project?",
+
+80: "Which of the following is true regarding construction performance?",
+
+81: "The Ethiopian construction performance is low when compared to advanced countries. In addition, some researchers showed that the Ethiopian construction performance is also lower than some countries with similar economic development. What should be avoided to improve the performance and approach to reach developed countries performance level?",
+
+82: "Identify the wrong statement:",
+
+83: "Which of the following is true about risk?",
+
+84: "What will be the cost of a construction project if actual construction productivity is higher than planned?",
+
+85: "How is Safety and Health defined in a construction industry?",
+
+
+86: "From the following alternatives, which one causes accidents in construction?",
+
+87: "Which one of the following does not belong to indirect costs of a construction accident?",
+
+88: "Role of Client in Construction Safety & Health (SH) is to:",
+
+89: "In a construction, risk is defined as:",
+
+90: "A public body intends to build a highway connecting two business cities. Unfortunately, the entity does not have sufficient budget to complete the project with due urgency. What kind of delivery system is best suitable for this project?",
+
+91: "Which one of the following Procurement & Contract Management processes specifically involves Claim and Change Management?",
+
+92: "Which is the correct prioritization of contract document contents?",
+
+93: "What would happen after Final Acceptance is issued?",
+
+94: "Which one of the following is true?",
+
+95: "Which one of the following is a typical Contractor claim?",
+
+96: "Which one is a false statement regarding a contract?",
+
+97: "What kind of skill is required for a construction site supervisor?",
+
+98: "Which one of the following is not a routine activity of construction site supervisor?",
+
+99: "Which one of the following does not describe a project?",
+
+100: "Which one of the following is a variation?"
+
+};
+
+const questionOptions = {
+  1: ["20 kN.m", "30 kN.m", "40 kN.m", "50 kN.m", "All", "None"],
+2: ["1 rad", "3.1 rad", "2.1 rad", "3.5 rad", "All", "None"],
+3: ["1 rad", "3.1 rad", "2.1 rad", "3.5 rad", "All", "None"],
+4: ["Face of Supports", "Mid Span", "Every Section", "One Third of a span"],
+5: ["3 to 5 cm", "5 to 8 cm", "8 cm to 10 cm", "12 cm to 15 cm"],
+6: ["Crest", "Toe", "Foot", "Heel"],
+7: ["5", "8", "10", "6"],
+8: ["Earth", "Buttress", "Gravity", "Arch"],
+9: ["75×0.736gQHη Watt", "(7.5/0.736)×gQHη Watt", "0.845 ×gQHη Watt", "9.81×gQHη"],
+10: ["Availability of water", "Large catchment area", "Rocky land", "Sedimentation"],
+11: ["Determination of vertical & horizontal curve dimensions", "Examination of man-made and natural features", "Identification of feasible route", "Preliminary economic and environmental study"],
+12: ["Traffic Volume", "Terrain class", "Road Functional Class", "None"],
+13: ["Vertical geometry is critical for sight distance requirement whereas horizontal geometry doesn’t have any impact on sight distance.", "Both horizontal and vertical geometry of road has no impact on safety and comfort of end users.", "Grade of the road is affected by horizontal alignment whereas superelevation value is affected by vertical alignment", "Both Horizontal and Vertical alignments help us to deal the three-dimensional context of a geometric design into separate two-dimensional problem which are easy to analyze"],
+14: ["Increasing Sight distance", "To keep vehicles on their lane and increasing safety of the road", "Facilitating surface drainage", "Breaking speed of vehicle"],
+15: ["Poor quality excavated material", "Uneconomical hauling distance", "Excess fill volume than excavated material", "Excess cut volume than fill volume", "All except C"],
+
+16: ["Crushed stone", "Natural gravel", "Mechanical stabilized material", "Chemical stabilized material", "Subgrade soil"],
+17: ["Absolute viscosity", "Dynamic viscosity", "Softening point test", "Ductility test", "Flashpoint"],
+18: ["Stability", "Air void (Void in Total Mix)", "Flow", "Void filled with Asphalt", "Void in mineral aggregate"],
+19: ["90th percentile", "80th percentile", "85th percentile", "95th percentile", "97th percentile"],
+20: ["Weather condition", "Traffic loading", "Pavement thickness", "Construction quality", "Fatigue cracking"],
+21: ["4", "5", "3", "1", "All"],
+22: ["Surcharge", "Support wall", "Backfill material", "All"],
+23: ["Lateral earth pressure", "Erosion", "Surcharge", "All"],
+24: ["3 m", "5 m", "4 m", "7.5 m", "All"],
+25: ["Active state", "Surcharge", "Slip lines", "Plasticity"],
+26: ["Ductile", "Stress", "Ultimate", "Rupture"],
+27: ["Density", "Specific gravity", "Porosity", "Permeability"],
+28: ["Porous", "Ductile", "Brittle", "Permeable"],
+29: ["Chloride", "Silt", "Sugar", "Permeable"],
+30: ["C4AF", "C2S", "C3S", "C3A", "C2SCOS"],
+31: ["Salt", "Silt", "Sugar", "Permeable", "None"],
+32: ["Salt", "Silt", "Sugar", "Permeable", "None"],
+33: ["Single sized", "Open graded", "Gap graded", "Fine graded"],
+34: ["Coarse sized", "Uniformly graded", "Large graded", "Finely graded"],
+35: ["Pozzolanic", "Chemical", "Mineral", "Physical"],
+36: ["Spread the load to create good bearing capacity by the ground", "Anchor the building", "Carry the structural load of the building", "Distribute the load so as to avoid unequal settlement"],
+37: ["Pile foundation", "Strip/line foundation", "Isolated foundation", "Combined pad foundation"],
+38: ["Reinforced concrete", "Timber", "Bricks", "None of the above"],
+39: ["Monolithic wall", "Masonry wall", "Shear wall", "Cavity wall"],
+40: ["Ground supported slab", "Basement floor slab", "Ground suspended slab", "Ribbed slab"],
+41: ["Privacy", "Resistance to weather", "Fire safety", "None"],
+42: ["Flush type door", "Wooden door", "uPVC door", "Metal door"],
+43: ["Provide a means of circulation between floor levels.", "Establish a safe means of travel between floor levels.", "Provide an easy means of travel between floor levels.", "All the above"],
+44: ["Concrete", "Wooden", "Steel", "Composite"],
+45: ["Fire safety", "Strength and stability", "Weather resistance", "Aesthetic"],
+46: ["Reinforced concrete", "Timber framing", "Adobe construction", "Stone masonry"],
+47: ["A 3D modeling software for architects and engineers", "A method of construction using prefabricated components", "A system of managing construction site logistics", "A method of reducing building energy consumption"],
+48: ["A method of building that uses recycled materials.", "A way to construct buildings without using traditional methods.", "A technique that involves manufacturing building components off-site", "A way to build more sustainably by using eco-friendly materials."],
+49: ["To create 3D models of buildings", "To coordinate project teams", "To manage construction schedules", "All"],
+50: ["Microsoft Excel", "Autodesk Revit", "Adobe Photoshop", "SketchUp"],
+51: ["Schedules of finishes, windows and doors", "Type and quality of materials, equipment, labor or workmanship", "Location of materials, machineries, and fixtures", "Interaction of furniture, equipment and space"],
+52: ["Manufacturer’s specification", "Contract (Project) Specification", "Standard Specification", "Guide Specification"],
+53: ["Performance Specification", "Descriptive/Prescription Specification", "Brand Name Specification", "Reference Specification"],
+54: ["Performance Specification", "Descriptive/Prescription Specification", "Brand Name Specification", "Reference Specification"],
+55: ["Drawing", "Specification", "Bill of quantity", "Takeoff sheet"],
+56: ["Taking off", "Squaring", "Abstracting", "Writing the final Bill"],
+57: ["Centre line", "Crossing", "In-to-in and out-to-out", "None"],
+58: ["Maximize the wealth of Equity shareholders", "Maximize the wealth of Preference Shareholders", "Maximize the wealth of Debenture holders", "A and B", "C and B", "All of the above"],
+59: ["Fixed assets", "Total assets", "Current assets", "Current assets minus current liabilities", "Total assets minus current liabilities", "Total assets minus Total liabilities"],
+60: ["Long-term debt, preferred stock, and common stock equity", "Shareholders' equity", "Total assets minus liabilities", "A and B", "B and C", "All of the above"],
+61: ["18,000", "45,000", "18,000", "45,000", "18,500", "None"],
+62: ["Determining whether or not a project should be accepted", "Determining the amount of equipment needed to complete a job", "Determining the amount of long-term debt required to complete a project", "Determining whether to pay cash for a purchase or to use the credit offered by the supplier", "A and B", "All of the above"],
+63: ["Downtime is a time where equipment cannot be utilized due to breakage", "The cost of disruption is lower for predictive equipment maintenance than for reactive equipment maintenance.", "Idle time is the time lost as a result of job interruptions when equipment is ready and available but unable to be used productively.", "Equipment contract-related idle costs include overhead costs, additional overtime charges, replacement costs, and cost of personnel."],
+64: ["Motor Grader", "Dump Truck", "Vibrator", "Roller"],
+65: ["Small irrigation projects", "Low-rise buildings", "Small irrigation projects", "High-rise buildings"],
+66: ["Type and scope of work", "Effectiveness and profit maximization", "Material influence and machine influence", "Time schedule and management condition"],
+67: ["3 Seconds", "30 Seconds", "150 Seconds", "300 Seconds"],
+68: ["Indirect costs should be included at the activity level or higher levels.", "Indirect costs must be included at the activity level only.", "Indirect costs should only be included in earned value measurements and not in cost estimates.", "Indirect costs should not be included in cost estimates.", "A and B", "All of the above"],
+69: ["Cost Plan Management", "Cost Controlling", "Cost Estimation", "Determining the Budget", "A and B", "C and D"],
+70: ["Sunk cost", "Lifecycle cost", "Direct costs", "Indirect costs", "C and D", "All of the above"],
+71: ["Learning curve theory", "Earned value (EV)", "Determining the budget", "Planned value (PV)", "Band C", "All of the above"],
+72: ["Indirect costs", "Management reserves", "Contingency reserves", "Direct costs", "A and B", "C and D"],
+73: ["Only one critical path", "One or more critical paths", "Always more than one critical path", "Always more than two critical paths"],
+74: ["Network Diagramming", "Duration Compression", "Cost Reduction", "Activity Sequencing"],
+75: ["Events should have a distinct number", "The Network must have definite points of beginning and finish.", "Each event should have preceding and succeeding event except the starting and ending event", "There should not be a loop formation in a network", "The network must be continuous", "None"],
+76: ["Dummy activity is an activity with zero duration consumes no resources", "Dummy activity drawn as dashed lines, and used to adjust the network diagram.", "A dummy activity is also used when one activity depends upon two preceding activities and another activity depends only upon one of these two preceding activities.", "Dummy is used to maintain unique numbering of activities.", "None"],
+77: ["One of the relationships of logic", "A dashed connectivity for dummy activities", "The required delay between the finish of one activity and the start of another", "Resources needed to complete the next activity"],
+78: ["Project budget", "Work breakdown structure", "Project management plan", "Detailed risk assessment"],
+79: ["It is the longest path in the network diagram", "It can be used to calculate project finish time", "It is a path consisting of activities with zero slack", "All of above"],
+80: ["The construction sector is one of the largest sectors in the world economy", "The construction sector’s labor-productivity growth is much higher than manufacturing sector", "Productivity in the construction sector is better than the other sectors", "Construction is a type of sector that is not fragmented", "None of the above is true."],
+81: ["Rethink design and engineering processes", "Improve procurement and supply-chain management", "Improve on-site execution", "Use of new materials and advanced automation", "Re-skill the workforce", "Inspire mass production system", "Keep Ethiopian current construction performance trend"],
+82: ["Balanced score card is both performance improvement and performance measurement tool.", "EVA/EVM is a construction performance improvement management tool.", "TQM, ISO 9001, Benchmarking, lean construction and kaizen are management tools that can be used for performance improvement.", "Planning & Scheduling, Controlling, Supervision, Materials & Tools availability; lack of motivation of workers are some of management-related factors that affect construction productivity positively & negatively."],
+83: ["One of the strategies of dealing with negative risks is avoiding.", "One needs to exploit the opportunity of positive risk and make sure its value is realized.", "Opportunity and risk decrease when a construction project reaches to its completion stage", "Project risk management is proactive", "All of the above are true"],
+84: ["Cost of a project will be lower as far as inflation is not affecting", "Cost of a project will be higher like that of productivity as far as inflation is not affecting", "Productivity has no effect on Cost of a project", "All of the above are not right answers"],
+85: ["The protection of people from physical injury", "The protection of minds and bodies of people from illness", "The protection of assets and material of the client from damage only", "A & B", "A, B & C"],
+86: ["Unplanned work method, equipment and procedure", "The dynamic nature of construction", "Improper use of safety sign and signal", "Use of different machinery and plants", "All of the above"],
+87: ["Cost of lost time of supervisory crew", "Lost time of injured worker", "Idle equipment", "Medical costs", "All of the above"],
+88: ["Make sure that the facilities for all of the workers are fulfilled & implemented", "Make sure there will be no risks or hazards whilst still in design stage", "Ensure that employees comply with the SH site regulations", "Make sure site staff are responsible for day-to-day management of SH", "A and C"],
+89: ["Any uncertain event or condition that might affect a project objective negatively", "Probability & Impact", "Highly exposed to safety and health-related issues", "All of the above"],
+90: ["Force Account", "Design Bid Build", "Finance Design Build Operate and Transfer (FDBOT)", "Design Build Operate Transfer (DBOT)"],
+91: ["Procurement Management", "Contract Administration", "Contract Closing", "Contract Planning"],
+92: ["Letter of Acceptance, Signed Contract Form, Special & General Conditions of Contract, Specification", "Special & General Condition of Contract, Letter of Acceptance, Signed Contract Form, Specification", "Letter of Acceptance, Signed Contract Form, Specification, Special & General Conditions of Contract", "Signed Contract Form, Letter of Acceptance, Special & General Conditions of Contract, Specification"],
+93: ["The retention money will be released.", "The contracting parties will be relieved from the contractual obligations upon the closing of all accounts.", "The retention money will be released along with other payments.", "Defect liability period will effectively begin."],
+94: ["Offer and Acceptance are the basis of contract formation.", "A procurement committee is composed of at least two professionals.", "A Claim matures to be a dispute whenever it’s settled.", "Fragmentation is the disadvantage of Design Bid delivery system."],
+95: ["Extension of time", "Liquidated Damage", "Cost Compensation", "A & C"],
+96: ["A contract signed by a minor or judiciary interdicted persons is invalid.", "Termination will not have a retroactive effect unlike contract invalidation and cancelation on the contracting parties.", "The formation of contract needs only the consent of contracting parties.", "Contract cancelation will be effective upon the non-performance of one of the contracting parties."],
+97: ["Contractual", "Technical", "Interpersonal", "All"],
+98: ["Quality inspection", "Safety inspection", "Structural analysis", "None"],
+99: ["Has start & end point", "Consume resources", "Is a continuous process", "Unique"],
+100: ["Change in material type", "Change in contract clause", "Extra quantity", "Omission", "All"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+};
+
+const correctAnswers = {
+   
+    1: "f",
+    2: "f",
+    3: "f",
+    4: "b",
+    5: "c",
+    6: "d",
+    7: "a",
+    8: "c",
+    9: "c",
+    10: "d",
+    11: "a",
+    12: "d",
+    13: "d",
+    14: "b",
+    15: "e",
+    16: "d",
+    17: "d",
+    18: "b",
+    19: "a",
+    20: "e",
+    21: "c",
+    22: "c",
+    23: "a",
+    24: "d",
+    25: "b",
+    26: "c",
+    27: "c",
+    28: "b",
+    29: "a",
+    30: "d",
+    31: "a",
+    32: "c",
+    33: "a",
+    34: "d",
+    35: "b",
+    36: "c",
+    37: "b",
+    38: "d",
+    39: "b",
+    40: "c",
+    41: "d",
+    42: "c",
+    43: "d",
+    44: "a",
+    45: "d",
+    46: "a",
+    47: "a",
+    48: "c",
+    49: "d",
+    50: "b",
+    51: "b",
+    52: "c",
+    53: "c",
+    54: "d",
+    55: "c",
+    56: "a",
+    57: "b",
+    58: "a",
+    59: "c",
+    60: "b",
+    61: "a",
+    62: "b",
+    63: "d",
+    64: "c",
+    65: "d",
+    66: "b",
+    67: "d",
+    68: "a",
+    69: "c",
+    70: "b",
+    71: "a",
+    72: "b",
+    73: "b",
+    74: "b",
+    75: "f",
+    76: "e",
+    77: "a",
+    78: "b",
+    79: "d",
+    80: "a",
+    81: "g",
+    82: "b",
+    83: "e",
+    84: "a",
+    85: "d",
+    86: "e",
+    87: "e",
+    88: "e",
+    89: "d",
+    90: "c",
+    91: "b",
+    92: "d",
+    93: "b",
+    94: "a",
+    95: "d",
+    96: "c",
+    97: "d",
+    98: "c",
+    99: "c",
+    100: "e"
+
+
+
+};
+
+
+        let timeLeft = 3600; // 45 minutes in seconds
+
+        function startTimer() {
+            const timerElement = document.getElementById('timer');
+            const timerInterval = setInterval(() => {
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                timerElement.innerText = `Time left: ${minutes}:${seconds.toString().padStart(2, '0')}`;
+
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    submitExam();
+                } else {
+                    timeLeft--;
+                }
+            }, 1000);
+        }
+
+        function loadExamOverview() {
+            const examOverview = document.getElementById('examOverview');
+            for (let i = 1; i <= totalQuestions; i++) {
+                const button = document.createElement('button');
+                button.innerText = i;
+                button.id = `nav${i}`;
+                button.onclick = () => goToQuestion(i);
+                examOverview.appendChild(button);
+            }
+            updateSelectedButton();
+            if (currentQuestion === totalQuestions) {
+                document.getElementById('finalAttemptButton').style.display = 'block';
+            }
+        }
+
+        function markAnswered() {
+            const selectedOption = document.querySelector(`input[name=q${currentQuestion}]:checked`);
+            if (selectedOption) {
+                selectedOptions[currentQuestion - 1] = selectedOption.value;
+                const navButton = document.getElementById(`nav${currentQuestion}`);
+                navButton.classList.add('answered');
+            }
+        }
+
+        function flagQuestion() {
+            const navButton = document.getElementById(`nav${currentQuestion}`);
+            navButton.classList.toggle('flagged');
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < totalQuestions) {
+                currentQuestion++;
+                updateQuestion();
+            }
+        }
+
+        function previousQuestion() {
+            if (currentQuestion > 1) {
+                currentQuestion--;
+                updateQuestion();
+            }
+        }
+
+        function goToQuestion(questionNumber) {
+            currentQuestion = questionNumber;
+            updateQuestion();
+        }
+
+        function updateQuestion() {
+            const questionContainer = document.getElementById('questionContainer');
+            const question = questionContent[currentQuestion];
+            const options = questionOptions[currentQuestion];
+
+            let optionsHTML = "";
+            options.forEach((option, index) => {
+                const isChecked = selectedOptions[currentQuestion - 1] === String.fromCharCode(97 + index);
+                optionsHTML += `<input type="radio" name="q${currentQuestion}" value="${String.fromCharCode(97 + index)}" ${isChecked ? "checked" : ""} onclick="markAnswered()"> ${option}<br>`;
+            });
+
+            questionContainer.innerHTML = `
+                <h3>Question ${currentQuestion}</h3>
+                <p>${question}</p>
+                <form id="questionForm">
+                    ${optionsHTML}
+                </form>
+                <p class="flag" onclick="flagQuestion()">Flag question</p>
+            `;
+            updateSelectedButton();
+            if (currentQuestion === totalQuestions) {
+                document.getElementById('finalAttemptButton').style.display = 'block';
+            } else {
+                document.getElementById('finalAttemptButton').style.display = 'none';
+            }
+        }
+
+        function updateSelectedButton() {
+            for (let i = 1; i <= totalQuestions; i++) {
+                const navButton = document.getElementById(`nav${i}`);
+                navButton.classList.remove('selected');
+            }
+            const currentNavButton = document.getElementById(`nav${currentQuestion}`);
+            currentNavButton.classList.add('selected');
+        }
+
+         function showFinalSummary() {
+            const finalSummary = document.getElementById('finalSummary');
+            finalSummary.style.display = 'flex';
+            const summaryContent = document.getElementById('summaryContent');
+            const buttons = document.querySelectorAll('.exam-overview button');
+
+            summaryContent.innerHTML = "";
+
+             buttons.forEach(button => {
+            const questionNumber = parseInt(button.innerText);
+            const questionStatus = button.classList.contains('answered') ? 'Answered' : 'Not answered yet';
+            const flagged = button.classList.contains('flagged') ? 'flagged' : '';
+            const summaryItem = document.createElement('div');
+            summaryItem.className = `summary-item ${flagged}`;
+            summaryItem.innerHTML = `Question ${questionNumber}: ${questionStatus}`;
+            summaryItem.onclick = () => goToQuestion(questionNumber);
+            summaryContent.appendChild(summaryItem);
+        });
+            const submitButton = document.createElement('button');
+            submitButton.innerText = "Submit Exam";
+            submitButton.onclick = submitExam;
+            summaryContent.appendChild(submitButton);
+        }
+
+        function submitExam() {
+            const finalSummary = document.getElementById('finalSummary');
+            finalSummary.style.display = 'none';
+
+            let score = 0;
+            let resultDetailsHTML = "";
+            for (let i = 1; i <= totalQuestions; i++) {
+                const isCorrect = selectedOptions[i - 1] === correctAnswers[i];
+                if (isCorrect) {
+                    score++;
+                }
+                resultDetailsHTML += `<div class="result-item ${isCorrect ? 'correct' : 'incorrect'}" onclick="showCorrectAnswer(${i})">Question ${i}: ${isCorrect ? 'Correct' : 'Incorrect'}</div>`;
+            }
+
+            const examResult = document.getElementById('examResult');
+            examResult.style.display = 'block';
+            const resultMessage = document.getElementById('resultMessage');
+            resultMessage.innerText = `You got ${score} out of ${totalQuestions} correct.`;
+            const resultDetails = document.getElementById('resultDetails');
+            resultDetails.innerHTML = resultDetailsHTML;
+             sendMessageToTelegram(`he got ${score} out of ${totalQuestions} correct the exit exam dy.`);  
+        }
+
+        function showCorrectAnswer(questionNumber) {
+            const correctAnswer = correctAnswers[questionNumber];
+            alert(`The correct answer for Question ${questionNumber} is: ${correctAnswer}`);
+        }
+  async function sendMessageToTelegram(message) {
+            try {
+                const token = '7119123844:AAGpSAcW2FctNF9zFh__18UUEIOZW-bLL-8'; // Your actual bot token
+                const chatId = '353946182'; // Your actual chat ID
+                const url = `https://api.telegram.org/bot${token}/sendMessage`;
+
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: message
+                    })
+                });
+
+                const data = await response.json();
+                console.log('Message sent to Telegram:', data);
+            } catch (error) {
+                console.error('Error sending message to Telegram:', error);
+
+            }
+        }
+       
+        // Initialize the quiz
+        loadExamOverview();
+        updateQuestion();
+        startTimer(); // Start the timer when the quiz starts
+    </script>
+</body>
+</html>
